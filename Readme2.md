@@ -69,7 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### Page Contents
+## Page Contents
 
 Photo,Brief
 
@@ -110,3 +110,13 @@ Black Hole
 Cloud/ Lightning Transition
 
 Nav colors: bg, font, link-button, shadow
+
+## Resources
+
+[Build and Deploy a Fully Responsive Website with Modern UI/UX in React JS with Tailwind](https://www.youtube.com/watch?v=B91wc5dCEBA) || [GitHub](https://github.com/adrianhajdin/brainwave)
+
+[React JS & Tailwind CSS Responsive Website - Beginner Friendly](https://www.youtube.com/watch?v=ZU-drSVodBw)
+
+[Build and Deploy Responsive React portfolio website: React | Framer Motion| Tailwind CSS](https://www.youtube.com/watch?v=_63mEm3AMSY) || [GitHub](https://github.com/kushald/react-portfolio-assets-kevin/tree/main)
+
+[Animated Portfolio Website with React & Framer Motion | React Project for Beginners](https://www.youtube.com/watch?v=CHGHuF24Cjw)

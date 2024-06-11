@@ -1,0 +1,51 @@
+{
+    "nav": [
+        {
+            "id": 0,
+            "title": "Home",
+            "path": "/",
+            "side": "left"
+        },
+        {
+            "id": 1,
+            "title": "Overall",
+            "path": "/",
+            "side": "right"
+        },
+        {
+            "id": 2,
+            "title": "Professional",
+            "path": "/",
+            "side": "right"
+        },
+        {
+            "id": 3,
+            "title": "Personal",
+            "path": "/",
+            "side": "right"
+        },
+        {
+            "id": 4,
+            "title": "Skills",
+            "path": "/",
+            "side": "right"
+        },{
+            "id": 5,
+            "title": "Technology",
+            "path": "/",
+            "side": "right"
+        },{
+            "id": 6,
+            "title": "Contact",
+            "path": "/",
+            "side": "right"
+        }
+    ],
+    "professional":[
+
+    ],
+    "personal":[],
+    "skills": [],
+    "technologies": [],
+    "projects":[]
+}

@@ -1,10 +1,10 @@
 import React from "react";
-import { navRoutes } from "../constants";
+import { navRoutes, zIndex } from "../constants";
 
 const Header = () => {
   return (
-    <nav className="bg-gray-950 flex">
-      <div className="w-full px-5 lg:px-10 flex flex-wrap items-center justify-between mx-auto py-2">
+    <nav className={`relative bg-gray-950 flex z-3 z-${zIndex.header}`}>
+      <div className="w-full px-5 md:px-3 lg:px-10 xl:px-15 flex flex-wrap items-center justify-between mx-auto py-2">
         <div className="flex items-center justify-start py-2">
           <a href="#" className="flex items-center">
             <img

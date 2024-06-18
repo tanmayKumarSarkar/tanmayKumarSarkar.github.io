@@ -3,13 +3,20 @@
   text-align: center;
 } */
 
+html,
 body {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   text-align: center;
   font-family: "Changa", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 .changa-300 {
@@ -24,4 +31,8 @@ body {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+}
+
+.parallax {
+  /* background-image: url('./assets/parallax/BG1-Sky-3.1.png'); */
 }

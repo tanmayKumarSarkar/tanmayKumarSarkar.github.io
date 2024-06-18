@@ -29,7 +29,7 @@ Top/ Right Icon Nav
 
 ### Page Structure
 
-Paralax Section (x,y movements)
+Paralax Section (x,y movements), fog, star, cloud
 
 Bento Grid
 

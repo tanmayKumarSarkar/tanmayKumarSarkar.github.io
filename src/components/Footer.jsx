@@ -1,7 +1,14 @@
 import React from "react";
+import { zIndex } from "../constants";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <div
+      className={`relative bg-gray-950 w-full h-[8vh] z-3 z-${zIndex.footer}`}
+    >
+      Footer
+    </div>
+  );
 };
 
 export default Footer;

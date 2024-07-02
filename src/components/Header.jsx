@@ -3,7 +3,7 @@ import { navRoutes, zIndex } from "../constants";
 
 const Header = () => {
   return (
-    <nav className={`relative bg-gray-950 flex z-3 z-${zIndex.header}`}>
+    <nav className={`relative bg-black/100 flex z-3 z-${zIndex.header}`}>
       <div className="w-full px-5 md:px-3 lg:px-10 xl:px-15 flex flex-wrap items-center justify-between mx-auto py-2">
         <div className="flex items-center justify-start py-2">
           <a href="#" className="flex items-center">
@@ -47,12 +47,12 @@ const Header = () => {
           id="navbar-default"
         >
           {/* <ul className="font-medium flex flex-col md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"> */}
-          <ul className="font-medium flex flex-col md:flex-row rounded-lg bg-gray-950 md:justify-end">
+          <ul className="font-medium flex flex-col md:flex-row rounded-lg bg-black/100 md:justify-end">
             {navRoutes.map((nav) => (
               <li key={nav.id}>
                 <a
                   href={nav.path}
-                  className="flex p-2 mx-[2px] my-1 text-white bg-blue-700 md:bg-gray-950 md:hover:bg-blue-700 rounded md:rounded-full md:px-2 md:py-2 shadow-sm hover:
+                  className="flex p-2 mx-[2px] my-1 text-white bg-blue-700 md:bg-black/100 md:hover:bg-blue-700 rounded md:rounded-full md:px-2 md:py-2 shadow-sm hover:
 hover:shadow-white"
                   //   aria-current="page"
                 >

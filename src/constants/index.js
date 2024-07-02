@@ -60,7 +60,7 @@ export const parallaxImages = [
   {
     id: 1,
     image: "BG1-Sky-3.1.png",
-    show: true,
+    show: false,
     xSpeed: 0,
     ySpeed: 0,
     zSpeed: 0,
@@ -77,7 +77,7 @@ export const parallaxImages = [
   {
     id: 2,
     image: "BG1-Moon-1.1.png",
-    show: true,
+    show: false,
     xSpeed: 0,
     ySpeed: 0,
     zSpeed: 0,
@@ -657,4 +657,8 @@ export const profileDetails = {
     languages: ["English", "Hindi", "Bengali"],
     address: "Kolkata, West Bengal, India",
   },
+};
+
+export const getRandomInt = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 };

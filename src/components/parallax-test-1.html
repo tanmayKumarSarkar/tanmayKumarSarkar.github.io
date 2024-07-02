@@ -1,0 +1,121 @@
+<html>
+  <div class="parallax-container">
+    <div class="parallax-layer" id="layer1"></div>
+    <div class="parallax-layer" id="layer2"></div>
+    <div class="parallax-layer" id="layer3"></div>
+  </div>
+
+  <style>
+    .parallax-container {
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      perspective: 1px;
+    }
+    .parallax-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+    }
+    #layer1 {
+      background-image: url("https://cdn.pixabay.com/photo/2023/01/28/06/57/man-7750139_1280.png");
+      transform: translateZ(-2px) scale(3);
+    }
+    #layer2 {
+      background-image: url("https://cdn.pixabay.com/photo/2022/05/24/17/47/triangle-7219011_1280.png");
+      transform: translateZ(-1px) scale(2);
+    }
+    #layer3 {
+      background-image: url("https://cdn.pixabay.com/photo/2021/12/12/00/19/trees-6863878_640.png");
+      transform: translateZ(0);
+    }
+  </style>
+
+  <script>
+    var container = document.querySelector(".parallax-container");
+    var layers = document.querySelectorAll(".parallax-layer");
+
+    container.addEventListener("scroll", () => {
+      var scrolled = container.scrollTop;
+      var speed = 0.2;
+
+      layers.forEach((layer, index) => {
+        var yOffset = -(scrolled * speed * (index + 1) * 0.1);
+        layer.style.transform = `translateY(${yOffset}px)`;
+      });
+    });
+
+    container.addEventListener("mousemove", (e) => {
+      var { left, top, width, height } = container.getBoundingClientRect();
+      var x = (e.clientX - left) / width - 0.5;
+      var y = (e.clientY - top) / height - 0.5;
+
+      layers.forEach((layer, index) => {
+        var speed = (index + 1) * 10;
+        layer.style.transform = `translateX(${x * speed}px) translateY(${
+          y * speed
+        }px)`;
+      });
+    });
+
+    // #2
+
+    container.addEventListener("mousemove", (e) => {
+      var { left, top, width, height } = container.getBoundingClientRect();
+      var x = (e.clientX - left) / width - 0.5;
+      var y = (e.clientY - top) / height - 0.5;
+
+      layers.forEach((layer, index) => {
+        var speed = (index + 1) * 10;
+        layer.style.transform = `rotateY(${x * speed}deg) rotateX(${
+          -y * speed
+        }deg)`;
+      });
+    });
+  </script>
+
+  <!-- night sky star -->
+
+  <script>
+    // Night Sky Generator
+    const nightSky = document.createElement("div");
+    nightSky.style.width = "100%";
+    nightSky.style.height = "100vh";
+    nightSky.style.background =
+      "linear-gradient(to bottom, #000000 0%, #000033 100%)";
+    nightSky.style.position = "relative";
+    nightSky.style.overflow = "hidden";
+
+    document.body.appendChild(nightSky);
+
+    // Generate stars
+    for (let i = 0; i < 500; i++) {
+      const star = document.createElement("div");
+      star.style.position = "absolute";
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.width = `${Math.random() * 3 + 1}px`;
+      star.style.height = star.style.width;
+      star.style.backgroundColor = "#ffffff";
+      star.style.borderRadius = "50%";
+      star.style.animation = `twinkle ${
+        Math.random() * 2 + 1
+      }s infinite alternate`;
+      nightSky.appendChild(star);
+    }
+
+    // Twinkle animation
+    const style = document.createElement("style");
+    style.textContent = `
+  @keyframes twinkle {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.2); }
+  }
+`;
+    document.head.appendChild(style);
+  </script>
+</html>

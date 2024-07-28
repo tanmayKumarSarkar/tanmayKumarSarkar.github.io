@@ -44,7 +44,7 @@
     transform: translate(-50%, -50%);
     background-color: #ffffff00;
     background-position: center center;
-    background-image: linear-gradient(#ffffff10 .17vw, transparent .17vw), linear-gradient(90deg, #ffffff10 .17vw, transparent .17vw);
+    background-image: linear-gradient(#ffffff10 .1em, transparent .1em), linear-gradient(90deg, #ffffff10 .1em, transparent .1em);
     background-size: 6.97vw 6.97vw;
     overflow: hidden;
 }
@@ -111,6 +111,35 @@
     animation-delay: 5.5s;
 }
 
+@media only screen and (max-width : 767px) {
+    .squares-bg {
+        width: 63vw;
+        height: 63vw;
+        background-size: 10.5vw 10.5vw;
+    }
+
+    .squares-bg-highlight {
+        width: 21.45vw;
+        height: 21.3vw;
+        background-size: 10.5vw 10.5vw;
+    }
+
+    .circle1 {
+        height: 21vw;
+        width: 21vw;
+    }
+
+    .circle2 {
+        height: 31.2vw;
+        width: 31.2vw;
+    }
+
+    .circle3 {
+        height: 52.2vw;
+        width: 52.2vw;
+    }
+}
+
 @keyframes ripples {
     20% {
         border: 1px solid #ffffff05;
@@ -165,11 +194,8 @@
 
 .smallCard {
     position: absolute;
-    /* height: 10vw; */
-    /* width: 10vw; */
     border: 1px solid #ffffff20;
     background-color: #ffffff10;
-    /* border-radius: 10px; */
 }
 
 .smallCard:hover,

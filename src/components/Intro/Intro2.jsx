@@ -70,7 +70,7 @@ function Intro() {
         </div>
         <motion.div
           variants={slideInFromRight(0.8)}
-          className="w-full h-full flex justify-center items-center ml-[-26vw] md:ml-0 md:mr-0 mt-6 md:-mt-5"
+          className="w-full h-full flex justify-center items-center ml-[-26vw] md:ml-0 md:mr-0 mt-10 md:-mt-5"
         >
           <TechIcons />
         </motion.div>

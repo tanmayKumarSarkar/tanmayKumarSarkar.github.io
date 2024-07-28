@@ -1,5 +1,5 @@
 import React from "react";
-import { zIndex } from "../constants";
+import { zIndex } from "../utils";
 
 function Sidebar() {
   return (

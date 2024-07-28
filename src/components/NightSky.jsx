@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
-import { getRandomInt } from "../constants";
+import { getRandomInt } from "../utils";
 
 // Night Sky Generator
 const nightSky = document.createElement("div");
 
+const starCount = 60;
 // Generate stars
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < starCount; i++) {
   const star = document.createElement("div");
-  star.style.left = `${getRandomInt(3, 97)}%`;
-  star.style.top = `${getRandomInt(0, 40)}%`;
-  star.style.width = `${getRandomInt(3, 5)}px`;
+  if (i > starCount * 0.15) {
+    star.style.left = `${getRandomInt(3, 75)}%`;
+  } else {
+    star.style.left = `${getRandomInt(87, 97)}%`;
+  }
+  //   star.style.left = `${getRandomInt(3, 97)}%`;
+  star.style.top = `${getRandomInt(11, 30)}%`;
+
+  star.style.width = `${getRandomInt(4, 6.5)}px`;
   //   star.style.width = `${getRandomInt(1, 2.5)}px`;
   star.style.height = star.style.width;
   let starColor = ["white", "#dcfaff", "#ffd5d5", "#fff8cd"][

@@ -662,3 +662,9 @@ export const profileDetails = {
 export const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+
+export const getRandomIntV2 = (min1, max1, min2, max2) => {
+  return Math.random() > 0.5
+    ? getRandomInt(min1, max1)
+    : getRandomInt(min2, max2);
+};

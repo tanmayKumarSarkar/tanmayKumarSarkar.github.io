@@ -1,0 +1,109 @@
+.intro2-cointainer {}
+
+/* .squares-bg {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    background-color: white;
+    clip-path: polygon(50% 50% 50% 50%);
+} */
+
+.squares-bg {
+    width: 42vw;
+    height: 42vw;
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    background-color: #ffffff00;
+    background-position: center center;
+    background-image: linear-gradient(#ffffff10 .17vw, transparent .17vw), linear-gradient(90deg, #ffffff10 .17vw, transparent .17vw);
+    background-size: 6.97vw 6.97vw;
+    overflow: hidden;
+}
+
+.squares-bg-highlight {
+    /* content: ' '; */
+    width: 14.3vw;
+    height: 14.2vw;
+    position: absolute;
+    border-radius: 50%;
+    /* left: 40%;
+    top: 50%; */
+    transform: translate(-50%, -50%);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    /* background-color: red; */
+    background-image: linear-gradient(#ffffff80 .1em, transparent .1em), linear-gradient(90deg, #ffffff80 .1em, transparent .1em);
+    background-size: 6.97vw 6.97vw;
+    overflow: hidden;
+    display: none;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* background-color: #fff; */
+    transform: translate(-50%, -50%);
+    border: 1px solid #ffffff05;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    /* transition: all 0.5s ease-in-out; */
+    animation: ripples 10.0s ease-in-out 0.5s infinite;
+    -webkit-animation: ripples 10.0s ease-in-out 0.5s infinite;
+}
+
+
+.circle1 {
+    height: 15vw;
+    width: 15vw;
+    animation-delay: 0s;
+}
+
+.circle2 {
+    height: 19vw;
+    width: 19vw;
+    animation-delay: 1s;
+}
+
+.circle3 {
+    height: 29vw;
+    width: 29vw;
+    animation-delay: 4s;
+}
+
+.circle4 {
+    height: 33vw;
+    width: 33vw;
+    animation-delay: 5s;
+}
+
+@keyframes ripples {
+    20% {
+        border: 1px solid #ffffff05;
+    }
+
+    50% {
+        border: 2px solid #ffffff20;
+        transform: scale(1.1) translate(-45%, -45%);
+    }
+
+    100% {
+        border: 1px solid #ffffff05;
+    }
+}
+
+.small-tech-icons {
+    /* position: absolute; */
+}
+
+.smallCard {
+    /* height: 10vw; */
+    /* width: 10vw; */
+    border: 1px solid #ffffff20;
+    background-color: #ffffff10;
+    /* border-radius: 10px; */
+    font: #ffffff;
+}

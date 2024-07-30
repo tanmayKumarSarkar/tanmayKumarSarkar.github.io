@@ -17,7 +17,7 @@ function Intro() {
   return (
     <div className="intro2-cointainer w-full h-full py-0 relative overflow-hidden flex flex-col bg-[#040016]">
       <video
-        className="rotate-180 absolute top-[-255px] left-0 z-[1] w-full h-full object-cover"
+        className="rotate-180 absolute top-[-44%] md:top-[-43%] left-0 z-[1] w-full h-full object-cover blackhole"
         autoPlay
         muted
         loop
@@ -27,7 +27,7 @@ function Intro() {
       <motion.div
         initial="hidden"
         animate="visible"
-        className="flex flex-row items-center justify-center px-7 md:px-20 mt-40 w-full z-[20]"
+        className="flex flex-row items-center justify-center px-7 md:px-20 xl:px-32 mt-40 w-full z-[20] xl:gap-60"
       >
         <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
           <motion.div
@@ -70,11 +70,18 @@ function Intro() {
         </div>
         <motion.div
           variants={slideInFromRight(0.8)}
-          className="w-full h-full flex justify-center items-center ml-[-26vw] md:ml-0 md:mr-0 mt-10 md:-mt-5"
+          className="w-full h-full xl:w-[50%] xl:h-[50%] flex justify-center items-center ml-[-26vw] xl:-ml-10 md:ml-0 md:mr-0 xl:mr-28 mt-10 md:-mt-5 xl:-mt-10 2xl:-mt-20"
         >
           <TechIcons />
         </motion.div>
       </motion.div>
+      {/* <div className="my-img-container z-[2] mt-[50%] ">
+        <img
+          className="my-img rounded-[50%] w-[150px] h-[150px] border-2 border-red-700 border-y-gray-400"
+          src="../assets/Tanmay_o.png"
+          alt=""
+        />
+      </div> */}
     </div>
   );
 }

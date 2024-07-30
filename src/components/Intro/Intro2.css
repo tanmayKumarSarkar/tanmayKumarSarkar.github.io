@@ -1,3 +1,7 @@
+.blackhole {
+    /* transform: translate(0, -50%); */
+}
+
 .intro2-cointainer {}
 
 .Welcome-text {
@@ -203,5 +207,6 @@
 .smallCard:active {
     border: 1px solid #ae00ff;
     transform: scale(1.05);
-    transition: .5s ease-in;
+    /*rotateY(180deg);*/
+    transition: .5s ease-in-out;
 }

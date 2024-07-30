@@ -1,6 +1,6 @@
 import React from "react";
 import ContentFragment from "./ContentFragment";
-import Intro from "./Intro/Intro2";
+import Intro from "./Intro/Intro3";
 
 const Contents = () => {
   return (

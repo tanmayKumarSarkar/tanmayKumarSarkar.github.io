@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Intro2.css";
+import "./TechIcons.css";
 import { motion } from "framer-motion";
 
 import SmallCard from "../Common/SmallCard";
@@ -60,7 +60,7 @@ const TechIcons = () => {
     // inner.style.left = clientX - 50 + "%";
   };
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full tecicons-container">
       {/* <img
         src="../assets/Intro2/mainIconsdark.svg"
         alt="work icons"

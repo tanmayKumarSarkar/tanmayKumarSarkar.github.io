@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import "./TechIcons.css";
 import { motion } from "framer-motion";
@@ -20,10 +20,11 @@ import { slideInFromRight } from "../../utils/motion";
 import { RiSvelteFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiMicrosoftazure } from "react-icons/si";
 
-const TechIcons = () => {
+const TechIcons = ({ classname = "" }) => {
+  const componentRef = useRef(null);
   const mouseOver = (e) => {
     // console.log(e);
-    let inner = document.querySelector(".squares-bg-highlight");
+    let inner = componentRef.current.querySelector(".squares-bg-highlight");
     let outer = inner?.parentElement;
     if (!inner || !outer) return;
     let clientX = 0,
@@ -60,7 +61,7 @@ const TechIcons = () => {
     // inner.style.left = clientX - 50 + "%";
   };
   return (
-    <div className="w-full h-full tecicons-container">
+    <div className="w-full h-full tecicons-container" ref={componentRef}>
       {/* <img
         src="../assets/Intro2/mainIconsdark.svg"
         alt="work icons"
@@ -70,10 +71,10 @@ const TechIcons = () => {
       <div className="squares-bg-container relative w-full h-full">
         <div
           className="squares-bg"
-          onMouseMoveCapture={(e) => mouseOver(e)}
+          onMouseMove={(e) => mouseOver(e)}
           onTouchMoveCapture={(e) => mouseOver(e)}
         >
-          <div className="squares-bg-highlight"></div>
+          <div className={`squares-bg-highlight`}></div>
           <div className="circle circle1"></div>
           <div className="circle circle2"></div>
           <div className="circle circle3"></div>

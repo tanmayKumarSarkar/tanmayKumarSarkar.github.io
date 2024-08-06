@@ -160,4 +160,8 @@
     transform: scale(1.05);
     /*rotateY(180deg);*/
     transition: .5s ease-in-out;
+    /* border: 1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d); */
 }

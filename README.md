@@ -9,9 +9,11 @@ Currently, two official plugins are available:
 
 ### Page Contents
 
-Photo,Brief
+Photo
 
-Overall Exp
+Brief ✓
+
+Overall Exp ✓
 
 Profession Exp
 

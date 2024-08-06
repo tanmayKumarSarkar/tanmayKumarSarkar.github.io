@@ -429,9 +429,17 @@ export const profileDetails = {
     github: "https://github.com/tanmayKumarSarkar",
     address: "Kolkata, West Bengal, India",
   },
-  profession: "Full Stack Developer",
-  about_me:
-    "Self-motivated Full-stack Developer experienced in frontend & backend technologies with 6.5+ years' experience of finding business solutions and team management skills, wants to work with your Company in a creative & challenging environment where I can put effort into researching, learning and creating high-quality products with my creative thinking and problem-solving skills.",
+  profession: "Fullstack Software Developer",
+  about_me_1: `
+                Self-motivated Full-Stack Developer from
+                 India with over 8 years of experience in frontend and backend
+                technologies. My passion for research, learning, and
+                problem-solving drives me to create high-quality products.
+              `,
+  about_me_2: `
+                I'm proficient in finding innovative business solutions and
+                leading teams effectively providing the best project exprience.
+              `,
   profile_summary: [
     "Having 6.5+ years of experience in Full- Stack Software Development, Architecture Design, IOT, DevOps & Web Development in the IT industry.",
     "Well acquainted with the Front- End technologies like ReactJS, React Native, Angular, JQuery.",

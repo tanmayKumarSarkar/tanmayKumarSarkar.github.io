@@ -25,6 +25,18 @@
   border: 0;
 }
 
+@property --d-gradient {
+  syntax: '<number>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes fadeIn {
+  50% {
+    --d-gradient: 1
+  }
+}
+
 
 /* @layer base {
   body {

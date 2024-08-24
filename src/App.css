@@ -32,3 +32,37 @@ body {
   font-weight: 600;
   font-style: normal;
 }
+
+#navbar-default-div {
+  transition: 1s ease-in-out;
+}
+
+.nav-glass-texture {
+  background: rgba(255, 255, 255, .3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  border: 1px solid #c547ffd3;
+  padding: 5px 0px;
+}
+
+.header-nav-item {
+  border: 2px solid #94949400;
+}
+
+.header-nav-item:hover {
+  background: rgba(255, 255, 255, 0.363);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid #ae00ff;
+}
+
+.nav-txt {
+  text-shadow:
+    1px 1px 2px black,
+    0 0 2em rgb(132, 0, 255),
+    0 0 0.3em blue;
+}

@@ -95,6 +95,35 @@
     }
 }
 
+@media only screen and (min-width : 1024px) and (orientation: landscape) {
+    .squares-bg {
+        width: 31.5vw;
+        height: 31.5vw;
+        background-size: 5.25vw 5.25vw;
+    }
+
+    .squares-bg-highlight {
+        width: 10.73vw;
+        height: 10.65vw;
+        background-size: 5.25vw 5.25vw;
+    }
+
+    .circle1 {
+        height: 10.5vw;
+        width: 10.5vw;
+    }
+
+    .circle2 {
+        height: 15.6vw;
+        width: 15.6vw;
+    }
+
+    .circle3 {
+        height: 26.1vw;
+        width: 26.1vw;
+    }
+}
+
 @keyframes ripples {
     20% {
         border: 1px solid #ffffff05;

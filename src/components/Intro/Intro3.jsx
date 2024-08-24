@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, lazy } from "react";
 
 import "./Intro3.css";
 import { motion } from "framer-motion";
@@ -6,10 +6,13 @@ import {
   slideInFromTop,
   slideInFromLeft,
   slideInFromRight,
+  slideInFromBottom,
 } from "../../utils/motion";
 import { profileDetails } from "../../utils";
 import { SparklesIcon } from "@heroicons/react/16/solid";
-import TechIcons from "./TechIcons";
+// import TechIcons from "./TechIcons";
+const TechIcons = lazy(() => import("./TechIcons.jsx"));
+const StarsField = lazy(() => import("./StarsField.jsx"));
 
 const Intro = () => {
   const componentRef = useRef(null);
@@ -28,7 +31,7 @@ const Intro = () => {
   }, []);
   return (
     <div
-      className="flex flex-col w-full h-full intro3-cointainer py-0 px-0 mx-0 relative overflow-hidden bg-[#040016]"
+      className="flex flex-col w-full h-full intro3-cointainer py-0 px-0 mx-0 relative overflow-hidden"
       ref={componentRef}
     >
       <video
@@ -38,6 +41,7 @@ const Intro = () => {
         loop
         src="../assets/Intro2/blackhole.webm"
       ></video>
+      <StarsField />
       <motion.div
         initial="hidden"
         animate="visible"
@@ -49,13 +53,15 @@ const Intro = () => {
               variants={slideInFromLeft(0.5)}
               className="relative flex-col font-bold text-white w-auto h-auto"
             >
-              <div className="text-left text-xl md:text-2xl">Hello, I'm</div>
+              <div className="text-left font-normal text-sm md:text-lg">
+                Hello, I'm
+              </div>
               <div className="text-2xl md:text-4xl uppercase">
                 {profileDetails.name}
               </div>
             </motion.div>
             <motion.div
-              variants={slideInFromTop}
+              variants={slideInFromTop(0.5)}
               className="Welcome-box py-[7px] px-[5px] border border-[#7042f88b] opacity-[0.9] w-full"
             >
               <SparklesIcon className="text-[#ffd92f] mr-[8px] h-5 w-5" />
@@ -69,9 +75,9 @@ const Intro = () => {
           <div className="intro flex flex-row h-full w-full">
             <motion.div
               variants={slideInFromLeft(0.5)}
-              className="flex flex-col text-white text-sm md:text-xl xl:text-2xl w-auto h-auto text-left md:px-10 justify-evenly"
+              className="flex flex-col text-white text-sm md:text-lg w-auto h-auto text-left md:px-10 justify-evenly"
             >
-              <span className="about_me_1">
+              <span className="about_me_1 font-bold text-xl md:text-xl text-center md:text-left">
                 {profileDetails.about_me_1}
                 {/* Self-motivated Full-Stack Developer from
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
@@ -87,7 +93,7 @@ const Intro = () => {
               >
                 <TechIcons />
               </motion.div>
-              <span className="about_me_2">
+              <span className="about_me_2  text-center md:text-left">
                 {profileDetails.about_me_2}
                 {/* I'm proficient in finding innovative business solutions and
                 leading teams effectively providing
@@ -96,6 +102,16 @@ const Intro = () => {
                 </span>
                 project exprience. */}
               </span>
+              <div className="w-full flex justify-center">
+                <motion.span
+                  variants={slideInFromBottom(0.5)}
+                  className="Welcome-box py-[5px] md:py-[3px] px-[10px] border border-[#efe9ff] opacity-[0.9] text-center cursor-pointer"
+                >
+                  <h1 className="Welcome-text text-[17px] text-white mr-[4px]">
+                    About Me
+                  </h1>
+                </motion.span>
+              </div>
             </motion.div>
           </div>
           <motion.div
@@ -106,6 +122,19 @@ const Intro = () => {
           </motion.div>
         </div>
       </motion.div>
+      <div className="custom-shape-divider-bottom-1724344525">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
     </div>
   );
 };

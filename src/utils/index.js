@@ -430,18 +430,20 @@ export const profileDetails = {
     address: "Kolkata, West Bengal, India",
   },
   profession: "Fullstack Software Developer",
-  about_me_1: `
-                Self-motivated Full-Stack Developer from
+  about_me_1: `Building Innovative, Robust and Scalable Digital Solutions`,
+  about_me_2: `Experienced Full-Stack Developer with a passion for solving complex challenges and leading projects from concept to functional, scalable, and innovative software providing the best seamless digital experiences`,
+  about_me_3: `
+                Self-motivated Full-Stack Developer & Tech Lead from
                  India with over 8 years of experience in frontend and backend
                 technologies. My passion for research, learning, and
                 problem-solving drives me to create high-quality products.
               `,
-  about_me_2: `
+  about_me_4: `
                 I'm proficient in finding innovative business solutions and
                 leading teams effectively providing the best project exprience.
               `,
   profile_summary: [
-    "Having 6.5+ years of experience in Full- Stack Software Development, Architecture Design, IOT, DevOps & Web Development in the IT industry.",
+    "Having 8+ years of experience in Full- Stack Software Development, Architecture Design, IOT, DevOps & Web Development in the IT industry.",
     "Well acquainted with the Front- End technologies like ReactJS, React Native, Angular, JQuery.",
     "Well versed with Technology/ Platform: Java/ J2EE, .Net web application development and MVC architecture, Dynamics 365 CRM& App Components.",
     "Also, expertise in other Server- Side technologies like Node JS, Express, Django, GraphQL and Restful Web Service.",
@@ -450,9 +452,22 @@ export const profileDetails = {
   ],
   experience: [
     {
+      company: "Wipro",
+      location: "Kolkata, India",
+      duration: "Aug 2023 - Present",
+      client: "UnitedHealth Group Inc",
+      role: "",
+      skills: "",
+      description: "",
+      responsibilities: [],
+      works: [
+        "D365 CRM application development with different Power App components for capturing user requests for different data to provide data export as CSV and BI reporting.",
+      ],
+    },
+    {
       company: "Tech Mahindra",
       location: "Kolkata, India",
-      duration: "Apr 2021 - Present",
+      duration: "Apr 2021 - Aug 2023",
       client: "",
       role: "",
       skills: "",

@@ -1,3 +1,8 @@
+.intro3-cointainer {
+    background: #040016;
+    /* background: radial-gradient(ellipse at bottom, #1b2735 -200%, #040016 100%); */
+}
+
 .blackhole {}
 
 .Welcome-text {
@@ -27,6 +32,12 @@
     transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
 }
 
+.Welcome-box:hover,
+.Welcome-box:active,
+.Welcome-box:focus {
+    box-shadow: inset 0 -7px 11px #bcacff6e;
+}
+
 .my-img {
     filter: drop-shadow(0 0 10px #000) drop-shadow(0 0 20px #000) drop-shadow(0 0 30px #000);
     /* background-image: url('../assets/Tanmay.png');
@@ -41,4 +52,28 @@
     height: 100%; */
     /* z-index: -2;
     opacity: 1; */
+}
+
+/* custom shape divider */
+
+
+.custom-shape-divider-bottom-1724344525 {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1724344525 svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 30px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1724344525 .shape-fill {
+    fill: #FFFFFF;
 }

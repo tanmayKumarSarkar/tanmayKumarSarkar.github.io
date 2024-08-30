@@ -19,10 +19,10 @@ const Overall = () => {
         </span>
         <div className="flex flex-col items-start">
           <span className="flex justify-center items-center py-0 px-2">
-            <FaLocationDot color="#a02dff" /> &nbsp; India
+            <FaLocationDot color="#6e18f0" /> &nbsp; India
           </span>
           <span className="flex justify-center items-center py-0 px-2">
-            <MdOutlineLanguage color="#a02dff" /> &nbsp; English & Hindi
+            <MdOutlineLanguage color="#6e18f0" /> &nbsp; English & Hindi
           </span>
         </div>
       </div>

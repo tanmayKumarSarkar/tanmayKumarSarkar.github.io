@@ -17,6 +17,19 @@ export default {
       backgroundPosition: {
         "bottom-center": "bottom center",
       },
+      screens: {
+        xxs: { max: "414px" },
+        "md-lg-portrait": {
+          min: "768px",
+          max: "1023px",
+          orientation: "portrait",
+        },
+        "md-lg-landscape": {
+          min: "768px",
+          max: "1023px",
+          orientation: "landscape",
+        },
+      },
     },
   },
   plugins: [],

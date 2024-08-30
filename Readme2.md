@@ -111,6 +111,8 @@ Cloud/ Lightning Transition
 
 Nav colors: bg, font, link-button, shadow
 
+#2 bouncing bubble, changing radient border, card hover effect, double curve, w<1024 && w>h
+
 ## Resources
 
 [Build and Deploy a Fully Responsive Website with Modern UI/UX in React JS with Tailwind](https://www.youtube.com/watch?v=B91wc5dCEBA) || [GitHub](https://github.com/adrianhajdin/brainwave)

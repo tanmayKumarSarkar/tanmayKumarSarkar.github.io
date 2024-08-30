@@ -4,14 +4,18 @@ import {
   AiOutlineCodeSandbox,
   AiOutlineFundProjectionScreen,
 } from "react-icons/ai";
-import { PiShootingStarBold } from "react-icons/pi";
+import { PiChatsDuotone, PiShootingStarBold } from "react-icons/pi";
 import { IoMdHappy } from "react-icons/io";
 import Overall from "./Overall";
+import { TbDeviceDesktopAnalytics } from "react-icons/tb";
+import { IoDesktopSharp } from "react-icons/io5";
+import { GiServerRack } from "react-icons/gi";
+import { ImDatabase } from "react-icons/im";
 const ProfileSummaryBG = lazy(() => import("./ProfileSummaryBG.jsx"));
 
 const ProfileSummary = () => {
   return (
-    <div className="w-full h-full profile-summary-bg">
+    <div className="w-full h-full profile-summary-bg relative">
       <ProfileSummaryBG />
       <div className="w-full h-full px-5 gap-3 md:gap-6 grid grid-cols-12 grid-rows-12 md:grid-rows-11 lg:grid-rows-12 ">
         <div className="rounded-xl col-span-12 lg:col-span-6 portrait:lg:max-xl:col-span-12 row-span-3 md:row-span-4 lg:row-span-5 portrait:lg:max-xl:row-span-3 bento-card">
@@ -60,8 +64,8 @@ const ProfileSummary = () => {
         <div className="rounded-xl md:col-span-6 md:row-span-1 hidden lg:block portrait:lg:max-xl:hidden"></div>
 
         <div className="rounded-xl col-span-6 row-span-3 md:row-span-3 lg:row-span-3 bento-card flex flex-col justify-start items-start p-2">
-          <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold">
-            Front-end Technologies
+          <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold flex justify-center items-center">
+            <IoDesktopSharp color="#6e18f0" /> &nbsp; Front-end Technologies
           </div>
           <div className="w-full rounded-xl col-span-12 row-span-6 p-2 text-xs md:text-sm text-left">
             Specialized In: Responsive UI Design.
@@ -72,8 +76,8 @@ const ProfileSummary = () => {
         </div>
 
         <div className="rounded-xl col-span-6 row-span-3 md:row-span-3 lg:row-span-3 bento-card flex flex-col justify-start items-start p-2">
-          <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold">
-            Back-end Technologies
+          <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold flex justify-center items-center">
+            <GiServerRack color="#6e18f0" /> &nbsp; Back-end Technologies
           </div>
           <div className="w-full rounded-xl col-span-12 row-span-6 p-2 text-xs md:text-sm text-left">
             Specialized In: Robust and secure RESTful API Web Services.
@@ -84,8 +88,8 @@ const ProfileSummary = () => {
         </div>
 
         <div className="rounded-xl col-span-6 row-span-2 md:row-span-3 bento-card flex flex-col justify-start items-start p-2">
-          <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold">
-            Databases
+          <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold flex justify-center items-center">
+            <ImDatabase color="#6e18f0" /> &nbsp; Databases
           </div>
           <div className="w-full rounded-xl col-span-12 row-span-6 p-2 text-xs md:text-sm text-left">
             Relational: MySQL, Oracle, PostgreSQL.
@@ -94,8 +98,8 @@ const ProfileSummary = () => {
           </div>
         </div>
         <div className="rounded-xl col-span-6 row-span-2 md:row-span-3 bento-card flex flex-col justify-start items-start p-2">
-          <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold">
-            Communication
+          <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold flex justify-center items-center">
+            <PiChatsDuotone color="#6e18f0" /> &nbsp; Communication
           </div>
           <div className="w-full rounded-xl col-span-12 row-span-6 p-2 text-xs md:text-sm text-left">
             Identifying specific requirements, managing client expectations,

@@ -459,8 +459,15 @@ export const profileDetails = {
         {
           Project: "UnitedHealth Group Inc",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "React JS, Svelte, Node JS, Handlebars JS, Java, Jenkins, Openlens",
+          "Tools/Technologies": [
+            "React JS",
+            "Svelte",
+            "Node JS",
+            "Handlebars JS",
+            "Java",
+            "Jenkins",
+            "Openlens",
+          ],
           Description:
             "Comprehensive Web Application for searching, comparing and shopping Medical Insurance Plans based on provided Zip Code and provided personal Information",
           Role: "Developer",
@@ -476,17 +483,18 @@ export const profileDetails = {
       company: "Tech Mahindra",
       location: "Kolkata, India",
       duration: "Apr 2021 - Aug 2023",
-      client: "Microsoft",
-      role: "",
-      skills: "",
-      description: "",
-      responsibilities: [],
       works: [
         {
           Project: "Microsoft Sustainability Info Hub",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "React JS, Dynamics 365 CRM, Microsoft Power Apps, Power Automate, Power BI, Azure",
+          "Tools/Technologies": [
+            "React JS",
+            "Dynamics 365 CRM",
+            "Microsoft Power Apps",
+            "Power Automate",
+            "Power BI",
+            "Azure",
+          ],
           Description:
             "Built and enhanced a D365 CRM application using Power Apps, aimed at capturing user requests and providing Sustainability data export capabilities in CSV format along with BI reporting.",
           Role: "Developer, Tech Lead",
@@ -495,8 +503,13 @@ export const profileDetails = {
         {
           Project: "Microsoft Teams's App Development",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "React JS, Node JS, Microsoft oAuth, SSO, Azure",
+          "Tools/Technologies": [
+            "React JS",
+            "Node JS",
+            "Microsoft oAuth",
+            "SSO",
+            "Azure",
+          ],
           Description:
             "Microsoft Teams App development using Node JS, React and Azure App Registration, Bot Services, Bot Framework on Meeting Extension, SSO, Adaptive Card etc.",
           Role: "Developer",
@@ -513,8 +526,17 @@ export const profileDetails = {
         {
           Project: "SMART-WELD IoT Solution",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "Angular 8, NodeJS, Typescript, HTML, CSS, Bootstrap 4, Power BI, PostgreSQL, Azure, Git-Actions, MQTT, Data Pipeline",
+          "Tools/Technologies": [
+            "Angular 8",
+            "NodeJS",
+            "Bootstrap 4",
+            "Power BI",
+            "PostgreSQL",
+            "Azure",
+            "Git-Actions",
+            "MQTT",
+            "Data Pipeline",
+          ],
           Description:
             "SmartWeld IoT Solution for Industrial Welding that involved sensor data collection through MQTT with Data Pipeline and real-time analytics.",
           Role: "Developer, Tech Lead",
@@ -530,8 +552,12 @@ export const profileDetails = {
         {
           Project: "YTY Gloves Manufacturer & AMDTF Data Analytics",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "Oracle, Java, Oracle Analytical Cloud, Data Pipeline",
+          "Tools/Technologies": [
+            "Oracle",
+            "Java",
+            "Oracle Analytical Cloud",
+            "Data Pipeline",
+          ],
           Description:
             "Implemented a data collection and analytics pipeline for a gloves manufacturing company, leveraging Oracle Analytical Cloud (OAC) for business insights.",
           Role: "Developer, Data Engineer, Tech Lead",
@@ -546,8 +572,17 @@ export const profileDetails = {
         {
           Project: "E-Trans - Driver Scorecard & Accident Prediction",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "React, NodeJS, Bootstrap, Python (Django), Socket, REST API, PostgreSQL, Power BI, Data Pipeline",
+          "Tools/Technologies": [
+            "React",
+            "NodeJS",
+            "Bootstrap",
+            "Python (Django)",
+            "Socket",
+            "REST API",
+            "PostgreSQL",
+            "Power BI",
+            "Data Pipeline",
+          ],
           Description:
             "Developed a predictive analytics system for transportation safety, using real-time vehicle data to score driver performance and predict accidents.",
           Role: "Developer, Data Engineer, Tech Lead",
@@ -562,8 +597,14 @@ export const profileDetails = {
         {
           Project: "PeekHire - Hiring Solutions",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "Angular 8, Typescript, jQuery, Web RTC, Bootstrap, Java Spring Boot, MongoDB",
+          "Tools/Technologies": [
+            "Angular 8",
+            "jQuery",
+            "Web RTC",
+            "Bootstrap",
+            "Java Spring Boot",
+            "MongoDB",
+          ],
           Description:
             "Interview Management System that can record and manage Audio/ Video/ Text in the absence of an interviewer with features for post-interview review & other features",
           Role: "Developer, Tech Lead",
@@ -579,8 +620,11 @@ export const profileDetails = {
           Project:
             "Oracle Industrial Data Model (OIDM) & NetSuite Implementation",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "Oracle Analytical Cloud (OAC), Oracle Industrial Data Model (OIDM), NetSuite",
+          "Tools/Technologies": [
+            "Oracle Analytical Cloud (OAC)",
+            "Oracle Industrial Data Model (OIDM)",
+            "NetSuite",
+          ],
           Description:
             "Worked on the development, migration, and implementation of Oracle Industrial Data Model and NetSuite for business data analytics.",
           Role: "Developer",
@@ -594,7 +638,12 @@ export const profileDetails = {
         {
           Project: "E-Trans - Real-Time Vehicle Tracking System",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies": "Raspberry Pi, HarperDB, Node.js, Angular 4",
+          "Tools/Technologies": [
+            "Raspberry Pi",
+            "HarperDB",
+            "Node.js",
+            "Angular 4",
+          ],
           Description:
             "Designed a system to track vehicles in real-time, identifying route deviations, idle times, and providing video feed recording.",
           Role: "Developer, Tech Lead",
@@ -607,8 +656,13 @@ export const profileDetails = {
         {
           Project: "AEROMEXICO - Real-Time Airlines Baggage Tracking",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "Kafka, Oracle NoSQL, Hive, Oracle DB, Oracle Analytical Cloud (OAC)",
+          "Tools/Technologies": [
+            "Kafka",
+            "Oracle NoSQL",
+            "Hive",
+            "Oracle DB",
+            "Oracle Analytical Cloud (OAC)",
+          ],
           Description:
             "Developed a baggage tracking system using RFID data to provide real-time analytics on baggage location and movement",
           Role: "Developer, Tech Lead",
@@ -621,7 +675,11 @@ export const profileDetails = {
         {
           Project: "CWP - Telecommunications Domain Analytics",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies": "ElasticSearch, Logstash, Kibana (ELK Stack)",
+          "Tools/Technologies": [
+            "ElasticSearch",
+            "Logstash",
+            "Kibana (ELK Stack)",
+          ],
           Description:
             "Implemented real-time and historical CDR data analytics & reporting dashboard for telecommunications, focusing on recharge, usage, churn, and profit analysis",
           Role: "Developer",
@@ -634,8 +692,17 @@ export const profileDetails = {
         {
           Project: "Smart Pump IoT Solutions",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "React, jQuery, Bootstrap, Spring Boot, React Native, MongoDB, Arduino, GSM module, Node JS",
+          "Tools/Technologies": [
+            "React",
+            "jQuery",
+            "Bootstrap",
+            "Spring Boot",
+            "React Native",
+            "MongoDB",
+            "Arduino",
+            "GSM module",
+            "Node JS",
+          ],
           Description:
             "Smart pump system with Mobile App that can deliver an adequate amount of water depending on weather and soil texture",
           Role: "Developer, Tech Lead",
@@ -650,8 +717,7 @@ export const profileDetails = {
         {
           Project: "Real-Time Robotics Dashboard",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "Elastic Stack (ElasticSearch, Logstash, Kibana)",
+          "Tools/Technologies": ["ElasticSearch", "Logstash", "Kibana"],
           Description:
             "Developed a system to collect real-time data from working robots and display it on customizable dashboards accessible via any device.",
           Role: "Developer",
@@ -673,40 +739,45 @@ export const profileDetails = {
         {
           Project: "Project Management Portal",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies":
-            "Microservices, MySQL, Hibernate, Spring Boot (Backend), Angular 4 (Frontend).",
+          "Tools/Technologies": [
+            "Microservices",
+            "MySQL",
+            "Hibernate",
+            "Spring Boot",
+            "Angular 4",
+          ],
           Description:
             "Developed a comprehensive project management portal using microservices architecture to streamline project tracking and management processes.",
           Role: "Developer",
           Responsibilities: [
             "Designed architecture",
             "Backend services development",
-            "User-friendly frontend interface",
+            "User-friendly UI",
           ],
         },
         {
           Project: "Banking System Enhancement and Maintenance",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies": "J2EE, MySQL, Java 8",
+          "Tools/Technologies": ["J2EE", "MySQL", "Java 8"],
           Description:
             "Enhanced and maintained critical banking systems, focusing on fixing broken settlements and improving transactional support for equity, bonds, and stocks.",
           Role: "Developer",
           Responsibilities: [
-            "Analyzed and resolved settlement issues in production",
+            "Analyzed and resolved settlement issues",
             "Implemented system enhancements",
-            "Ensuring seamless back-office support for institutional clients",
+            "Seamless back-office support for institutional clients",
           ],
         },
         {
           Project: "SharePoint Development and Automation Testing",
           Duration: "Aug 2023 - Present",
-          "Tools/Technologies": "SharePoint Designer, Selenium, Sikuli",
+          "Tools/Technologies": ["SharePoint Designer", "Selenium", "Sikuli"],
           Description:
             "Developed and designed workflows for content management on SharePoint, and conducted web and desktop application automation testing.",
           Role: "SharePoint Developer, Automation Tester",
           Responsibilities: [
             "Designed and developed SharePoint workflows",
-            "Automation testing using Selenium and Sikuli to ensure quality and reliability of web and desktop applications",
+            "Automation testing with Selenium and Sikuli for quality assurance of web and desktop applications",
           ],
         },
       ],

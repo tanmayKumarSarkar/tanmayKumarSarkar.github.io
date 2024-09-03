@@ -19,11 +19,11 @@ const Contents = () => {
       <ContentFragment className="w-full h-screen md:h-full lg-h-screen bg-white py-5">
         <ProfileSummary></ProfileSummary>
       </ContentFragment>
+      <ContentFragment className="w-full min-h-screen bg-black py-5">
+        <Projects />
+      </ContentFragment>
       <ContentFragment className="w-full min-h-screen bg-amber-600 py-5">
         <WorkExp />
-      </ContentFragment>
-      <ContentFragment className="w-full h-screen bg-green-600 py-5">
-        <Projects />
       </ContentFragment>
     </div>
   );

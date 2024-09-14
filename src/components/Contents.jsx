@@ -16,10 +16,10 @@ const Contents = () => {
       <ContentFragment className="w-full h-screen">
         <Intro></Intro>
       </ContentFragment>
-      <ContentFragment className="w-full h-screen md:h-full lg-h-screen bg-white py-5">
+      <ContentFragment className="w-full h-screen md:h-full lg-h-screen bg-white pt-5 pb-3 mb-4 md:mb-0">
         <ProfileSummary></ProfileSummary>
       </ContentFragment>
-      <ContentFragment className="w-full min-h-screen bg-black py-5">
+      <ContentFragment className="w-full min-h-screen bg-black pb-5">
         <Projects />
       </ContentFragment>
       <ContentFragment className="w-full min-h-screen bg-amber-600 py-5">

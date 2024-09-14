@@ -805,7 +805,7 @@ export const profileDetails = {
         "Back End Development",
         "Integrated CD/ CI pipeline",
       ],
-      title: "UnitedHealth Group - Medical Insurance Plans Web Application",
+      Title: "UnitedHealth Group - Medical Insurance Plans Web Application",
       Description_2:
         "Developed a web application to search, compare, and shop for medical insurance plans, improving user engagement and customer experience.",
       Revenue: "Contributed to a 10% increase in customer acquisition.",
@@ -820,6 +820,12 @@ export const profileDetails = {
         "The previous platform was slow and inefficient, resulting in high drop-off rates.",
       Solution:
         "Built a fast, user-friendly platform that streamlined the comparison and purchase process, improving overall customer satisfaction.",
+      Screens: [
+        "UHG Home.png",
+        "UHG Summary.png",
+        "UHG Details.png",
+        "UHG Compare.png",
+      ],
     },
     {
       id: 2,
@@ -837,7 +843,7 @@ export const profileDetails = {
         "Built and enhanced a D365 CRM application using Power Apps, aimed at capturing user requests and providing Sustainability data export capabilities in CSV format along with BI reporting.",
       Role: "Developer, Tech Lead",
       Responsibilities: ["Front End Development", "Back End Development"],
-      title: "D365 CRM Application Development",
+      Title: "D365 CRM Application Development",
       Description_2:
         "Developed a Dynamics 365 CRM application for capturing and exporting user requests, enhancing business intelligence reporting.",
       Revenue:
@@ -852,6 +858,7 @@ export const profileDetails = {
         "Legacy CRM systems were slow and inefficient, affecting decision-making.",
       Solution:
         "Created a streamlined system that improved data handling and reporting, leading to faster decision-making.",
+      Screens: ["InfoHub-1.png"],
     },
     {
       id: 3,
@@ -868,7 +875,7 @@ export const profileDetails = {
         "Microsoft Teams App development using Node JS, React and Azure App Registration, Bot Services, Bot Framework on Meeting Extension, SSO, Adaptive Card etc.",
       Role: "Developer",
       Responsibilities: ["Front End Development", "Back End Development"],
-      title: "Microsoft Teams App Development",
+      Title: "Microsoft Teams App Development",
       Description_2:
         "Developed Microsoft Teams apps with Node.js and React, integrating features like meeting extensions and SSO.",
       Revenue: "Increased internal team productivity by 15%.",
@@ -883,6 +890,25 @@ export const profileDetails = {
         "Manual processes during meetings were inefficient, causing delays.",
       Solution:
         "Automated routine meeting tasks, improving team efficiency and reducing time spent on manual operations.",
+      Github_URL: [
+        {
+          Name: "App Localization",
+          url: "https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs",
+        },
+        {
+          Name: "App Auth",
+          url: "https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs",
+        },
+        {
+          Name: "Bot Adaptive Card Actions",
+          url: "https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/nodejs",
+        },
+        {
+          Name: "Meetings Token App",
+          url: "https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs",
+        },
+      ],
+      Screens: ["appLocalizationModule.gif"],
     },
     {
       id: 4,
@@ -910,7 +936,7 @@ export const profileDetails = {
         "Real-time data visualization",
         "CD/ CI, Azure",
       ],
-      title: "SmartWeld IoT Solution for Industrial Welding",
+      Title: "SmartWeld IoT Solution for Industrial Welding",
       Description_2:
         "Developed a solution for collecting sensor data and performing real-time analytics on welding operations.",
       Revenue:
@@ -951,7 +977,7 @@ export const profileDetails = {
         "BI Analytics",
         "Dashboards to monitor alerts & KPIs",
       ],
-      title: "Driver Scorecard & Accident Prediction System",
+      Title: "Driver Scorecard & Accident Prediction System",
       Description_2:
         "Created a real-time system to predict accidents and score driver behavior using vehicle data.",
       Revenue:
@@ -989,7 +1015,7 @@ export const profileDetails = {
         "CD/ CI",
         "AWS",
       ],
-      title: "Interview Management System",
+      Title: "Interview Management System",
       Description_2:
         "Developed an Interview Management System that records audio, video, and text in the absence of an interviewer, allowing for detailed reviews and feedback at a later time.",
       Revenue:
@@ -1025,7 +1051,7 @@ export const profileDetails = {
         "Backend development",
         "UI for real-time monitoring",
       ],
-      title: "Real-Time Vehicle Location Tracking System",
+      Title: "Real-Time Vehicle Location Tracking System",
       Description_2:
         "Designed a system to track vehicle locations in real-time, including route deviation detection, vehicle idle time monitoring, and streaming video feed using Raspberry Pi and HarperDB.",
       Revenue:
@@ -1068,7 +1094,7 @@ export const profileDetails = {
         "Mobile App Development",
         "Hardware Assembly, Firmware Development",
       ],
-      title: "Smart Pump System with Mobile App",
+      Title: "Smart Pump System with Mobile App",
       Description_2:
         "Created an IoT-based smart pump system that delivers the right amount of water based on weather and soil data.",
       Revenue:
@@ -1101,7 +1127,7 @@ export const profileDetails = {
         "Managed data migrations",
         "Analytics/ reporting",
       ],
-      title: "Oracle Industrial Data Model (OIDM) Implementation",
+      Title: "Oracle Industrial Data Model (OIDM) Implementation",
       Description_2:
         "Developed and migrated data systems using Oracle Analytical Cloud and OIDM for improved business analytics.",
       Revenue: "Improved data management efficiency by 20%.",
@@ -1135,7 +1161,7 @@ export const profileDetails = {
         "ETL Data Pipeline",
         "Analytical dashboard reporting",
       ],
-      title: "Real-Time Airlines Baggage Tracking System",
+      Title: "Real-Time Airlines Baggage Tracking System",
       Description_2:
         "Developed a baggage tracking system using RFID data, allowing real-time tracking and analytics.",
       Revenue:
@@ -1170,7 +1196,7 @@ export const profileDetails = {
         "Backend services development",
         "User-friendly UI",
       ],
-      title: "Project Management Portal",
+      Title: "Project Management Portal",
       Description_2:
         "Developed a portal using microservices to manage and track project tasks and milestones.",
       Revenue:
@@ -1206,7 +1232,7 @@ export const profileDetails = {
         "BI Analytics",
         "Dashboards to track manufacturing KPIs",
       ],
-      title:
+      Title:
         "Data Collection, Pipeline, BI Analytics for YTY Gloves Manufacturer & AMDTF",
       Description_2:
         "Developed a robust data pipeline for YTY Gloves Manufacturer & AMDTF using Oracle Analytical Cloud (OAC), enabling real-time business analytics and decision-making based on comprehensive data insights.",
@@ -1234,7 +1260,7 @@ export const profileDetails = {
         "Implemented real-time and historical CDR data analytics & reporting dashboard for telecommunications, focusing on recharge, usage, churn, and profit analysis",
       Role: "Developer",
       Responsibilities: ["Data Mapping", "ETL Data Pipeline", "BI Analytics"],
-      title: "Real-Time & Historical Analytics in Telecommunications",
+      Title: "Real-Time & Historical Analytics in Telecommunications",
       Description_2:
         "Developed a system for real-time and historical data analytics in the telecommunications domain, focusing on recharge, usage, churn, and profit analysis, using the ELK Stack.",
       Revenue:
@@ -1266,7 +1292,7 @@ export const profileDetails = {
         "BI Analytics",
         "Real-time dashboard",
       ],
-      title: "Real-Time Robotics Dashboard",
+      Title: "Real-Time Robotics Dashboard",
       Description_2:
         "Developed a real-time system for collecting data from robots, displaying it on custom dashboards accessible from any device via the web, using Elastic Stack.",
       Revenue:

@@ -1,6 +1,23 @@
 .project-card {
     border: 1px solid white;
     border-radius: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     /* min-width: calc(50% - 32px); */
+}
+
+.project-card-img {
+    min-height: 200px;
+    max-height: 200px;
+    flex-basis: 40%;
+    height: 100%;
+}
+
+.project-card-img>img {
+    border-radius: 10px;
+    transition: transform .2s;
+}
+
+.project-card-img>img:hover {
+    transform: scale(1.5);
+    box-shadow: 5px 5px 5px black;
 }

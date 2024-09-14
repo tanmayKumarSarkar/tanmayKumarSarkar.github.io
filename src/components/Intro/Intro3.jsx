@@ -56,7 +56,7 @@ const Intro = () => {
               <div className="text-left font-normal text-sm md:text-lg">
                 Hello, I'm
               </div>
-              <div className="text-2xl md:text-4xl uppercase">
+              <div className="text-2xl md:text-3xl uppercase">
                 {profileDetails.name}
               </div>
             </motion.div>

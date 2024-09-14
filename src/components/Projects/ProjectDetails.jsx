@@ -1,8 +1,8 @@
 import React from "react";
 
-function ProjectItem({ exp, index: i }) {
+const ProjectDetails = ({ exp, index: i }) => {
   return (
-    <div className="w-[calc(100%-32px)] md:w-[calc(50%-32px)] text-sm font-medium text-white project-card">
+    <div>
       <div>{exp.Project}</div>
       <div>{exp.Description}</div>
       <div>{exp.Role}</div>
@@ -19,6 +19,6 @@ function ProjectItem({ exp, index: i }) {
       <div>{exp.Solution}</div>
     </div>
   );
-}
+};
 
-export default ProjectItem;
+export default ProjectDetails;

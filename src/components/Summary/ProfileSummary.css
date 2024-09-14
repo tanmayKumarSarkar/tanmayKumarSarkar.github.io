@@ -5,7 +5,7 @@
     align-items: center;
     /* border: 1px solid rgb(176, 50, 255); */
     padding: 20px 10px;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.35);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     /* , inset 1px 1px 5px rgba(0, 0, 139, 0.23); */
@@ -42,7 +42,7 @@
 }
 
 .purple-grad-font {
-    background: linear-gradient(rgb(128, 128, 128), rgb(0, 0, 0));
+    background: linear-gradient(rgb(148, 148, 148), rgb(0, 0, 0));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

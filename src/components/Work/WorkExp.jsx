@@ -13,9 +13,9 @@ function WorkExp() {
       <section className="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden antialiased">
         <div className="w-full mx-auto px-0 py-0">
           <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
-            <div className="w-full max-w-4xl mx-auto">
+            <div className="w-full max-w-5xl mx-auto">
               {/* Vertical Timeline #3 */}
-              <div className="space-y-0 relative before:absolute before:inset-0 before:ml-8 before:-translate-x-px md:before:ml-[10.16rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+              <div className="space-y-0 relative before:absolute before:inset-0 before:ml-8 before:-translate-x-px md:before:ml-[10.16rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-400 before:to-transparent">
                 {/* Item #1 */}
                 {profileDetails?.experience?.map((exp, i) => (
                   <ExperienceDetails key={`exp-${i}`} exp={exp} index={i} />

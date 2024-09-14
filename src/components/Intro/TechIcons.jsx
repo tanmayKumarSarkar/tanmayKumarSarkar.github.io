@@ -89,7 +89,7 @@ const TechIcons = ({ classname = "" }) => {
             <SmallCard Sclass="smallCard top-[19%] left-[23%]">
               <FaAws style={{ color: "#ffffff" }} />
             </SmallCard>
-            <SmallCard Sclass="smallCard top-[44%] left-[44%]">
+            <SmallCard Sclass="smallCard top-[44.5%] left-[44.5%] md:top-[43.5%] md:left-[43.5%]">
               <FaNodeJs style={{ color: "#ffffff" }} />
             </SmallCard>
             <SmallCard Sclass="smallCard top-[78.5%] left-[44%]">

@@ -1,14 +1,14 @@
-import React, { Suspense } from "react";
-
-// const Spline = React.lazy(() => import("@splinetool/react-spline"));
+import React, { Suspense, lazy } from "react";
+import "./Projects.css";
+import { profileDetails } from "../../utils";
+const ProjectItem = lazy(() => import("./ProjectItem.jsx"));
 
 const Projects = () => {
   return (
-    <div>
-      Projects
-      {/* <Suspense fallback={<div>Loading...</div>}>
-        <Spline scene="https://prod.spline.design/bnr0cDdhK3AkvI8n/scene.splinecode" />
-      </Suspense> */}
+    <div className="w-full h-full flex flex-row flex-wrap justify-evenly">
+      {profileDetails?.projects?.map((exp, i) => (
+        <ProjectItem key={`exp-${i}`} exp={exp} index={i} />
+      ))}
     </div>
   );
 };

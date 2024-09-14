@@ -1,0 +1,6 @@
+.project-card {
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    /* min-width: calc(50% - 32px); */
+}

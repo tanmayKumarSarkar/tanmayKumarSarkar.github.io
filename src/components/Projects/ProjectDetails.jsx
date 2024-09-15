@@ -1,8 +1,14 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import { profileDetails } from "../../utils";
 
-const ProjectDetails = ({ exp, index: i }) => {
+const ProjectDetails = (props) => {
+  console.log(props);
+  const { projectid } = useParams();
+  const exp = profileDetails.projects.find((p) => p.id == projectid);
   return (
-    <div>
+    <div className="project-details-container min-h-[calc(100vh-49px)]">
+      <div className="h-14 bg-[#040016]"></div>
       <div>{exp.Project}</div>
       <div>{exp.Description}</div>
       <div>{exp.Role}</div>

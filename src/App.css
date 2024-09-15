@@ -34,11 +34,11 @@ body {
 }
 
 #navbar-default-div {
-  transition: 1s ease-in-out;
+  transition: 2s ease-in-out;
 }
 
 .nav-glass-texture {
-  background: rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, .8);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.7px);
@@ -48,16 +48,83 @@ body {
 }
 
 .header-nav-item {
-  border: 2px solid #94949400;
+  /* border: 2px solid #94949400; */
+  /* transition: transform .2s; */
+  position: relative;
+  /* padding: 1.3rem; */
+  /* clip-path: border-box; */
 }
 
 .header-nav-item:hover {
-  background: rgba(255, 255, 255, 0.363);
+  background: rgba(255, 255, 255, 0.226);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 2px solid #ae00ff;
+  /* border: 2px solid #ae00ff; */
+}
+
+.header-nav-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  /* background: conic-gradient(from var(--angle), rgba(238, 238, 241, 0.9) 58%, transparent 0); */
+  background: conic-gradient(from var(--angle), rgba(0, 0, 0, 0) 90%, rgb(255, 255, 255)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  /* transition: transform 2s; */
+  animation: 5s border-rotation linear infinite;
+}
+
+@media only screen and (max-width : 767px) {
+  .header-nav-item {
+    /* border-bottom: 1px solid black; */
+    margin-bottom: 12px;
+  }
+
+  .header-nav-item::before {
+    border: none;
+    border-bottom: 1px solid transparent;
+    background: linear-gradient(rgba(0, 0, 0, 1) 90%, rgb(255, 255, 255));
+    animation: none;
+  }
+}
+
+.header-nav-item:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  border: 1.5px solid transparent;
+  background: conic-gradient(from var(--angle), rgb(248, 0, 248), rgb(0, 255, 242)) border-box;
+  /* background: conic-gradient(red, orange, yellow, green, blue); */
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  transition: transform 2s;
+  animation: 2s border-rotation ease-in infinite;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  /* this can be angle or percentage */
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotation {
+  to {
+    --angle: -360deg;
+  }
 }
 
 .nav-txt {
@@ -65,4 +132,60 @@ body {
     1px 1px 2px black,
     0 0 2em rgb(132, 0, 255),
     0 0 0.3em blue;
+}
+
+.liner-gradient-border {
+  border-radius: 10px;
+  transition: transform .2s;
+  display: flow-root;
+  position: relative;
+  padding: 1.3rem;
+}
+
+.liner-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: linear-gradient(45deg, rgb(248, 0, 248), rgb(0, 255, 242)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  transition: transform 2s;
+}
+
+.conic-gradient-border {
+  border-radius: 10px;
+  transition: transform .2s;
+  /* display: flow-root; */
+  position: relative;
+  padding: 1.3rem;
+}
+
+.conic-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: conic-gradient(rgb(248, 0, 248), rgb(0, 255, 242)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  transition: transform 2s;
+}
+
+.blue-scroll-cursor {
+  cursor: url('/public/assets/cursors/scroll-64-blue-filled.png') 16 24, auto;
+}
+
+.black-scroll-cursor {
+  cursor: url('/public/assets/cursors/scroll-64-black-filled.png') 16 24, auto;
 }

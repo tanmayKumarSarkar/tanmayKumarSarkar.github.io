@@ -27,7 +27,7 @@ const ProfileSummary = () => {
             <span className="text-4xl purple-grad-font font-medium">15</span>
             <span className="text-4xl purple-grad-icons font-semibold">+</span>
           </span>
-          <span className="w-full bento-card-footer">
+          <span className="w-full bento-card-footer liner-gradient-border">
             <AiOutlineFundProjectionScreen /> Projects
           </span>
         </div>
@@ -37,7 +37,7 @@ const ProfileSummary = () => {
             <span className="text-4xl purple-grad-font font-medium">10</span>
             <span className="text-4xl purple-grad-icons font-semibold">+</span>
           </span>
-          <span className="w-full bento-card-footer">
+          <span className="w-full bento-card-footer liner-gradient-border">
             <IoMdHappy /> Satisfied Clients
           </span>
         </div>
@@ -47,7 +47,7 @@ const ProfileSummary = () => {
             <span className="text-4xl purple-grad-font font-medium">8</span>
             <span className="text-4xl purple-grad-icons font-semibold">+</span>
           </span>
-          <span className="w-full bento-card-footer">
+          <span className="w-full bento-card-footer liner-gradient-border">
             <PiShootingStarBold /> Years Experience
           </span>
         </div>
@@ -56,7 +56,7 @@ const ProfileSummary = () => {
             <span className="text-4xl purple-grad-font font-medium">20</span>
             <span className="text-4xl purple-grad-icons font-semibold">+</span>
           </span>
-          <span className="w-full bento-card-footer">
+          <span className="w-full bento-card-footer liner-gradient-border">
             <AiOutlineCodeSandbox /> Core Technologies
           </span>
         </div>

@@ -1,7 +1,10 @@
 import React from "react";
 import { navRoutes, zIndex } from "../utils";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const toggleMobileMenu = () => {
     let breadcrumbsMenu = document.getElementById("nav-breadcrumbs-menu");
     let isBreadCrumbsAriaExpanded =
@@ -62,22 +65,29 @@ const Header = () => {
           </svg>
         </button>
         <div
-          className="hidden w-full md:flex md:w-auto md:justify-end"
+          className="hidden w-full md:flex md:w-auto md:justify-end -ml-4 md:ml-0"
           id="navbar-default-div"
         >
           {/* <ul className="font-medium flex flex-col md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"> */}
-          <ul className="font-medium flex flex-row md:flex-row rounded-lg justify-center md:justify-end flex-wrap header-nav-menu">
+          <ul className="font-medium flex flex-col md:flex-row rounded-lg justify-center md:justify-end flex-wrap header-nav-menu w-[107%] md:w-full">
             {navRoutes.map((nav) => (
               <li key={nav.id}>
                 <a
-                  href={nav.path}
-                  className="flex px-2 mx-[2px] mb-1 md:px-2 md:py-1 text-white nav-txt header-nav-item"
+                  // href={nav.path}
+                  onClick={() => {
+                    navigate(nav.path);
+                    toggleMobileMenu();
+                  }}
+                  className="flex px-2 mx-2 md:mx-0 lg:mx-2 mb-1 md:px-2 md:py-1 text-white nav-txt header-nav-item cursor-pointer"
                   //                   "bg-transparent md:hover:bg-blue-700 rounded md:rounded-full  shadow-sm hover:
                   // hover:shadow-white"
                   //   aria-current="page"
                 >
                   {nav.title}
                 </a>
+                {/* <Link to={nav.path}>
+                  <div className="btn">{nav.title}</div>
+                </Link> */}
               </li>
             ))}
           </ul>

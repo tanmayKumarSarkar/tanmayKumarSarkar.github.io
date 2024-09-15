@@ -6,6 +6,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
+    if (window.innerWidth > 767) return;
     let breadcrumbsMenu = document.getElementById("nav-breadcrumbs-menu");
     let isBreadCrumbsAriaExpanded =
       breadcrumbsMenu.getAttribute("aria-expanded") === "true" ? false : true;

@@ -1494,3 +1494,13 @@ export const getRandomIntV2 = (min1, max1, min2, max2) => {
     ? getRandomInt(min1, max1)
     : getRandomInt(min2, max2);
 };
+
+export const isMobile = () => {
+  // if we want a more complete list use this: http://detectmobilebrowsers.com/
+  // str.test() is more efficent than str.match()
+  // remember str.test is case sensitive
+  var isMobile = /iphone|ipod|android|ie|blackberry|fennec/.test(
+    navigator.userAgent.toLowerCase()
+  );
+  return isMobile;
+};

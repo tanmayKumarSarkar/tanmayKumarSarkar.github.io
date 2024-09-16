@@ -74,7 +74,7 @@ const Header = () => {
             {navRoutes.map((nav) => (
               <li key={nav.id}>
                 <a
-                  // href={nav.path}
+                  href={nav.path}
                   onClick={() => {
                     navigate(nav.path);
                     toggleMobileMenu();

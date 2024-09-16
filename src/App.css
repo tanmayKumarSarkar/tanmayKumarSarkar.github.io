@@ -312,3 +312,14 @@ body {
     left: calc(100% - 22px)
   }
 }
+
+.menu-wrapper{
+  position: relative;
+}
+
+.menu-wrapper>a{
+  color: white;
+  /* position: fixed; */
+  mix-blend-mode: difference;
+  /* font-size: 2em; */
+}

@@ -13,28 +13,28 @@ const WorkExp = lazy(() => import("./Work/WorkExp.jsx"));
 const Contents = () => {
   return (
     <div className="w-full z-[1]">
-      <ContentFragment className="w-full h-screen">
+      <ContentFragment id="intro-section" className="w-full h-screen">
         <Intro></Intro>
       </ContentFragment>
-      <ContentFragment className="w-full h-screen md:h-full lg-h-screen bg-[#ffffff10] pt-5 pb-3 mb-16">
+      <ContentFragment id="profile-summary-section" className="w-full h-screen md:h-full lg-h-screen bg-[#ffffff10] pt-5 pb-3 mb-16">
         <ProfileSummary></ProfileSummary>
       </ContentFragment>
-      <ContentFragment className="w-full min-h-screen bg-black pb-5">
+      <ContentFragment id="projects-section" className="w-full min-h-screen bg-black pb-5">
         <Projects />
       </ContentFragment>
-      <ContentFragment className="w-full min-h-screen bg-amber-600 py-5">
+      <ContentFragment id="work-experience-section" className="w-full min-h-screen bg-amber-600 py-5">
         <WorkExp />
       </ContentFragment>
-      <ContentFragment className="w-full min-h-screen bg-white py-5">
-        About Me
-      </ContentFragment>
-      <ContentFragment className="w-full min-h-screen bg-white py-5">
+      <ContentFragment id="skills-section" className="w-full min-h-screen bg-white py-5">
         Skills
       </ContentFragment>
-      <ContentFragment className="w-full min-h-screen bg-white py-5">
+      <ContentFragment id="technology-section" className="w-full min-h-screen bg-white py-5">
+        Technology
+      </ContentFragment>
+      <ContentFragment id="contact-section" className="w-full min-h-screen bg-white py-5">
         Contact
       </ContentFragment>
-      <ContentFragment className="w-full min-h-screen bg-white py-5">
+      <ContentFragment id="footer-content-section" className="w-full min-h-screen bg-white py-5">
         Footer Content
       </ContentFragment>
     </div>

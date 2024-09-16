@@ -10,42 +10,49 @@ export const navRoutes = [
     title: "Home",
     path: "/#",
     side: "left",
+    icon: "IoHome"
   },
   {
     id: 1,
     title: "Summary",
     path: "/#profile-summary-section",
     side: "right",
+    icon: "IoPieChart"
   },
   {
     id: 2,
     title: "Projects",
     path: "/#projects-section",
     side: "right",
+    icon: "IoRocket"
   },
   {
     id: 3,
     title: "Experiences",
     path: "/#work-experience-section",
     side: "right",
+    icon: "IoBriefcaseSharp"
   },
   {
     id: 4,
     title: "Skills",
     path: "/#skills-section",
     side: "right",
+    icon: "IoSnowSharp"
   },
   {
     id: 5,
     title: "Technology",
     path: "/#technology-section",
     side: "right",
+    icon:"IoHardwareChip"
   },
   {
     id: 6,
     title: "Contact",
     path: "/#contact-section",
     side: "right",
+    icon: "IoMail"
   },
 ];
 

@@ -18,6 +18,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.PERSON_ACCESS_TOKEN_GP }}
+        publish_dir: ./build
     - run: npm run deploy --if-present
     
   # test:

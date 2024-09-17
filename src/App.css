@@ -335,32 +335,72 @@ body {
 
 .menu-span-item{
   position: relative;
-  mix-blend-mode: difference
+  /* mix-blend-mode: screen; */
+  /* mix-blend-mode: difference; */
+  background-color: white;
 }
 
 .menu-span-item::before {
-  content: '';
+  /* content: ''; */
   position: absolute;
   top: 0;
   left: -100%;
   width: 200%;
   height: 100%;
-  mix-blend-mode: screen;
-  /* background-color: white; */
-  border-radius: 50%;
-  mix-blend-mode: difference
+  /* mix-blend-mode: screen; */
+  /* background-color: black; */
+  /* border-radius: 50%; */
+  /* mix-blend-mode: difference */
 }
 
 .menu-span-item>span{
-  /* color: white; */
+  /* position: relative; */
+  color: white;
   mix-blend-mode: difference;
   /* mix-blend-mode: screen; */
   /* font-size: 1.5em; */
   /* background-blend-mode: screen; */
+  /* background-color: white; */
+
+
 }
-.menu-span-item>span::after{
+/* .menu-span-item>span::before{
+  color: black;
+  mix-blend-mode: difference;
+  font-size: 1.5em;
+} */
+
+/* .menu-span-item>span>svg{
+  color: black;
+  mix-blend-mode: difference;
+} */
+
+.sidebar-container{
+  background: #ffffff00;
+  mix-blend-mode: difference;
+}
+
+.menu-bar{
+  /* background-color: red;
+  mix-blend-mode: difference; */
+}
+
+.menu-bar>span{
   color: white;
   mix-blend-mode: difference;
-  /* font-size: 1.5em; */
+}
+
+@media only screen and (max-width : 767px) {
+
+  .sidebar-container .header-nav-item::before {
+    border: 1px solid transparent;
+    background: conic-gradient(from var(--angle), rgba(0, 0, 0, 0) 90%, rgb(255, 255, 255)) border-box;
+    animation: 5s border-rotation linear infinite;
+  }
+  .sidebar-container .header-nav-item:hover:before{
+    border: 1.5px solid transparent;
+    background: conic-gradient(from var(--angle), rgb(248, 0, 248), rgb(0, 255, 242)) border-box;
+    animation: 2s border-rotation ease-in infinite;
+  }
 }
 

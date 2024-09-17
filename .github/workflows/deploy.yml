@@ -1,7 +1,8 @@
 name: Deployment Master
-on: push
-  branches:
-    - master
+on:
+  push:
+    branches:
+      - master
 jobs:
   test:
     runs-on: ubuntu-latest

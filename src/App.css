@@ -378,6 +378,7 @@ body {
 .sidebar-container{
   background: #ffffff00;
   mix-blend-mode: difference;
+  display: contents;
 }
 
 .menu-bar{

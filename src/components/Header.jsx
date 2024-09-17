@@ -79,7 +79,7 @@ const Header = () => {
                     navigate(nav.path);
                     toggleMobileMenu();
                   }}
-                  className="flex px-2 mx-2 md:mx-0 lg:mx-2 mb-1 md:px-2 md:py-1 text-white nav-txt header-nav-item cursor-pointer"
+                  className="flex px-3 md:px-2 mx-2 md:mx-0 lg:mx-2 mb-2 md:mb-1 md:px-2 py-1 md:py-1 text-white nav-txt header-nav-item cursor-pointer"
                   //                   "bg-transparent md:hover:bg-blue-700 rounded md:rounded-full  shadow-sm hover:
                   // hover:shadow-white"
                   //   aria-current="page"

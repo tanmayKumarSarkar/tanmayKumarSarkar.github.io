@@ -7,7 +7,7 @@ const ProjectDetails = (props) => {
   const { projectid } = useParams();
   const exp = profileDetails.projects.find((p) => p.id == projectid);
   return (
-    <div className="project-details-container min-h-[calc(100vh-49px)]">
+    <div className="project-details-container min-h-[calc(100vh-49px)] bg-white">
       <div className="h-14 bg-[#040016]"></div>
       <div>{exp.Project}</div>
       <div>{exp.Description}</div>

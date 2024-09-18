@@ -7,7 +7,7 @@ function ProjectItem({ exp, index: i }) {
       <div className="my-6 mx-4 project-card-img flex justify-center items-center">
         <img
           // src={`public/assets/UnitedHealth Group Inc/UHG Home.png`}
-          src={`public/assets/Projects/${exp.Project}/${
+          src={`/assets/Projects/${exp.Project}/${
             exp.Screens ? exp.Screens[0] : ""
           }`}
           alt=""

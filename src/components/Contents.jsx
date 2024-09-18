@@ -12,7 +12,7 @@ const WorkExp = lazy(() => import("./Work/WorkExp.jsx"));
 
 const Contents = () => {
   return (
-    <div className="w-full z-[1]">
+    <div className="w-full z-[1] bg-white">
       <ContentFragment id="intro-section" className="w-full h-screen">
         <Intro></Intro>
       </ContentFragment>

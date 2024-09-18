@@ -9,6 +9,7 @@ const ProjectDetails = (props) => {
   return (
     <div className="project-details-container min-h-[calc(100vh-49px)] bg-white">
       <div className="h-14 bg-[#040016]"></div>
+      Project details
       <div>{exp.Project}</div>
       <div>{exp.Description}</div>
       <div>{exp.Role}</div>

@@ -1,0 +1,48 @@
+name: Deployment Master
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install
+    - run: npm run build
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.PERSON_ACCESS_TOKEN_GP }}
+        publish_dir: ./build
+    # - run: npm run deploy --if-present
+    
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #      - uses: actions/checkout@v2
+  #      - uses: Adzz/jest_test_action@v1.0.0
+  #        with:
+  #         package-manager: npm
+  #         command: test:ci
+          
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/master'
+  #   steps:
+  #       - uses: actions/checkout@v2
+  #       - uses: Adzz/jest_test_action@v1.0.0
+  #         with:
+  #         package-manager: npm
+  #         command: test:ci
+  #     - name: Deploy app
+  #       run: npm run deploy

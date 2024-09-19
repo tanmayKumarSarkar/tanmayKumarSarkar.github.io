@@ -1,7 +1,9 @@
-import React, { lazy } from "react";
+import React, { lazy, useContext, useEffect } from "react";
 // import ContentFragment from "./ContentFragment";
 // import Intro from "./Intro/Intro3";
 import ProfileSummary from "./Summary/ProfileSummary";
+import { HeaderContext, useHeaderMenuCtx } from "../utils/Context.jsx";
+import { useLocation, useNavigate } from "react-router-dom";
 // import Projects from "./Projects/Projects";
 
 const ContentFragment = lazy(() => import("./ContentFragment.jsx"));
@@ -11,8 +13,24 @@ const Projects = lazy(() => import("./Projects/Projects.jsx"));
 const WorkExp = lazy(() => import("./Work/WorkExp.jsx"));
 
 const Contents = () => {
+
+  // const {showHeader, setShowHeader} = useContext(HeaderContext);
+  const [headerMenu, setHeaderMenu] = useHeaderMenuCtx();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+  useEffect(()=>{
+    // setShowHeader(true);
+    setHeaderMenu(true);
+    if(location.hash){
+      // console.log(`1:: ${location.pathname}${location.hash}`, document.querySelector(`a[href="${location.pathname}${location.hash}"]`))
+      document.querySelector(`a[href="${location.pathname}${location.hash}"]`).click();
+    }
+  },[])
+
   return (
-    <div className="w-full z-[1] bg-white">
+    <div className="w-full z-[1] bg-white contents-container">
       <ContentFragment id="intro-section" className="w-full h-screen">
         <Intro></Intro>
       </ContentFragment>

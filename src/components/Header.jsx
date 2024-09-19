@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { navRoutes, zIndex } from "../utils";
 import { Link, useNavigate } from "react-router-dom";
+import { HeaderContext, useHeaderMenuCtx } from '../utils/Context.jsx';
 
 const Header = () => {
   const navigate = useNavigate();
+  const [headerMenu, setHeaderMenu] = useHeaderMenuCtx();
+  // const {showHeader, setShowHeader} = useContext(HeaderContext);
+  const [hasContentsContainer, setHasContentsContainer] = useState(false);
+  let timeoutID = null;
 
+  useEffect(()=>{
+    timeoutContentsContainer();
+  },[])
+  
   const toggleMobileMenu = () => {
     if (window.innerWidth > 767) return;
     let breadcrumbsMenu = document.getElementById("nav-breadcrumbs-menu");
@@ -21,6 +30,23 @@ const Header = () => {
     document.querySelector("#navbar-default-div")?.classList.toggle("hidden");
   };
 
+  const checkContentsContainer = () =>{
+    // console.log('hasContentsContainer :: ', !!document.querySelector('.contents-container'))
+    return !!document.querySelector('.contents-container');
+  }
+
+  const timeoutContentsContainer = ()=>{
+    console.log('clear timeoutID: ', timeoutID)
+    if(checkContentsContainer()){
+      setHasContentsContainer(true);
+    }else{
+        timeoutID = setTimeout(()=>{
+        timeoutContentsContainer();
+        },1000)
+    }
+    clearTimeout(timeoutID);
+  }
+
   return (
     <nav
       className={`absolute w-full bg-transparent flex z-3 z-${zIndex.header}`}
@@ -34,7 +60,7 @@ const Header = () => {
               alt="Portfolio Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-white pl-2">
-              Portfolio
+              Portfolio 
             </span>
           </a>
         </div>
@@ -70,6 +96,7 @@ const Header = () => {
           id="navbar-default-div"
         >
           {/* <ul className="font-medium flex flex-col md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"> */}
+          {(headerMenu || hasContentsContainer) && 
           <ul className="font-medium flex flex-col md:flex-row rounded-lg justify-center md:justify-end flex-wrap header-nav-menu w-[107%] md:w-full">
             {navRoutes.map((nav) => (
               <li key={nav.id}>
@@ -92,6 +119,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
+          }
         </div>
       </div>
     </nav>

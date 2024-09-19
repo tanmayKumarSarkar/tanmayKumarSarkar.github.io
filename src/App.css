@@ -34,7 +34,7 @@ body {
 }
 
 #navbar-default-div {
-  transition: 2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .nav-glass-texture {

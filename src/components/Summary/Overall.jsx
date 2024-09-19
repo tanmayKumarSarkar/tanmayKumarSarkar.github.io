@@ -32,7 +32,7 @@ const Overall = () => {
           <FaDownload color="#a02dff" />
         </span>
       </div>
-      <div className="rounded-xl col-span-12 row-span-6 bento-card p-2 text-xs md:text-sm text-left">
+      <div className="rounded-xl col-span-12 row-span-6 bento-card p-2 text-xs md:text-sm text-left liner-gradient-border">
         Experienced in Full-Stack Software Development, Architecture Design,
         IOT, DevOps & Web Development in Enterprise Applications.
       </div>

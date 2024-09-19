@@ -4,10 +4,10 @@ import ProjectDetails from "./ProjectDetails";
 function ExperienceDetails({ exp, index: i }) {
   return (
     <div className="relative px-3 md:px-6 py-4 exp-section shadow-sm hover:bg-slate-300 hover:bg-opacity-20 cursor-pointer">
-      <div className="md:flex items-start md:space-x-4 mb-3">
-        <div className="flex items-center space-x-2 md:space-x-2 md:space-x-reverse">
+      <div className="md:flex items-center md:space-x-4 mb-3">
+        <div className="flex items-center space-x-8 md:space-x-2 md:space-x-reverse">
           {/* Icon */}
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full outer-shadow md:order-1">
             <svg
               className="fill-emerald-500"
               xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ function ExperienceDetails({ exp, index: i }) {
             </svg>
           </div>
           {/* Date */}
-          <div className="flex w-10/12 flex-col items-center text-sm font-medium text-indigo-500 md:w-28">
+          <div className="flex w-8/12 flex-col items-center text-sm font-medium text-indigo-500 md:w-40 p-6 outer-shadow ">
             <div>{exp.duration}</div>
             <div>{exp.company}</div>
             <div>{exp.location}</div>

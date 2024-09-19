@@ -6,8 +6,8 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 import { Route, Routes } from "react-router-dom";
-import { useContext } from 'react';
-import { HeaderContext, useHeaderMenuCtx } from './utils/Context.jsx';
+import { useContext } from "react";
+import { HeaderContext, useHeaderMenuCtx } from "./utils/Context.jsx";
 const ProjectDetails = lazy(() =>
   import("./components/Projects/ProjectDetails.jsx")
 );
@@ -16,14 +16,16 @@ function App() {
   const [showHeader, setShowHeader] = useState(false);
   const [headerMenu, setHeaderMenu] = useHeaderMenuCtx();
   // console.log(headerMenu)
-  useEffect(()=>{
+  useEffect(() => {
     // setShowHeader(false);
-    setHeaderMenu(false);
-  },[])
+    if (window.innerWidth > 767) {
+      setHeaderMenu(false);
+    }
+  }, []);
 
   return (
     <>
-    {/* <HeaderContext.Provider value={{showHeader, setShowHeader}}> */}
+      {/* <HeaderContext.Provider value={{showHeader, setShowHeader}}> */}
       <div className="w-full">
         <Header></Header>
 
@@ -49,7 +51,7 @@ function App() {
         <Footer></Footer>
       </div>
       {/* </HeaderContext.Provider> */}
-      </>
+    </>
   );
 }
 

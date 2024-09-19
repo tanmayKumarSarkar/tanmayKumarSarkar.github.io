@@ -5,21 +5,18 @@ import { useNavigate } from "react-router-dom";
 import { navRoutes } from "../utils";
 import IconComp from "./Common/IconComp";
 import { motion, useAnimate } from "framer-motion";
-import {
-  slideInFromLeft,
-  slideInFromRight,
-} from "../utils/motion";
+import { slideInFromLeft, slideInFromRight } from "../utils/motion";
 
 function Sidebar() {
   const navigate = useNavigate();
-  const [scope, animate] = useAnimate()
+  const [scope, animate] = useAnimate();
   // const Icon = React.lazy(()=> import('react-icons/io5').then(module=>({default:module['IoPieChart']})))
-  const onScroll = ()=>{
+  const onScroll = () => {
     // 60px
-    let navRect = document.querySelector('nav').getBoundingClientRect();
+    let navRect = document.querySelector("nav")?.getBoundingClientRect();
     let slideInProp = {
-      hidden: { 
-        x: 100, 
+      hidden: {
+        x: 100,
         opacity: 0,
         transition: {
           duration: 0.8,
@@ -33,18 +30,18 @@ function Sidebar() {
         },
       },
     };
-    if(navRect && navRect.bottom<10){
+    if (navRect && navRect.bottom < 10) {
       animate(scope.current, slideInProp.visible);
-    }else{
+    } else {
       animate(scope.current, slideInProp.hidden);
     }
-  }
+  };
 
   useEffect(() => {
-    document.addEventListener('scroll', onScroll, true);
-    return () => document.removeEventListener('scroll', onScroll, true);
+    document.addEventListener("scroll", onScroll, true);
+    return () => document.removeEventListener("scroll", onScroll, true);
   });
-  
+
   return (
     <motion.div
       initial="hidden"
@@ -55,21 +52,27 @@ function Sidebar() {
     >
       <div className="menu-bar flex flex-col">
         {navRoutes.map((nav) => {
-        
-        return (<a key={nav.id} aria-label={nav.title} title={nav.title}
-          href={nav.path}
-          onClick={() => navigate(nav.path)}
-          className="p-2 my-1 header-nav-item cursor-pointer"
-        >
-          <span className="menu-span-item"><span className="text-xl lg:text-3xl"><IconComp componentName={nav.icon} /></span></span>
-          
-        </a>)
-      })}
+          return (
+            <a
+              key={nav.id}
+              aria-label={nav.title}
+              title={nav.title}
+              href={nav.path}
+              onClick={() => navigate(nav.path)}
+              className="p-2 my-1 header-nav-item cursor-pointer"
+            >
+              <span className="menu-span-item">
+                <span className="text-xl lg:text-3xl">
+                  <IconComp componentName={nav.icon} />
+                </span>
+              </span>
+            </a>
+          );
+        })}
       </div>
       {/* <div className="w-full h-full absolute bg-white"></div> */}
       <div className="flex flex-col menu-wrapper">
-
-      {/* {navRoutes.map((nav) => {
+        {/* {navRoutes.map((nav) => {
         
         return (<a key={nav.id}
           href={nav.path}
@@ -80,14 +83,12 @@ function Sidebar() {
           
         </a>)
       })} */}
-      {/* <a href="/#" onClick={() => navigate('/#')}
+        {/* <a href="/#" onClick={() => navigate('/#')}
         className="p-2 header-nav-item cursor-pointer"
       > <IoHome /> </a> */}
-      
       </div>
     </motion.div>
   );
 }
 
 export default Sidebar;
-

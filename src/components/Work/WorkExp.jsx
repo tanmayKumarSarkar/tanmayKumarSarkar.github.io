@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { profileDetails } from "../../utils";
 import ExperienceDetails from "./ExperienceDetails";
+import "./Work.css";
 
 function WorkExp() {
   const [workProfile, setWorkProfile] = useState(
@@ -10,12 +11,12 @@ function WorkExp() {
   );
   return (
     <div className="w-full h-full flex justify-center items-center">
-      <section className="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden antialiased">
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden antialiased">
         <div className="w-full mx-auto px-0 py-0">
-          <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
-            <div className="w-full max-w-5xl mx-auto">
+          <div className="flex flex-col justify-center divide-y divide-slate-200 px-0 md:px-4 lg:px-16">
+            <div className="w-full mx-auto inner-shadow">
               {/* Vertical Timeline #3 */}
-              <div className="space-y-0 relative before:absolute before:inset-0 before:ml-8 before:-translate-x-px md:before:ml-[10.16rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-400 before:to-transparent">
+              <div className="space-y-0 relative before:absolute before:inset-0 before:ml-8 before:-translate-x-px md:before:ml-[13.16rem] md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-400 before:to-transparent">
                 {/* Item #1 */}
                 {profileDetails?.experience?.map((exp, i) => (
                   <ExperienceDetails key={`exp-${i}`} exp={exp} index={i} />

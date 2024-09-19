@@ -2,9 +2,6 @@ import React from "react";
 
 const NotFound = () => {
   const style = `
-    .main {
-        margin-top: 15%;
-      }
 
       .st0 {
         fill: #fff;
@@ -183,19 +180,25 @@ const NotFound = () => {
   return (
     <div className="not-found-container min-h-[calc(100vh-49px)] bg-white">
       <div className="h-14 bg-[#040016]"></div>
-      <div className="min-h-[calc(100vh-105px)] w-full flex flex-col justify-evenly items-center">
+      <div className="min-h-[calc(100vh-49px-8vh)] w-full flex flex-col justify-evenly items-center">
         <div className="text -mb-36 z-[5]">
-          <h1>404 Error</h1>
-          <h2>Couldn't launch :(</h2>
-          <h3>
-            Page Not Found - lets take you
+          <h1 className="text-red-600 font-black text-6xl">404</h1>
+          <h2 className="font-bold text-3xl">PAGE NOT FOUND</h2>
+          <h3 className="font-semibold text-lg">BACK TO HOME?</h3>
+          <h4 className="font-semibold text-lg">
             <a
-              className="ml-1 px-1 text-[#f66947] hover:text-white hover:bg-[#f66947] hover:rounded-xl"
+              className="ml-1 px-2 text-[#f66947] hover:text-white hover:bg-[#f66947] hover:rounded-xl"
               href="/#"
             >
-              BACK
+              YES
             </a>
-          </h3>
+            <a
+              className="ml-1 px-2 text-[#f66947] hover:text-white hover:bg-[#f66947] hover:rounded-xl"
+              href="/#"
+            >
+              NO
+            </a>
+          </h4>
         </div>
         <div className="svg-container h-full w-full ">
           <style>{style}</style>

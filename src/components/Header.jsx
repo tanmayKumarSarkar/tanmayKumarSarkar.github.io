@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { navRoutes, zIndex } from "../utils";
 import { Link, useNavigate } from "react-router-dom";
-import { HeaderContext, useHeaderMenuCtx } from '../utils/Context.jsx';
+import { HeaderContext, useHeaderMenuCtx } from "../utils/Context.jsx";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -10,10 +10,10 @@ const Header = () => {
   const [hasContentsContainer, setHasContentsContainer] = useState(false);
   let timeoutID = null;
 
-  useEffect(()=>{
+  useEffect(() => {
     timeoutContentsContainer();
-  },[])
-  
+  }, []);
+
   const toggleMobileMenu = () => {
     if (window.innerWidth > 767) return;
     let breadcrumbsMenu = document.getElementById("nav-breadcrumbs-menu");
@@ -30,22 +30,22 @@ const Header = () => {
     document.querySelector("#navbar-default-div")?.classList.toggle("hidden");
   };
 
-  const checkContentsContainer = () =>{
+  const checkContentsContainer = () => {
     // console.log('hasContentsContainer :: ', !!document.querySelector('.contents-container'))
-    return !!document.querySelector('.contents-container');
-  }
+    return !!document.querySelector(".contents-container");
+  };
 
-  const timeoutContentsContainer = ()=>{
-    console.log('clear timeoutID: ', timeoutID)
-    if(checkContentsContainer()){
+  const timeoutContentsContainer = () => {
+    // console.log('clear timeoutID: ', timeoutID)
+    if (checkContentsContainer()) {
       setHasContentsContainer(true);
-    }else{
-        timeoutID = setTimeout(()=>{
+    } else {
+      timeoutID = setTimeout(() => {
         timeoutContentsContainer();
-        },1000)
+      }, 1000);
     }
     clearTimeout(timeoutID);
-  }
+  };
 
   return (
     <nav
@@ -60,7 +60,7 @@ const Header = () => {
               alt="Portfolio Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-white pl-2">
-              Portfolio 
+              Portfolio
             </span>
           </a>
         </div>
@@ -96,30 +96,30 @@ const Header = () => {
           id="navbar-default-div"
         >
           {/* <ul className="font-medium flex flex-col md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"> */}
-          {(headerMenu || hasContentsContainer) && 
-          <ul className="font-medium flex flex-col md:flex-row rounded-lg justify-center md:justify-end flex-wrap header-nav-menu w-[107%] md:w-full">
-            {navRoutes.map((nav) => (
-              <li key={nav.id}>
-                <a
-                  href={nav.path}
-                  onClick={() => {
-                    navigate(nav.path);
-                    toggleMobileMenu();
-                  }}
-                  className="flex px-3 md:px-2 mx-2 md:mx-0 lg:mx-2 mb-2 md:mb-1 md:px-2 py-1 md:py-1 text-white nav-txt header-nav-item cursor-pointer"
-                  //                   "bg-transparent md:hover:bg-blue-700 rounded md:rounded-full  shadow-sm hover:
-                  // hover:shadow-white"
-                  //   aria-current="page"
-                >
-                  {nav.title}
-                </a>
-                {/* <Link to={nav.path}>
+          {(headerMenu || hasContentsContainer) && (
+            <ul className="font-medium flex flex-col md:flex-row rounded-lg justify-center md:justify-end flex-wrap header-nav-menu w-[107%] md:w-full">
+              {navRoutes.map((nav) => (
+                <li key={nav.id}>
+                  <a
+                    href={nav.path}
+                    onClick={() => {
+                      navigate(nav.path);
+                      toggleMobileMenu();
+                    }}
+                    className="flex px-3 md:px-2 mx-2 md:mx-0 lg:mx-2 mb-2 md:mb-1 md:px-2 py-1 md:py-1 text-white nav-txt header-nav-item cursor-pointer"
+                    //                   "bg-transparent md:hover:bg-blue-700 rounded md:rounded-full  shadow-sm hover:
+                    // hover:shadow-white"
+                    //   aria-current="page"
+                  >
+                    {nav.title}
+                  </a>
+                  {/* <Link to={nav.path}>
                   <div className="btn">{nav.title}</div>
                 </Link> */}
-              </li>
-            ))}
-          </ul>
-          }
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </nav>

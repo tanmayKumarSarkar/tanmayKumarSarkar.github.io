@@ -3,13 +3,13 @@ import ProjectDetails from "./ProjectDetails";
 
 function ExperienceDetails({ exp, index: i }) {
   return (
-    <div className="relative px-3 md:px-6 py-4 exp-section shadow-sm hover:bg-slate-300 hover:bg-opacity-20 cursor-pointer">
+    <div className="relative px-3 md:px-6 py-4 exp-section experience-details-item">
       <div className="md:flex items-center md:space-x-4 mb-3">
         <div className="flex items-center space-x-8 md:space-x-2 md:space-x-reverse">
           {/* Icon */}
           <div className="flex items-center justify-center w-10 h-10 rounded-full outer-shadow md:order-1">
             <svg
-              className="fill-emerald-500"
+              className="fill-emerald-500 experience-details-landmark"
               xmlns="http://www.w3.org/2000/svg"
               width={16}
               height={16}

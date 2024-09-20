@@ -1,11 +1,15 @@
 import React from "react";
 import { FaRegShareFromSquare } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { profileDetails } from "../../utils";
 
 function ProjectDetails({ work, index: i }) {
+  // console.log(work.Project, profileDetails.projects);
+  const prj = profileDetails.projects.find((p) => p.Project == work.Project);
+  let prjId = prj ? prj.id : 0;
   return (
     <div>
-      <div className="text-slate-500 ml-7 md:ml-0 mt-2">
+      <div className="text-slate-500 ml-7 md:ml-0 mt-4 mb-2">
         <span className="text-slate-900 text-sm font-medium text-outer-shadow">
           {work.Project}
         </span>
@@ -18,7 +22,7 @@ function ProjectDetails({ work, index: i }) {
               type="checkbox"
             /> 
             <span className="block max-h-9 overflow-hidden transition-all duration-300 peer-checked/showLabel:max-h-52">*/}
-          <div className="cursor-pointer relative w-full">
+          <div className="relative w-full">
             {work.Description}
             {/* <span className="absolute ">
                 <svg
@@ -35,10 +39,10 @@ function ProjectDetails({ work, index: i }) {
               <Link
                 className="text-slate-900 text-lg font-medium px-6 py-2 flex inner-shadow-sm justify-center items-center"
                 to={{
-                  pathname: `/project/${work.id}`,
+                  pathname: `/project/${prjId}`,
                   exp: work,
                   index: i,
-                  pid: work.id,
+                  pid: prjId,
                 }}
               >
                 <span className="text-sm">See More &nbsp;</span>

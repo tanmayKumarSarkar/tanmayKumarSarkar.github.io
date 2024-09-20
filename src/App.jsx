@@ -5,7 +5,7 @@ import Contents from "./components/Contents";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { HeaderContext, useHeaderMenuCtx } from "./utils/Context.jsx";
 const ProjectDetails = lazy(() =>
@@ -15,12 +15,32 @@ const ProjectDetails = lazy(() =>
 function App() {
   const [showHeader, setShowHeader] = useState(false);
   const [headerMenu, setHeaderMenu] = useHeaderMenuCtx();
+  const navigate = useNavigate();
   // console.log(headerMenu)
   useEffect(() => {
     // setShowHeader(false);
     if (window.innerWidth > 767) {
       setHeaderMenu(false);
     }
+  }, []);
+
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    const errorHandler = (event) => {
+      setHasError(true);
+      console.error("ErrorBoundary caught an error", event.error);
+      navigate("/404");
+      window.location = "/404";
+    };
+
+    window.addEventListener("error", errorHandler);
+    window.addEventListener("unhandledrejection", errorHandler);
+
+    return () => {
+      window.removeEventListener("error", errorHandler);
+      window.removeEventListener("unhandledrejection", errorHandler);
+    };
   }, []);
 
   return (

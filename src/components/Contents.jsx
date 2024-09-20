@@ -1,4 +1,4 @@
-import React, { lazy, useContext, useEffect } from "react";
+import React, { lazy, useContext, useEffect, useState } from "react";
 // import ContentFragment from "./ContentFragment";
 // import Intro from "./Intro/Intro3";
 import ProfileSummary from "./Summary/ProfileSummary";
@@ -28,6 +28,25 @@ const Contents = () => {
         ?.click();
     }
   }, []);
+
+  const [hasError, setHasError] = useState(false);
+
+  // useEffect(() => {
+  //   const errorHandler = (event) => {
+  //     setHasError(true);
+  //     console.error("ErrorBoundary caught an error", event.error);
+  //     navigate("/404");
+  //     // window.location = "/404.html";
+  //   };
+
+  //   window.addEventListener("error", errorHandler);
+  //   window.addEventListener("unhandledrejection", errorHandler);
+
+  //   return () => {
+  //     window.removeEventListener("error", errorHandler);
+  //     window.removeEventListener("unhandledrejection", errorHandler);
+  //   };
+  // }, []);
 
   return (
     <div className="w-full z-[1] bg-white contents-container">

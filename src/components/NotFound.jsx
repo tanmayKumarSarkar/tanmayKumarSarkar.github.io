@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
+  const navigate = useNavigate();
+
   const style = `
 
       .st0 {
@@ -193,8 +196,8 @@ const NotFound = () => {
               YES
             </a>
             <a
-              className="ml-1 px-2 text-[#f66947] hover:text-white hover:bg-[#f66947] hover:rounded-xl"
-              href="/#"
+              className="ml-1 px-2 text-[#f66947] hover:text-white hover:bg-[#f66947] hover:rounded-xl cursor-pointer"
+              onClick={() => navigate(-2)}
             >
               NO
             </a>

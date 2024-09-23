@@ -35,7 +35,7 @@ const Intro = () => {
       ref={componentRef}
     >
       <video
-        className="rotate-180 absolute top-[-44%] md:top-[-43%] left-0 z-[0] w-full h-full object-cover blackhole"
+        className="rotate-180 absolute top-[-44%] md:top-[-43%] left-0 z-[0] w-full h-full object-cover blackhole blue-scroll-cursor"
         autoPlay
         muted
         loop
@@ -45,7 +45,7 @@ const Intro = () => {
       <motion.div
         initial="hidden"
         animate="visible"
-        className="flex flex-col w-full h-full mt-[22vh] mb-[5vh] items-center justify-between gap-5"
+        className="flex flex-col w-full h-full mt-[22vh] mb-[5vh] items-center justify-between gap-5 blue-scroll-cursor"
       >
         <div className="salutation flex w-full justify-center md:justify-start">
           <div className="w-auto flex flex-col md:px-14">

@@ -10,49 +10,49 @@ export const navRoutes = [
     title: "Home",
     path: "/#",
     side: "left",
-    icon: "IoHome"
+    icon: "IoHome",
   },
   {
     id: 1,
     title: "Summary",
     path: "/#profile-summary-section",
     side: "right",
-    icon: "IoPieChart"
+    icon: "IoPieChart",
   },
   {
     id: 2,
     title: "Projects",
     path: "/#projects-section",
     side: "right",
-    icon: "IoRocket"
+    icon: "IoRocket",
   },
   {
     id: 3,
     title: "Experiences",
     path: "/#work-experience-section",
     side: "right",
-    icon: "IoBriefcaseSharp"
+    icon: "IoBriefcaseSharp",
   },
   {
     id: 4,
     title: "Skills",
     path: "/#skills-section",
     side: "right",
-    icon: "IoSnowSharp"
+    icon: "IoSnowSharp",
   },
   {
     id: 5,
     title: "Technology",
     path: "/#technology-section",
     side: "right",
-    icon:"IoHardwareChip"
+    icon: "IoHardwareChip",
   },
   {
     id: 6,
     title: "Contact",
     path: "/#contact-section",
     side: "right",
-    icon: "IoMail"
+    icon: "IoMail",
   },
 ];
 
@@ -531,7 +531,7 @@ export const profileDetails = {
       responsibilities: [],
       works: [
         {
-          Project: "SMART-WELD IoT Solution",
+          Project: "Smart-Weld IoT Solution",
           Duration: "Aug 2023 - Present",
           "Tools/Technologies": [
             "Angular 8",
@@ -866,6 +866,7 @@ export const profileDetails = {
       Solution:
         "Created a streamlined system that improved data handling and reporting, leading to faster decision-making.",
       Screens: ["InfoHub-1.png"],
+      Category: "CRM & Web Development",
     },
     {
       id: 3,
@@ -933,7 +934,7 @@ export const profileDetails = {
         "Data Pipeline",
       ],
       Description:
-        "SmartWeld IoT Solution for Industrial Welding that involved sensor data collection through MQTT with Data Pipeline and real-time analytics.",
+        "SmartWeld IoT Solution for Industrial Welding that involved sensor data collection through MQTT with Data Pipeline and real-time analytics on welding operations. The Real-time Dashboard is to facilitate LEAN implementation in operation to improve OPERATIONAL EFFICIENCY every hour by checking actual data with BENHCHMARK DATA and improve on the same.",
       Role: "Developer, Tech Lead",
       Responsibilities: [
         "SRS/ BRS",
@@ -958,6 +959,7 @@ export const profileDetails = {
       Problem: "Inefficient welding processes led to higher operational costs.",
       Solution:
         "Implemented predictive maintenance and real-time data analysis to optimize the welding process.",
+      Category: "Industrial IoT & Web Development",
     },
     {
       id: 5,

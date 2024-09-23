@@ -61,10 +61,11 @@ function Sidebar() {
               onClick={() => navigate(nav.path)}
               className="p-2 my-1 header-nav-item cursor-pointer"
             >
-              <span className="menu-span-item">
+              <span className="menu-span-item relative">
                 <span className="text-xl lg:text-3xl">
                   <IconComp componentName={nav.icon} />
                 </span>
+                <span className="menu-span-item-label">{nav.title}</span>
               </span>
             </a>
           );

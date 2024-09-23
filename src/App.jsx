@@ -63,6 +63,7 @@ function App() {
               path="/project/:projectid"
               element={<ProjectDetails />}
             />
+            <Route exact path="/404" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

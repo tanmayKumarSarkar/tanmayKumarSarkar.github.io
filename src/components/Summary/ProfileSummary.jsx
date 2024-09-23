@@ -15,7 +15,7 @@ const ProfileSummaryBG = lazy(() => import("./ProfileSummaryBG.jsx"));
 
 const ProfileSummary = () => {
   return (
-    <div className="w-full h-full profile-summary-bg relative">
+    <div className="w-full h-full profile-summary-bg relative black-scroll-cursor">
       <ProfileSummaryBG />
       <div className="w-full h-full px-5 gap-3 md:gap-6 grid grid-cols-12 grid-rows-12 md:grid-rows-11 lg:grid-rows-12 ">
         <div className="rounded-xl col-span-12 lg:col-span-6 portrait:lg:max-xl:col-span-12 row-span-3 md:row-span-4 lg:row-span-5 portrait:lg:max-xl:row-span-3 bento-card">

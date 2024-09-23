@@ -23,9 +23,14 @@ const Contents = () => {
     setHeaderMenu(true);
     if (location.hash) {
       // console.log(`1:: ${location.pathname}${location.hash}`, document.querySelector(`a[href="${location.pathname}${location.hash}"]`))
-      document
-        .querySelector(`a[href="${location.pathname}${location.hash}"]`)
-        ?.click();
+      let hashPath = document.querySelector(
+        `a[href="${location.pathname}${location.hash}"]`
+      );
+      if (hashPath) {
+        hashPath?.click();
+      } else {
+        navigate("/#");
+      }
     }
   }, []);
 

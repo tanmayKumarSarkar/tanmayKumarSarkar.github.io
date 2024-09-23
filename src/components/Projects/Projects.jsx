@@ -60,7 +60,9 @@ const Projects = () => {
         </div>
       </div>
       <div>
-        <div className="text-white -mt-6 mb-6 text-2xl">EXECUTED PROJECTS</div>
+        <div className="text-white -mt-6 mb-6 text-2xl">
+          ACCOMPLISHED PROJECTS
+        </div>
       </div>
       <div
         className="w-full h-full flex flex-row flex-wrap justify-evenly project-card-container"

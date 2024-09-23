@@ -26,7 +26,7 @@ function ExperienceDetails({ exp, index: i }) {
         </div>
 
         {/* Card Right (Desktop & Tablet) */}
-        <div className="hidden md:flex flex-col ">
+        <div className="hidden md:flex flex-col w-full">
           {exp.works.map((work, j) => (
             <ProjectDetails key={`work-${j}`} work={work} index={j} />
           ))}

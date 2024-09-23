@@ -1,0 +1,1 @@
+import{j as s}from"./index-CHX45U_h.js";function i(){return s.jsx("div",{className:"area w-full h-full",children:s.jsxs("ul",{className:"squares",children:[s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{})]})})}export{i as default};

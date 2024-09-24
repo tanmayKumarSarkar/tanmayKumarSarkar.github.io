@@ -8,6 +8,7 @@ import NotFound from "./components/NotFound";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { HeaderContext, useHeaderMenuCtx } from "./utils/Context.jsx";
+import QuillEditor from "./components/Common/QuillEditor.jsx";
 const ProjectDetails = lazy(() =>
   import("./components/Projects/ProjectDetails.jsx")
 );
@@ -64,6 +65,7 @@ function App() {
               element={<ProjectDetails />}
             />
             <Route exact path="/404" element={<NotFound />} />
+            <Route exact path="/quill-editor" element={<QuillEditor />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

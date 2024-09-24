@@ -156,6 +156,6 @@
 .sr-matrix-container>div {
     border-radius: 16px;
     border: 1px solid #e0e0e0;
-    background: linear-gradient(315deg, #cacaca, #f0f0f0);
-    box-shadow: inset -14px -14px 28px #cacaca, inset 4px 4px 8px #f6f6f6;
+    background: linear-gradient(315deg, #f5f5f525, #ffffff);
+    /* box-shadow: inset -14px -14px 28px #cacaca, inset 4px 4px 8px #f6f6f6; */
 }

@@ -56,10 +56,10 @@ function Sidebar() {
             <a
               key={nav.id}
               aria-label={nav.title}
-              title={nav.title}
+              // title={nav.title}
               href={nav.path}
               onClick={() => navigate(nav.path)}
-              className="p-2 my-1 header-nav-item cursor-pointer"
+              className="p-2 my-3 sidebar header-nav-item cursor-pointer"
             >
               <span className="menu-span-item relative">
                 <span className="text-xl lg:text-3xl">

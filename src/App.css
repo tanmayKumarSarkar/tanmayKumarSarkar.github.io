@@ -363,7 +363,7 @@ body {
   /* background-color: white; */
 }
 
-.menu-span-item-label {
+/* .menu-span-item-label {
   position: absolute;
   transform: translate(-50%, -100%);
   padding: 5px;
@@ -374,13 +374,12 @@ body {
   width: 100px;
   display: none;
   transition: 5s ease-in;
-  /* inset: 50% 10px 10px 10px; */
-}
+} */
 
-a:has(.menu-span-item):hover .menu-span-item-label {
+/* a:has(.menu-span-item):hover .menu-span-item-label {
   display: block;
   transform: translate(-110%, -100%);
-}
+} */
 
 /* .menu-span-item>span::before{
   color: black;
@@ -408,10 +407,10 @@ a:has(.menu-span-item):hover .menu-span-item-label {
   color: white;
   mix-blend-mode: difference;
 }
-
+/* 
 .sidebar-container .header-nav-item:hover {
   background: rgba(255, 255, 255, 0.1);
-}
+} */
 
 /* .sidebar-container .header-nav-item::before {
   border: 1px solid transparent;
@@ -421,7 +420,7 @@ a:has(.menu-span-item):hover .menu-span-item-label {
 
 /* @media only screen and (max-width : 767px) { */
 
-.sidebar-container .header-nav-item::before {
+/* .sidebar-container .header-nav-item::before {
   border: 1px solid transparent;
   background: conic-gradient(from var(--angle), rgba(0, 0, 0, 0), rgb(255, 255, 255) 90%, transparent 100%) border-box;
   animation: 5s border-rotation linear infinite;
@@ -431,6 +430,45 @@ a:has(.menu-span-item):hover .menu-span-item-label {
   border: 1.5px solid transparent;
   background: conic-gradient(from var(--angle), rgb(248, 0, 248), rgb(0, 255, 242) 90%, rgb(248, 0, 248) 100%) border-box;
   animation: 2s border-rotation ease-in infinite;
-}
+} */
 
 /* } */
+
+.sidebar.header-nav-item:hover .menu-span-item-label {
+  opacity: 1;
+  transform: translate(-36px, 0%);
+  /* background-color: #ffffff; */
+  mix-blend-mode: difference;
+}
+.sidebar.header-nav-item .menu-span-item-label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  /* margin-bottom: 1em; */
+  /* padding: 1em; */
+  background-color: #000;
+  font-size: 0.9em;
+  /* line-height: 1.6; */
+  text-align: left;
+  white-space: nowrap;
+  transform: translate(-50%, 0%);
+  transition: all 0.15s ease-in-out;
+}
+.sidebar.header-nav-item .menu-span-item-label::before,
+.sidebar.header-nav-item .menu-span-item-label::after {
+  content: '';
+  position: absolute;
+  /* top: 0; */
+  left: -2px;
+  width: 104%;
+  height: 2px;
+  /* border: 0.5em solid transparent; */
+  /* border-top-color: #000; */
+  /* transform: translate(0%, 0); */
+  background-color: #ffffff;
+}
+.sidebar.header-nav-item .menu-span-item-label::after {
+  bottom: -2px;
+}

@@ -1,1 +1,0 @@
-import{j as s}from"./index-BXnXAetQ.js";const t=()=>s.jsx("div",{children:s.jsx("div",{children:s.jsx("h2",{children:"DELIVERABLES-IMPROVING OPERATIONAL EFFICIENCY"})})}),d=({name:r})=>(r=r.toLowerCase(),r.includes("smart")&&r.includes("weld")?s.jsx(t,{}):"<></>");export{d as default};

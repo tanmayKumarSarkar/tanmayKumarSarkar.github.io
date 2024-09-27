@@ -436,7 +436,7 @@ body {
 
 .sidebar.header-nav-item:hover .menu-span-item-label {
   opacity: 1;
-  transform: translate(-36px, 0%);
+  transform: translate(-40px, 0%);
   /* background-color: #ffffff; */
   mix-blend-mode: difference;
 }
@@ -455,6 +455,8 @@ body {
   white-space: nowrap;
   transform: translate(-50%, 0%);
   transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
 }
 .sidebar.header-nav-item .menu-span-item-label::before,
 .sidebar.header-nav-item .menu-span-item-label::after {
@@ -469,6 +471,9 @@ body {
   /* transform: translate(0%, 0); */
   background-color: #ffffff;
 }
+.sidebar.header-nav-item .menu-span-item-label::before{
+  top: 0;
+}
 .sidebar.header-nav-item .menu-span-item-label::after {
-  bottom: -2px;
+  bottom: 0;
 }

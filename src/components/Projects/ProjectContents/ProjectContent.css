@@ -1,0 +1,48 @@
+.external-details h2 {
+    border-left: 3px solid #0092e2;
+    border-radius: 2.5px;
+    /* border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; */
+    display: inline-flex;
+    background: linear-gradient(to left, #86d0f848, #ee70ff34);
+    padding: 1px 6px;
+}
+
+.external-details ul>li {
+    margin-left: 20px;
+    /* list-style: circle; */
+    /* color: #c8ff00; */
+    position: relative;
+    text-align: left;
+}
+
+.external-details ul>li::before {
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    height: 8px;
+    width: 8px;
+    background-color: #0092e2;
+    background: radial-gradient(circle at 6px 6px, #5cabff, #026070);
+    box-shadow: 0 2px 10px #8d8dd8;
+}
+
+.external-details .smartweld-wrapper h3 {
+    color: #c8ff00;
+    font-weight: 400;
+    /* position: relative;
+    text-decoration: underline 2px #0092e2;
+    text-underline-offset: 5px; */
+}
+
+/* .external-details .smartweld-wrapper h3:afters {
+    content: '';
+    position: absolute;
+    inset: 1px 0px;
+    bottom: 0;
+    height: 2px;
+    border: 2px solid #0092e2;
+    border-radius: 3px;
+} */

@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProjectContent.css";
 import SmartWeld from "./SmartWeld";
 
 const LoadComp = ({ name }) => {

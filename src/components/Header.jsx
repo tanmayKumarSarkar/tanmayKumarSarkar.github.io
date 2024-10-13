@@ -55,7 +55,7 @@ const Header = () => {
         <div className="flex items-center justify-start py-2">
           <a href="#" className="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src="/assets/Portfolio Logo.png"
               className="h-8"
               alt="Portfolio Logo"
             />

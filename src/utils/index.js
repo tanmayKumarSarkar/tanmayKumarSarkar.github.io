@@ -960,6 +960,7 @@ export const profileDetails = {
       Solution:
         "Implemented predictive maintenance and real-time data analysis to optimize the welding process.",
       Category: "Industrial IoT & Web Development",
+      Screens: ["smartweld.gif"],
     },
     {
       id: 5,

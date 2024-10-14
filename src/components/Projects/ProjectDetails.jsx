@@ -3,11 +3,11 @@ import { useParams, useNavigate } from "react-router-dom";
 import { profileDetails } from "../../utils";
 import { HeaderContext, useHeaderMenuCtx } from "../../utils/Context.jsx";
 import { PiCompassToolFill } from "react-icons/pi";
-import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { FaGripfire } from "react-icons/fa";
 
 import "./Projects.css";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
+const Carousel = lazy(() => import("../Common/Carousel.jsx"));
 const LoadComp = lazy(() => import("./ProjectContents/LoadComp.jsx"));
 
 const ProjectDetails = (props) => {
@@ -42,6 +42,20 @@ const ProjectDetails = (props) => {
             <div className="text-3xl font-medium mt-2">{exp.Project}</div>
             <div className="mt-8 text-base font-semibold">At-A-Glance</div>
             <div className="mt-2">{exp.Description}</div>
+          </div>
+
+          <div className="mt-5">
+            <div className="mt-8 text-base font-semibold text-left">
+              Screen Captures
+            </div>
+            {exp.AllScreens && (
+              <Carousel
+                imageSet={{
+                  path: `/assets/Projects/${exp.Project}`,
+                  images: exp.AllScreens,
+                }}
+              ></Carousel>
+            )}
           </div>
 
           <div className="drtr-container mt-8 grid grid-cols-2 md:grid-cols-4 md:text-start gap-6 ">
@@ -118,7 +132,7 @@ const ProjectDetails = (props) => {
           </div>
 
           <div className="mt-10 external-details">
-            <LoadComp name={exp.Project} />
+            <LoadComp name={exp.Project}></LoadComp>
           </div>
         </div>
       </div>

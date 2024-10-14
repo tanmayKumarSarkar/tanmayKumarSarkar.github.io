@@ -35,20 +35,22 @@ function ProjectDetails({ work, index: i }) {
                 </span> */}
           </div>
           <div className="flex justify-end">
-            <span>
-              <Link
-                className="text-slate-900 text-lg font-medium px-6 py-2 flex inner-shadow-sm justify-center items-center"
-                to={{
-                  pathname: `/project/${prjId}`,
-                  exp: work,
-                  index: i,
-                  pid: prjId,
-                }}
-              >
-                <span className="text-sm">See More &nbsp;</span>
-                <FaRegShareFromSquare />
-              </Link>
-            </span>
+            {prjId != 0 && (
+              <span>
+                <Link
+                  className="text-slate-900 text-lg font-medium px-6 py-2 flex inner-shadow-sm justify-center items-center"
+                  to={{
+                    pathname: `/project/${prjId}`,
+                    exp: work,
+                    index: i,
+                    pid: prjId,
+                  }}
+                >
+                  <span className="text-sm">See More &nbsp;</span>
+                  <FaRegShareFromSquare />
+                </Link>
+              </span>
+            )}
           </div>
           <div className="mt-0.5 hidden">
             <span className="text-slate-900 text-sm font-medium">

@@ -92,11 +92,19 @@ const ProjectDetails = (props) => {
           <div className="flex justify-between sr-matrix-container mt-10">
             <div className="flex-grow max-w-[48%] md:max-w-[45%] p-2 md:px-8 text-left">
               <div className="font-semibold">Revenue</div>
-              <div className="text-sm my-1">{exp.Revenue}</div>
+              {/* <div className="text-sm my-1">{exp.Revenue}</div> */}
+              <div
+                className="text-sm my-1"
+                dangerouslySetInnerHTML={{ __html: exp.Revenue }}
+              />
             </div>
             <div className="flex-grow max-w-[48%] md:max-w-[45%] p-2 md:px-8 text-left">
               <div className="font-semibold">Sales</div>
-              <div className="text-sm my-1">{exp.Sales}</div>
+              {/* <div className="text-sm my-1">{exp.Sales}</div> */}
+              <div
+                className="text-sm my-1"
+                dangerouslySetInnerHTML={{ __html: exp.Sales }}
+              />
             </div>
           </div>
 
@@ -132,7 +140,7 @@ const ProjectDetails = (props) => {
           </div>
 
           <div className="mt-10 external-details">
-            <LoadComp name={exp.Project}></LoadComp>
+            <LoadComp name={exp.Project} project={exp}></LoadComp>
           </div>
         </div>
       </div>

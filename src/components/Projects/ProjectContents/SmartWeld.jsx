@@ -1,9 +1,9 @@
 import React from "react";
 
-const SmartWeld = () => {
+const SmartWeld = ({ project }) => {
   return (
     <div>
-      <div className="smartweld-wrapper">
+      <div className="smartweld-wrapper project-wrapper">
         <div>
           <h2>DELIVERABLES FOR IMPROVING OPERATIONAL EFFICIENCY</h2>
           <h3 className="mt-4">OVERAL EQUIPMENT EFFECTIVENRSS (OEE)</h3>
@@ -148,6 +148,13 @@ const SmartWeld = () => {
 
         <div>
           <h2 className="my-4">Machine Availability</h2>
+          <div className="flex items-center justify-center py-4">
+            <img
+              className="w-[80%] md:w-[60%]"
+              src={`/assets/Projects/${project.Project}/Availability.png`}
+              alt="Availability"
+            />
+          </div>
           <ul>
             <li>Machines utilization</li>
 
@@ -162,6 +169,13 @@ const SmartWeld = () => {
           </ul>
 
           <h2 className="my-4">Productivity</h2>
+          <div className="flex items-center justify-center py-4">
+            <img
+              className="w-[80%] md:w-[60%]"
+              src={`/assets/Projects/${project.Project}/PRODUCTIVITY.png`}
+              alt="PRODUCTIVITY"
+            />
+          </div>
           <ul>
             <li>
               Real time actual vs target and past data. Key information for
@@ -186,6 +200,13 @@ const SmartWeld = () => {
           </ul>
 
           <h2 className="my-4">Quality</h2>
+          <div className="flex items-center justify-center py-4">
+            <img
+              className="w-[80%] md:w-[60%]"
+              src={`/assets/Projects/${project.Project}/QUALITY.png`}
+              alt="QUALITY"
+            />
+          </div>
           <ul>
             <li>Measure Quality failures Machine wise ,Job Wise.</li>
             <li>
@@ -219,6 +240,13 @@ const SmartWeld = () => {
           </ul>
 
           <h2 className="my-4">Cost</h2>
+          <div className="flex items-center justify-center py-4">
+            <img
+              className="w-[80%] md:w-[60%]"
+              src={`/assets/Projects/${project.Project}/COST.png`}
+              alt="COST"
+            />
+          </div>
           <ul>
             <li>
               Actual weld cost /component, each stage .Always compare with the
@@ -289,6 +317,15 @@ const SmartWeld = () => {
               at the end of the Job.
             </li>
           </ul>
+
+          <h2 className="mt-4">Architecture</h2>
+          <div className="flex items-center justify-center py-4">
+            <img
+              className="w-[80%] md:w-[60%] shadow-filter"
+              src={`/assets/Projects/${project.Project}/SmartWeld Architecture.png`}
+              alt="SmartWeld Architecture"
+            />
+          </div>
         </div>
       </div>
     </div>

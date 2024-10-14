@@ -815,8 +815,10 @@ export const profileDetails = {
       Title: "UnitedHealth Group - Medical Insurance Plans Web Application",
       Description_2:
         "Developed a web application to search, compare, and shop for medical insurance plans, improving user engagement and customer experience.",
-      Revenue: "Contributed to a 10% increase in customer acquisition.",
-      Sales: "Helped convert 20% more visitors into paying customers.",
+      Revenue:
+        "Revenue per enrollee: $11,545 (Part C) </br> Revenue per enrollee: $1,800 (Part D)",
+      Sales:
+        "Enrollment: 51% of Medicare beneficiaries (Part C) </br> Enrollment Growth: 8% annual growth for Medicare Advantage (Part D)",
       The_what:
         "A web app for searching, comparing, and purchasing medical insurance plans.",
       The_why:
@@ -833,6 +835,14 @@ export const profileDetails = {
         "UHG Details.png",
         "UHG Compare.png",
       ],
+      AllScreens: [
+        "UHG Home.png",
+        "UHG Summary.png",
+        "UHG Details.png",
+        "UHG Compare.png",
+        "UHG Architecture.png",
+      ],
+      Category: "Healthcare & Web Development",
     },
     {
       id: 2,
@@ -865,7 +875,20 @@ export const profileDetails = {
         "Legacy CRM systems were slow and inefficient, affecting decision-making.",
       Solution:
         "Created a streamlined system that improved data handling and reporting, leading to faster decision-making.",
-      Screens: ["InfoHub-1.png"],
+      Screens: ["InfoHub Sub rfi approval.png"],
+      AllScreens: [
+        "InfoHub Architecture.png",
+        "InfoHub data gov.png",
+        "InfoHub new rfi portal.png",
+        "InfoHub new rfi.png",
+        "InfoHub rfi approval comments.png",
+        "InfoHub rfi approval.png",
+        "InfoHub rfi created.png",
+        "InfoHub rfi portal.png",
+        "InfoHub sub rfis approved.png",
+        "InfoHub Utilities.png",
+        "InfoHub Sub rfi approval.png",
+      ],
       Category: "CRM & Web Development",
     },
     {
@@ -962,7 +985,7 @@ export const profileDetails = {
       Category: "Industrial IoT & Web Development",
       Screens: ["smartweld.gif"],
       AllScreens: [
-        "Availability.png",
+        "Home.png",
         "Add Comp Spec I.png",
         "Add Comp Spec II.png",
         "Add Filler Material.png",
@@ -981,7 +1004,7 @@ export const profileDetails = {
         "COST.png",
         "Create Report Issue.png",
         "Filler Material.png",
-        "Home.png",
+        "Availability.png",
         "Job Config.png",
         "Joint Design.png",
         "Machine Comp Tracking.png",

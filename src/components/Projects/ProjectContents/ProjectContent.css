@@ -12,7 +12,7 @@
 }
 
 .external-details ul>li {
-    margin-left: 20px;
+    margin-left: 0px;
     /* list-style: circle; */
     /* color: #c8ff00; */
     position: relative;
@@ -34,6 +34,12 @@
 
 .shadow-filter {
     filter: drop-shadow(1px 1px 2px #ffffffbb);
+}
+
+.external-details p,
+.external-details li {
+    font-size: 0.875rem;
+    text-align: left;
 }
 
 

@@ -1,0 +1,1 @@
+import{j as s}from"./index-BEFx5QiZ.js";function i(){return s.jsx("div",{className:"area w-full h-full",children:s.jsxs("ul",{className:"squares",children:[s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{}),s.jsx("li",{})]})})}export{i as default};

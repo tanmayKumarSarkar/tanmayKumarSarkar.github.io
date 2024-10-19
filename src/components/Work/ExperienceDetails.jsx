@@ -19,9 +19,16 @@ function ExperienceDetails({ exp, index: i }) {
           </div>
           {/* Date */}
           <div className="flex w-8/12 flex-col items-center text-sm font-medium text-indigo-500 md:w-40 p-6 outer-shadow ">
-            <div>{exp.duration}</div>
+            <div className="w-[50%] mb-4">
+              <img
+                className="company-logo"
+                src={`/assets/Projects/${exp.logo}`}
+                alt={exp.logo}
+              />
+            </div>
+            <div className="text-xs font-semibold">{exp.duration}</div>
             <div>{exp.company}</div>
-            <div>{exp.location}</div>
+            <div className="text-xs font-semibold">{exp.location}</div>
           </div>
         </div>
 

@@ -5,7 +5,9 @@ import { profileDetails } from "../../utils";
 
 function ProjectDetails({ work, index: i }) {
   // console.log(work.Project, profileDetails.projects);
-  const prj = profileDetails.projects.find((p) => p.Project == work.Project);
+  const prj = profileDetails.projects
+    .filter((p) => p.visible)
+    .find((p) => p.Project == work.Project);
   let prjId = prj ? prj.id : 0;
   return (
     <div>

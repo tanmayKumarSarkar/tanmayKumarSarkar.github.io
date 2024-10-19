@@ -462,6 +462,7 @@ export const profileDetails = {
       company: "Wipro",
       location: "Kolkata, India",
       duration: "Aug 2023 - Present",
+      logo: "Wipro_logo.svg",
       works: [
         {
           Project: "UnitedHealth Group Inc",
@@ -490,6 +491,7 @@ export const profileDetails = {
       company: "Tech Mahindra",
       location: "Kolkata, India",
       duration: "Apr 2021 - Aug 2023",
+      logo: "Tech_mahindra_logo.png",
       works: [
         {
           Project: "Microsoft Sustainability Info Hub",
@@ -528,6 +530,7 @@ export const profileDetails = {
       company: "Ebiw Info Analytics Pvt. Ltd.",
       location: "Kolkata, India",
       duration: "Jan 2019 - Apr 2021",
+      logo: "Ebiw_logo.png",
       responsibilities: [],
       works: [
         {
@@ -741,6 +744,7 @@ export const profileDetails = {
       company: "Tata Consultancy Services",
       location: "Kolkata, India",
       duration: "August 2016 - Jan 2019",
+      logo: "Tcs_logo.png",
       responsibilities: [],
       works: [
         {
@@ -825,6 +829,8 @@ export const profileDetails = {
         "To enhance the user experience and simplify the purchase of insurance plans.",
       The_how:
         "Utilized ReactJS, Svelte, NodeJS, and Java for a seamless frontend-backend integration. Jenkins was used for CI/CD.",
+      visible: true,
+      order: 1,
       Problem:
         "The previous platform was slow and inefficient, resulting in high drop-off rates.",
       Solution:
@@ -871,6 +877,8 @@ export const profileDetails = {
       The_why: "To streamline data requests and improve reporting accuracy.",
       The_how:
         "Developed Power App components to capture and export data efficiently and integrated BI tools for insightful reporting.",
+      visible: true,
+      order: 2,
       Problem:
         "Legacy CRM systems were slow and inefficient, affecting decision-making.",
       Solution:
@@ -919,6 +927,8 @@ export const profileDetails = {
         "To improve team collaboration and automate routine tasks during meetings.",
       The_how:
         "Used Node.js and Azure to develop custom extensions and integrated SSO and Adaptive Cards for quick actions.",
+      visible: true,
+      order: 3,
       Problem:
         "Manual processes during meetings were inefficient, causing delays.",
       Solution:
@@ -997,6 +1007,8 @@ export const profileDetails = {
       The_why: "To optimize welding operations and reduce downtime.",
       The_how:
         "Built with MQTT, Node.js, and Power BI for real-time data collection and analysis.",
+      visible: true,
+      order: 4,
       Problem: "Inefficient welding processes led to higher operational costs.",
       Solution:
         "Implemented predictive maintenance and real-time data analysis to optimize the welding process.",
@@ -1079,6 +1091,8 @@ export const profileDetails = {
         "To improve road safety by monitoring driver behavior in real-time.",
       The_how:
         "Leveraged Python, Django, Socket, and PostgreSQL to collect and analyze vehicle data.",
+      visible: true,
+      order: 5,
       Problem: "Companies faced high costs due to frequent accidents.",
       Solution:
         "Provided real-time feedback on driver behavior, reducing accidents and enhancing safety.",
@@ -1118,6 +1132,8 @@ export const profileDetails = {
         "To automate and streamline interview processes, enabling interviews to occur even in the absence of the interviewer.",
       The_how:
         "Developed using Java Spring Boot for backend services, React JS for the frontend interface, and MongoDB for data storage.",
+      visible: true,
+      order: 6,
       Problem:
         "Interviews could only occur with an interviewer present, leading to scheduling conflicts and delays.",
       Solution:
@@ -1154,6 +1170,8 @@ export const profileDetails = {
         "To improve fleet management and reduce inefficiencies through real-time monitoring.",
       The_how:
         "Built using Raspberry Pi for hardware integration, HarperDB for data management, and Node.js and Angular for the web interface.",
+      visible: true,
+      order: 7,
       Problem:
         "Fleet managers lacked real-time insights into vehicle performance, leading to inefficiencies and increased costs.",
       Solution:
@@ -1194,6 +1212,8 @@ export const profileDetails = {
       The_why: "To optimize water usage and reduce wastage.",
       The_how:
         "Built with Arduino, GSM module, Node.js, and React Native for real-time monitoring.",
+      visible: true,
+      order: 8,
       Problem:
         "Inefficient water usage led to wastage and higher operational costs.",
       Solution:
@@ -1228,6 +1248,8 @@ export const profileDetails = {
         "To enhance data reporting capabilities and streamline data migration.",
       The_how:
         "Utilized OIDM and Oracle NetSuite for seamless data migration and BI analytics.",
+      visible: true,
+      order: 9,
       Problem: "Existing data models were outdated and inefficient.",
       Solution:
         "Upgraded the data model and enhanced analytics capabilities, improving overall data management.",
@@ -1262,6 +1284,8 @@ export const profileDetails = {
       The_why: "To reduce baggage loss and enhance tracking accuracy.",
       The_how:
         "Built with Kafka, Oracle NoSQL, and OAC to process and analyze RFID data.",
+      visible: true,
+      order: 10,
       Problem:
         "Frequent baggage mishandling led to customer dissatisfaction and higher costs.",
       Solution:
@@ -1297,6 +1321,8 @@ export const profileDetails = {
       The_why: "To improve team collaboration and project tracking.",
       The_how:
         "Built using Microservices, MySQL, Hibernate, Spring Boot, and Angular 4.",
+      visible: false,
+      order: 11,
       Problem:
         "Inefficient project tracking led to delays and miscommunication.",
       Solution:
@@ -1336,6 +1362,8 @@ export const profileDetails = {
         "To streamline data collection and enable real-time business insights for improved decision-making.",
       The_how:
         "Used Oracle Analytical Cloud (OAC) to build the data pipeline, enabling the company to gain insights from their operational data.",
+      visible: true,
+      order: 12,
       Problem:
         "Lack of structured data and real-time analytics, leading to slower decision-making processes.",
       Solution:
@@ -1363,6 +1391,8 @@ export const profileDetails = {
         "To help telecom companies optimize customer engagement and reduce churn.",
       The_how:
         "Utilized ElasticSearch, Logstash, and Kibana (ELK Stack) to collect, process, and visualize data in real-time.",
+      visible: true,
+      order: 13,
       Problem:
         "Telecom companies struggled with analyzing real-time data on customer behavior and predicting churn.",
       Solution:
@@ -1395,6 +1425,8 @@ export const profileDetails = {
         "To improve operational efficiency by providing real-time insights into robot performance.",
       The_how:
         "Built with ElasticSearch, Logstash, and Kibana (Elastic Stack) to collect, process, and display data from working robots.",
+      visible: false,
+      order: 14,
       Problem:
         "Lack of real-time insights into robot performance resulted in delayed responses to system issues.",
       Solution:

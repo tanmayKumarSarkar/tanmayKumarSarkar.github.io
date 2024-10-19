@@ -1,13 +1,13 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-const SmartWeld = ({ project }) => {
+const EtransScoreCard = ({ project }) => {
   return (
     <div>
-      <div className="smartweld-wrapper project-wrapper">
+      <div className="EtransScoreCard-wrapper project-wrapper">
         <div className="mt-4 mb-6 demo-link">
           <a
-            href="https://app.powerbi.com/view?r=eyJrIjoiMzAzOTQ0M2UtZWNhNS00MTg0LThmNzItNGQyMDBkYzJhMjE4IiwidCI6IjBjZGIxYWIwLWNmZjItNDcxNy1hZjU4LTgwYzdkZDE1NjI3ZCJ9&pageName=ReportSection"
+            href="https://app.powerbi.com/view?r=eyJrIjoiMGY0NDA0YWEtNjQwZS00MjY0LTg5ZjAtYTdjYmMzZDA4NjA4IiwidCI6IjBjZGIxYWIwLWNmZjItNDcxNy1hZjU4LTgwYzdkZDE1NjI3ZCJ9"
             target="_blank"
           >
             <h2>Go to Demo</h2> &nbsp; <FaExternalLinkAlt />
@@ -331,8 +331,8 @@ const SmartWeld = ({ project }) => {
           <div className="flex items-center justify-center py-4">
             <img
               className="w-[80%] md:w-[60%] shadow-filter"
-              src={`/assets/Projects/${project.Project}/SmartWeld Architecture.png`}
-              alt="SmartWeld Architecture"
+              src={`/assets/Projects/${project.Project}/EtransScoreCard Architecture.png`}
+              alt="EtransScoreCard Architecture"
             />
           </div>
         </div>
@@ -341,4 +341,4 @@ const SmartWeld = ({ project }) => {
   );
 };
 
-export default SmartWeld;
+export default EtransScoreCard;

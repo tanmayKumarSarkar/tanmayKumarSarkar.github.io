@@ -4,6 +4,7 @@ import SmartWeld from "./SmartWeld";
 import Uhg from "./UHG";
 import Infohub from "./Infohub";
 import TeamsApp from "./TeamsApp";
+import EtransScoreCard from "./EtransScoreCard";
 
 const LoadComp = ({ name, project }) => {
   console.log(project);
@@ -16,6 +17,8 @@ const LoadComp = ({ name, project }) => {
     return <TeamsApp project={project} />;
   if (name.includes("smart") && name.includes("weld"))
     return <SmartWeld project={project} />;
+  if (name.includes("scorecard") && name.includes("prediction"))
+    return <EtransScoreCard project={project} />;
 
   return "<></>";
 };

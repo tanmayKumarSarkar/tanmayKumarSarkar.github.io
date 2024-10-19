@@ -42,6 +42,21 @@
     text-align: left;
 }
 
+.external-details .demo-link {
+    /* font-size: 0.875rem; */
+    text-align: left;
+}
+
+.external-details .demo-link>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.external-details .demo-link>a>svg {
+    color: #c8ff00;
+}
+
 
 
 /* .external-details .smartweld-wrapper h3:afters {

@@ -1,12 +1,17 @@
 import React, { lazy, useContext, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { profileDetails } from "../../utils";
 import { HeaderContext, useHeaderMenuCtx } from "../../utils/Context.jsx";
 import { PiCompassToolFill } from "react-icons/pi";
 import { FaGripfire } from "react-icons/fa";
 
 import "./Projects.css";
-import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
+import {
+  MdKeyboardDoubleArrowLeft,
+  MdKeyboardDoubleArrowRight,
+  MdOutlineKeyboardArrowLeft,
+} from "react-icons/md";
+import { TiArrowBack } from "react-icons/ti";
 const Carousel = lazy(() => import("../Common/Carousel.jsx"));
 const LoadComp = lazy(() => import("./ProjectContents/LoadComp.jsx"));
 
@@ -14,6 +19,13 @@ const ProjectDetails = (props) => {
   // console.log(props);
   const { projectid } = useParams();
   const exp = profileDetails.projects.find((p) => p.id == projectid);
+  const allProjects = profileDetails.projects
+    ?.filter((p) => p.visible)
+    .sort((p1, p2) => p1.order - p2.order);
+  const expIndex = allProjects.findIndex((p) => p.id == projectid);
+  const prevId = expIndex > 0 ? allProjects[expIndex - 1].id : -2;
+  const nextId =
+    expIndex < allProjects.length - 1 ? allProjects[expIndex + 1].id : -1;
 
   const [headerMenu, setHeaderMenu] = useHeaderMenuCtx();
   // const {showHeader, setShowHeader} = useContext(HeaderContext);
@@ -31,12 +43,31 @@ const ProjectDetails = (props) => {
           <div className="text-left">
             <div className="text-xs font-medium  flex justify-between">
               <span className="text-xs font-medium ">{exp.Category}</span>
-              <span>
-                <a href="#" onClick={() => navigate(-1)} className="flex ">
+              <span className="flex">
+                <a
+                  href="#"
+                  onClick={() => navigate(-1)}
+                  className="flex mr-1 md:mr-24"
+                >
                   <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2">
-                    <MdKeyboardDoubleArrowLeft /> Back
+                    <TiArrowBack /> &nbsp;Back
                   </span>
                 </a>
+
+                {prevId != -2 && (
+                  <Link to={`/project/${prevId}`} className="flex ">
+                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2">
+                      <MdKeyboardDoubleArrowLeft /> Prev
+                    </span>
+                  </Link>
+                )}
+                {nextId != -1 && (
+                  <Link to={`/project/${nextId}`} className="flex ml-1">
+                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2">
+                      Next <MdKeyboardDoubleArrowRight />
+                    </span>
+                  </Link>
+                )}
               </span>
             </div>
             <div className="text-3xl font-medium mt-2">{exp.Project}</div>

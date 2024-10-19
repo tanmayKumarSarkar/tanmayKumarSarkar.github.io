@@ -75,3 +75,8 @@
 .experience-details-item:hover .experience-details-landmark {
     fill: #ee5656;
 }
+
+.experience-details-item .company-logo {
+    -webkit-filter: drop-shadow(2px 2px 3px #222222a8);
+    filter: drop-shadow(2px 2px 3px #222222a8);
+}

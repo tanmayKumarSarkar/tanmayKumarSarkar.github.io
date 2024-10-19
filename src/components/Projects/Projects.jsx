@@ -68,9 +68,12 @@ const Projects = () => {
         className="w-full h-full flex flex-row flex-wrap justify-evenly project-card-container"
         onMouseMove={(e) => mouseMove(e)}
       >
-        {profileDetails?.projects?.map((exp, i) => (
-          <ProjectItem key={`exp-${i}`} exp={exp} index={i} />
-        ))}
+        {profileDetails?.projects
+          ?.filter((p) => p.visible)
+          .sort((p1, p2) => p1.order - p2.order)
+          ?.map((exp, i) => (
+            <ProjectItem key={`exp-${i}`} exp={exp} index={i} />
+          ))}
       </div>
     </div>
   );

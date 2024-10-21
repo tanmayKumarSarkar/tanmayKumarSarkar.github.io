@@ -9,6 +9,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { HeaderContext, useHeaderMenuCtx } from "./utils/Context.jsx";
 import QuillEditor from "./components/Common/QuillEditor.jsx";
+import PageScrollBar from "./components/Common/PageScrollBar.jsx";
 const ProjectDetails = lazy(() =>
   import("./components/Projects/ProjectDetails.jsx")
 );
@@ -72,6 +73,7 @@ function App() {
         {/* <Contents></Contents> */}
         <Sidebar></Sidebar>
         <Footer></Footer>
+        <PageScrollBar />
       </div>
       {/* </HeaderContext.Provider> */}
     </>

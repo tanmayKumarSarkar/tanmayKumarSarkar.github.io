@@ -62,7 +62,7 @@
 
 .project-card-img:hover {
     border-radius: 10px;
-    transform: scale(1.5);
+    transform: scale(1.25);
     box-shadow: 5px 5px 5px black;
     z-index: 10;
 }

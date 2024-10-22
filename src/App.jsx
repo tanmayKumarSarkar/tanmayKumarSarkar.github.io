@@ -32,8 +32,8 @@ function App() {
     const errorHandler = (event) => {
       setHasError(true);
       console.error("ErrorBoundary caught an error", event.error);
-      navigate("/404");
-      window.location = "/404";
+      // navigate("/404");
+      // window.location = "/404";
     };
 
     window.addEventListener("error", errorHandler);

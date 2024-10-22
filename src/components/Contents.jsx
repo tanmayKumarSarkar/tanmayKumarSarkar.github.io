@@ -11,6 +11,8 @@ const Intro = lazy(() => import("./Intro/Intro3.jsx"));
 // const ProfileSummary = lazy(() => import("./Summary/ProfileSummary.jsx"));
 const Projects = lazy(() => import("./Projects/Projects.jsx"));
 const WorkExp = lazy(() => import("./Work/WorkExp.jsx"));
+const Skill = lazy(() => import("./Skills/Skill.jsx"));
+const MinorProjects = lazy(() => import("./Learnings/MinorProjects.jsx"));
 
 const Contents = () => {
   // const {showHeader, setShowHeader} = useContext(HeaderContext);
@@ -78,9 +80,15 @@ const Contents = () => {
       </ContentFragment>
       <ContentFragment
         id="skills-section"
-        className="w-full min-h-screen bg-white py-5"
+        className="w-full min-h-screen minor-project-container "
       >
-        Skills
+        <MinorProjects></MinorProjects>
+      </ContentFragment>
+      <ContentFragment
+        id="skills-section"
+        className="w-full min-h-screen py-5 skill-container "
+      >
+        <Skill></Skill>
       </ContentFragment>
       <ContentFragment
         id="technology-section"

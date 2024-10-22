@@ -1437,59 +1437,152 @@ export const profileDetails = {
   personal_projects: [
     {
       name: "Book Library Web Application",
-      description: "Designed with GraphQL server.",
+      description:
+        "The Book Library Web Application simplifies cataloging and borrowing with search, reserve, and review features, plus user reviews and due-date reminders.",
       technologies: ["Mongo DB", "GraphQL", "React JS"],
+      git: "https://github.com/tanmayKumarSarkar/MERN-Stack-Apps/tree/master/graphql-app",
     },
     {
-      name: "User Management and Video Player Web App",
+      name: "Video Player Web App",
       description:
-        "Developed in Node, Express, MongoDB & Angular 4 as front end.",
-      technologies: ["MEAN Stack"],
+        "Video Player Web App merges user account control with advanced video playback, providing efficient management and a great viewing experience.",
+      technologies: ["Node", "Express", "MongoDB", "Angular"],
+      git: "https://github.com/tanmayKumarSarkar/video-player",
     },
     {
       name: "Recipe World Web Application",
       description:
-        "Designed with data from RESTful external API, Color Game designed for Firefox OS with HTML/ CSS & Java Script.",
-      technologies: ["React JS"],
+        "The Recipe World Web App features a vast recipe collection, personalized suggestions, and user reviews, making culinary discovery, saving, and sharing easy.",
+      technologies: ["React JS", "REST API"],
+      git: "https://github.com/tanmayKumarSarkar/MERN-Stack-Apps/tree/master/cooking-recipe",
     },
     {
-      name: "Online Retail Banking System, MNREGA portal Web Application",
+      name: "Firefox Color Game",
       description:
-        "Developed in Java 1.8 with JSP, Servlet, Hibernate, Struts, JQuery & AJAX.",
-      technologies: ["J2EE"],
+        "The Firefox Color Game is an engaging browser game that challenges players to match colors accurately for a vibrant and stimulating user experience.",
+      technologies: ["Firefox", "HTML", "CSS", "Javascript"],
+      git: "https://github.com/tanmayKumarSarkar/ColorGame",
+    },
+    {
+      name: "User Management Web App",
+      description:
+        "The User Management Web App provides efficient account handling, access control, and user activity tracking. Secure, reliable, user-friendly.",
+      technologies: ["Node", "Express", "MongoDB", "Angular"],
+      git: "https://github.com/tanmayKumarSarkar/UserManagement",
+    },
+    {
+      name: "Online Retail Banking System",
+      description:
+        "The Online Retail Banking System offers digital banking services, enabling users to manage accounts, perform transactions, and access financial tools through a user-friendly web interface.",
+      technologies: [
+        "J2EE",
+        "Servlet",
+        "Hibernate",
+        "Struts",
+        "JQuery",
+        "AJAX",
+      ],
+    },
+    {
+      name: "MNREGA portal Web Application",
+      description:
+        "MNREGA portal Web Application supports the Mahatma Gandhi National Rural Employment Guarantee Act, offering job opportunities for 100 days of rural development work.",
+      technologies: [
+        "J2EE",
+        "Servlet",
+        "Hibernate",
+        "Struts",
+        "JQuery",
+        "AJAX",
+      ],
+      git: "https://github.com/tanmayKumarSarkar/MNREGA",
     },
     {
       name: "E-Requisition System Web Application",
-      description: "Developed in .NET 4.0 with ASP and JQuery, AJAX.",
-      technologies: ["C# .NET/ Visual Studio"],
+      description:
+        "The E-Requisition System Web App enhances organizational productivity by managing, tracking, and approving requests efficiently online. Smooth workflows, simplified processes.",
+      technologies: ["C#", ".NET 4.0", "JQuery", "AJAX"],
+      git: "https://github.com/tanmayKumarSarkar/E-Requisition-System",
     },
     {
       name: "LAN Chat communication tool",
       description:
-        "Developed using TCP/ IP and UDP protocol in C# implementation.",
-      technologies: ["C# .NET/ Visual Studio"],
+        "The LAN Chat tool supports TCP/IP and UDP, enabling seamless, real-time communication across local networks. Efficient, reliable, interactive.",
+      technologies: ["C#", ".NET", "TCP/ IP", "UDP"],
+      git: "https://github.com/tanmayKumarSarkar/LanChat",
     },
     {
-      name: "Running Ninja & Catch The Balls, Android Game",
+      name: "Running Ninja Android Game",
       description:
-        "Self-designed game character, character animations & C# as the Scripting language.",
-      technologies: ["UNITY Game Engine"],
+        "Running Ninja is a UNITY Android game featuring fast-paced ninja action, challenging levels, and exciting gameplay. Quick reflexes required!",
+      technologies: [
+        "UNITY Game Engine",
+        "C#",
+        "Inkscape",
+        "Character Design & Animation",
+      ],
+      git: "https://github.com/tanmayKumarSarkar/RunningNinja",
+    },
+    {
+      name: "Catch The Balls Android Game",
+      description:
+        "Catch The Balls is a UNITY Android game where players skillfully catch falling balls. Fast-paced, addictive, and fun gameplay.",
+      technologies: [
+        "UNITY Game Engine",
+        "C#",
+        "Inkscape",
+        "Asset Design & Animation",
+      ],
+      git: "https://github.com/tanmayKumarSarkar/CollectTheBalls",
+    },
+    {
+      name: "Tic Tac Toe Android Game",
+      description:
+        "Tic Tac Toe is a classic Android game, offering simple yet addictive gameplay. Play against AI or friends anytime.",
+      technologies: ["JAVA SWING", "JDK 1.7", "Eclipse"],
+      git: "https://github.com/tanmayKumarSarkar/Tic-Tac-Toe",
     },
     {
       name: "Auction System Desktop Application",
       description:
-        "Developed in JAVA SWING (1.7) & Tic Tac Toe Android Game designed using Android Eclipse IDE.",
-      technologies: ["JAVA SWING (1.7)"],
+        "The Auction System Desktop Application enables efficient auction management, bidding, and tracking. User-friendly interface ensures smooth, real-time operations.",
+      technologies: ["JAVA SWING", "JDK 1.7", "Eclipse"],
+      git: "https://github.com/tanmayKumarSarkar/Auction-System",
     },
     {
       name: "Stock Management System Web Application",
-      description: "",
-      technologies: ["Oracle 10g/ Oracle Forms"],
+      description:
+        "The Stock Management System Web App efficiently handles inventory tracking, stock levels, and order management. User-friendly, accurate, essential.",
+      technologies: ["Oracle 10g", "Oracle Forms"],
+      git: "https://github.com/tanmayKumarSarkar/Stock-Management-System",
     },
     {
-      name: "Online Examination System Web Application & Social Networking Site Web Application",
-      description: "",
-      technologies: ["PHP & MySQL"],
+      name: "Online Examination System Web Application",
+      description:
+        "The Online Examination System Web App offers secure, efficient test administration, automated grading, and detailed reporting. User-friendly, reliable.",
+      technologies: ["PHP", "MySQL", "JQuery", "AJAX"],
+      git: "https://github.com/tanmayKumarSarkar/Online-Test",
+    },
+    {
+      name: "Social Networking Site Web Application",
+      description:
+        "The Social Networking Site Web App connects users, enabling profile creation, messaging, and content sharing. User-friendly, engaging, interactive.",
+      technologies: ["PHP", "MySQL", "JQuery", "AJAX"],
+      git: "https://github.com/tanmayKumarSarkar/Social-Networking",
+    },
+    {
+      name: "Game Library Web App",
+      description:
+        "The Game Library Web App organizes, tracks, and manages video games efficiently. User-friendly, interactive, perfect for gamers.",
+      technologies: ["React", "REST API"],
+      git: "https://github.com/tanmayKumarSarkar/react-game-library",
+    },
+    {
+      name: "Renewable Energy Simulation App",
+      description:
+        "Interactive app simulating wind turbine and solar power generation, the server sends wind speed and light intensity data, simulating turbine rotation and solar power generation.",
+      technologies: ["React", "Node.js", "Three.js"],
+      git: "https://github.com/tanmayKumarSarkar/ThreeJS",
     },
   ],
   technical_skills: {

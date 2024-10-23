@@ -13,6 +13,9 @@ const Projects = lazy(() => import("./Projects/Projects.jsx"));
 const WorkExp = lazy(() => import("./Work/WorkExp.jsx"));
 const Skill = lazy(() => import("./Skills/Skill.jsx"));
 const MinorProjects = lazy(() => import("./Learnings/MinorProjects.jsx"));
+const Technology = lazy(() => import("./Technology/Technology.jsx"));
+const Contact = lazy(() => import("./Contact/Contact.jsx"));
+
 
 const Contents = () => {
   // const {showHeader, setShowHeader} = useContext(HeaderContext);
@@ -79,35 +82,35 @@ const Contents = () => {
         <WorkExp />
       </ContentFragment>
       <ContentFragment
-        id="skills-section"
+        id="learnings-section"
         className="w-full min-h-screen minor-project-container "
       >
         <MinorProjects></MinorProjects>
       </ContentFragment>
-      <ContentFragment
+      {/* <ContentFragment
         id="skills-section"
         className="w-full min-h-screen py-5 skill-container "
       >
         <Skill></Skill>
-      </ContentFragment>
+      </ContentFragment> */}
       <ContentFragment
         id="technology-section"
         className="w-full min-h-screen bg-white py-5"
       >
-        Technology
+        <Technology/>
       </ContentFragment>
       <ContentFragment
         id="contact-section"
-        className="w-full min-h-screen bg-white py-5"
+        className="w-full min-h-screen"
       >
-        Contact
+        <Contact/>
       </ContentFragment>
-      <ContentFragment
+      {/* <ContentFragment
         id="footer-content-section"
         className="w-full min-h-screen bg-white py-5"
       >
-        Footer Content
-      </ContentFragment>
+        <Contact/>
+      </ContentFragment> */}
     </div>
   );
 };

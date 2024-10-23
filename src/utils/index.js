@@ -35,8 +35,8 @@ export const navRoutes = [
   },
   {
     id: 4,
-    title: "Skills",
-    path: "/#skills-section",
+    title: "Learnings",
+    path: "/#learnings-section",
     side: "right",
     icon: "IoSnowSharp",
   },

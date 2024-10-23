@@ -49,4 +49,26 @@ Black Hole
 
 Cloud/ Lightning Transition
 
+ref:
+
+https://tech.elementor.templately.com/parallaxpro/
+
+https://codepen.io/saikathalderr/pen/rpPMrW
+
+https://web3forms.com/templates/contact-form-with-dark-mode
+
+https://images01.nicepagecdn.com/page/63/51/website-design-preview-6351173.webp
+
+https://images01.nicepagecdn.com/page/49/70/website-design-preview-497014.webp
+
+https://images01.nicepagecdn.com/page/40/29/website-design-preview-4029637.webp
+
+https://images01.nicepagecdn.com/page/28/78/website-template-preview-2878708.webp
+
+https://cdn.dribbble.com/users/1533259/screenshots/6176128/media/20dc5115e058cc55eb2ddffcd529dfca.png?resize=768x576&vertical=center
+
+https://cdn.dribbble.com/userupload/16322289/file/original-2c3b63f95094a9dbb81ccbd5d31090d1.png?resize=1024x768
+
+
+
 

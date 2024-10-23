@@ -1,0 +1,14 @@
+.contact-wrapper{
+    position: relative;
+    background: linear-gradient(to bottom,#000 15%,rgb(142,40,38));
+}
+
+.contact-wrapper .back{
+    position: absolute;
+    /* position: relative; */
+    /* bottom: -4px; */
+}
+
+.contact-wrapper .front{
+    /* position: absolute; */
+}

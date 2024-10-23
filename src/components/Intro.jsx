@@ -52,7 +52,7 @@ function Intro() {
                 className="parallax w-full h-full object-cover bg-cover bg-bottom-center"
                 style={{
                   //   backgroundImage: `url(./assets/parallax/bg2up.jpeg)`,
-                  backgroundImage: `url(./assets/parallax/${img.image})`,
+                  backgroundImage: `url(/assets/parallax/${img.image})`,
                 }}
               ></div>
             </ParallaxLayer>

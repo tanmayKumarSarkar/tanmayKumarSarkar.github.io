@@ -46,15 +46,17 @@ const MinorProjects = () => {
               className="personal-project-item w-[calc(100%-32px)] md:w-[calc(50%-32px)] lg:w-[calc(33%-32px)]"
               key={p.name}
             >
-              <div className="flex justify-center text-6xl py-2 icn">
-              {p.icon && <IconComp componentName={p.icon.name} lib={p.icon.lib} />}
+              <div>
+                <div className="flex justify-center text-6xl py-2 icn">
+                {p.icon && <IconComp componentName={p.icon.name} lib={p.icon.lib} />}
+                </div>
+                <div>{p.name}</div>
+                <div className="text-xs mt-2">{p.description}</div>
               </div>
-              <div>{p.name}</div>
-              <div className="text-xs mt-2">{p.description}</div>
-              <div className="text-xs mt-2 flex flex-wrap justify-center">{p.technologies?.map(t=>(
+              <div className="text-xs mt-2 flex flex-wrap justify-center items-center h-full">{p.technologies?.map(t=>(
                 <div className="tech" key={t}>{t}</div>
               ))}</div>
-              <div className="text-2xl mt-2 git">
+              <div className="text-3xl mt-2 git">
                 <a href={p.git}><FaGithub></FaGithub></a>
               </div>
             </div>

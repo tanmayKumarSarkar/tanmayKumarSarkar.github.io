@@ -57,12 +57,12 @@ const Contents = () => {
 
   return (
     <div className="w-full z-[1] bg-white contents-container">
-      <ContentFragment id="intro-section" className="w-full h-screen">
+      <ContentFragment id="intro-section" className="w-full min-h-screen md:h-screen">
         <Intro></Intro>
       </ContentFragment>
       <ContentFragment
         id="profile-summary-section"
-        className="w-full h-screen md:h-full lg-h-screen bg-[#ffffff10] pt-5 pb-3 mb-16"
+        className="w-full min-h-screen md:h-screen lg-h-screen bg-[#ffffff10] pt-5 pb-3 mb-16"
       >
         <ProfileSummary></ProfileSummary>
       </ContentFragment>

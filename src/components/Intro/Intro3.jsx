@@ -10,6 +10,7 @@ import {
 } from "../../utils/motion";
 import { profileDetails } from "../../utils";
 import { SparklesIcon } from "@heroicons/react/16/solid";
+import { IoIosArrowDown } from "react-icons/io";
 // import TechIcons from "./TechIcons";
 const TechIcons = lazy(() => import("./TechIcons.jsx"));
 const StarsField = lazy(() => import("./StarsField.jsx"));
@@ -31,7 +32,7 @@ const Intro = () => {
   }, []);
   return (
     <div
-      className="flex flex-col w-full h-full intro3-cointainer py-0 px-0 mx-0 relative overflow-hidden"
+      className="flex flex-col w-full min-h-screen md:h-full justify-around md:justify-start intro3-cointainer pt-0 pb-8 md:pb-0 px-0 mx-0 relative overflow-hidden"
       ref={componentRef}
     >
       <video
@@ -122,6 +123,11 @@ const Intro = () => {
           </motion.div>
         </div>
       </motion.div>
+      <div className="scroll-arrow bottom-[6%] md:bottom-[12%] text-sm md:text-4xl">
+        <div className="arrow-1 h-[7px] md:h-[15px]"><IoIosArrowDown /></div>
+        <div className="arrow-2 h-[7px] md:h-[15px]"><IoIosArrowDown /></div>
+        <div className="arrow-3 h-[7px] md:h-[15px]"><IoIosArrowDown /></div>
+      </div>
       <div className="custom-shape-divider-bottom-1724344525">
         <svg
           data-name="Layer 1"

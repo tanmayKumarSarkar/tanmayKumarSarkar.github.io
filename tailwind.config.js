@@ -29,6 +29,11 @@ export default {
           max: "1023px",
           orientation: "landscape",
         },
+        "lg-portrait": {
+          min: "1024",
+          max: "1279",
+          orientation: "portrait",
+        },
       },
     },
   },

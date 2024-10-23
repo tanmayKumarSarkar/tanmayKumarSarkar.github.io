@@ -1600,7 +1600,7 @@ export const profileDetails = {
         "Interactive app simulating wind turbine and solar power generation, the server sends wind speed and light intensity data, simulating turbine rotation and solar power generation.",
       technologies: ["React", "Node.js", "Three.js"],
       git: "https://github.com/tanmayKumarSarkar/ThreeJS",
-      icon:{name:"GiSolarPower",lib:"gi"}
+      icon:{name:"PiSolarPanelDuotone",lib:"pi"}
     },
   ],
   technical_skills: {

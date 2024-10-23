@@ -77,3 +77,35 @@
 .custom-shape-divider-bottom-1724344525 .shape-fill {
     fill: #FFFFFF;
 }
+
+.scroll-arrow{
+    position: absolute;
+    /* bottom:15px; */
+    left:0;
+    right: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+.arrow-1,.arrow-2,.arrow-3{
+    display: flex;
+    justify-content: center;
+    /* height: 15px; */
+}
+
+.arrow-1 {
+    animation: blinker 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+  }
+  @keyframes blinker { to { opacity: 0; } }
+  
+  .arrow-2 {
+    animation: blinker2 0.6s cubic-bezier(1, 0, 0, 1) infinite alternate;  
+  }
+  @keyframes blinker2 { to { opacity: 0; } }
+  
+  .arrow-3 {
+    animation: blinker3 1s ease-in-out infinite alternate;  
+  }
+  @keyframes blinker3 { to { opacity: 0; } }

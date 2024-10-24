@@ -1,7 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "./Contact.css";
 
+
+
 const Contact = () => {
+
+    const [wrapperOffset, setWrapperOffset] = useState(0);
+
+    const wrapperPosition = ()=>{
+        const wrapper = document.querySelector('.parallax-wrapper')?.getBoundingClientRect();
+        let wrapperScrollPos = 0;  
+        if(!!wrapper){
+        // wrapperScrollPos =   wrapper.height - wrapper.top;
+        // if(wrapperScrollPos<0){
+        //     wrapperScrollPos = 0
+        // }if(wrapperScrollPos>wrapper.height){}   
+        wrapperScrollPos=Math.min(wrapper.height, Math.max(0,( wrapper.height - wrapper.top)));    
+        }
+        console.log("wrapperScrollPos:::",wrapperScrollPos);
+        setWrapperOffset(wrapperScrollPos);
+    }
+
+    useEffect(()=>{
+        window.addEventListener('scroll',wrapperPosition)
+    },[]);
+
+    useEffect(()=>{
+        let rocketGroup = document.querySelector('.rocket-group');
+        let rocket = document.querySelector('.rocket');
+        let rocketTop = (wrapperOffset - (rocket.getBoundingClientRect().height+20));
+        if(rocketTop<0)rocketTop=0;
+        console.log("wrapperOffset::",wrapperOffset,"rocketTop",rocketTop);
+        rocketGroup.style.top = rocketTop+'px';
+    },[wrapperOffset]);
+
     return (
         <div className="contact-wrapper w-full min-h-screen">
             <div className="back -bottom-1 md:-bottom-8">

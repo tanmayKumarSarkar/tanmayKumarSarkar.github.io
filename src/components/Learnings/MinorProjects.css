@@ -1,3 +1,7 @@
+#learnings-section {
+    min-height: 100vh;
+}
+
 .minor-project-container {
     position: relative;
     background: red;
@@ -110,15 +114,15 @@
     justify-content: space-between;
 }
 
-.personal-project-item .icn{
-    color:#4af433;
+.personal-project-item .icn {
+    color: #4af433;
     -webkit-filter: drop-shadow(2px 2px 3px #000000e1);
     filter: drop-shadow(2px 2px 3px #000000e1);
 }
 
-.personal-project-item .tech{
+.personal-project-item .tech {
     background: #000;
-    color:#4af433;
+    color: #4af433;
     margin-left: 4px;
     margin-bottom: 6px;
     padding: 3px 6px;
@@ -128,16 +132,18 @@
 }
 
 
-.personal-project-item .git{
+.personal-project-item .git {
     position: absolute;
-    top:10px;
-    right:18px;
-    color:#02ffd5;
+    top: 10px;
+    right: 18px;
+    color: #02ffd5;
     -webkit-filter: drop-shadow(2px 2px 3px #000000e1);
     filter: drop-shadow(2px 2px 3px #000000e1);
     transition: 1.2s;
 }
 
-.personal-project-item .git:hover,.personal-project-item .git:focus,.personal-project-item .git:active{
+.personal-project-item .git:hover,
+.personal-project-item .git:focus,
+.personal-project-item .git:active {
     transform: scale(1.3);
 }

@@ -8,7 +8,7 @@ export const navRoutes = [
   {
     id: 0,
     title: "Home",
-    path: "/#",
+    path: "/#intro-section",
     side: "left",
     icon: "IoHome",
   },
@@ -1441,7 +1441,7 @@ export const profileDetails = {
         "The Book Library Web Application simplifies cataloging and borrowing with search, reserve, and review features, plus user reviews and due-date reminders.",
       technologies: ["Mongo DB", "GraphQL", "React JS"],
       git: "https://github.com/tanmayKumarSarkar/MERN-Stack-Apps/tree/master/graphql-app",
-      icon:{name:"IoLibrarySharp",lib:""}
+      icon: { name: "IoLibrarySharp", lib: "" },
     },
     {
       name: "Video Player Web App",
@@ -1449,7 +1449,7 @@ export const profileDetails = {
         "Video Player Web App merges user account control with advanced video playback, providing efficient management and a great viewing experience.",
       technologies: ["Node", "Express", "MongoDB", "Angular"],
       git: "https://github.com/tanmayKumarSarkar/video-player",
-      icon:{name:"PiVideoDuotone",lib:"pi"}
+      icon: { name: "PiVideoDuotone", lib: "pi" },
     },
     {
       name: "Recipe World Web Application",
@@ -1457,7 +1457,7 @@ export const profileDetails = {
         "The Recipe World Web App features a vast recipe collection, personalized suggestions, and user reviews, making culinary discovery, saving, and sharing easy.",
       technologies: ["React JS", "REST API"],
       git: "https://github.com/tanmayKumarSarkar/MERN-Stack-Apps/tree/master/cooking-recipe",
-      icon:{name:"GiCampCookingPot",lib:"gi"}
+      icon: { name: "GiCampCookingPot", lib: "gi" },
     },
     {
       name: "Firefox Color Game",
@@ -1465,7 +1465,7 @@ export const profileDetails = {
         "The Firefox Color Game is an engaging browser game that challenges players to match colors accurately for a vibrant and stimulating user experience.",
       technologies: ["Firefox", "HTML", "CSS", "Javascript"],
       git: "https://github.com/tanmayKumarSarkar/ColorGame",
-      icon:{name:"IoIosColorPalette",lib:"io"}
+      icon: { name: "IoIosColorPalette", lib: "io" },
     },
     {
       name: "User Management Web App",
@@ -1473,7 +1473,7 @@ export const profileDetails = {
         "The User Management Web App provides efficient account handling, access control, and user activity tracking. Secure, reliable, user-friendly.",
       technologies: ["Node", "Express", "MongoDB", "Angular"],
       git: "https://github.com/tanmayKumarSarkar/UserManagement",
-      icon:{name:"FaUsersGear",lib:"fa6"}
+      icon: { name: "FaUsersGear", lib: "fa6" },
     },
     {
       name: "Online Retail Banking System",
@@ -1487,7 +1487,7 @@ export const profileDetails = {
         "JQuery",
         "AJAX",
       ],
-      icon:{name:"ImLibrary",lib:"im"}
+      icon: { name: "ImLibrary", lib: "im" },
     },
     {
       name: "MNREGA portal Web Application",
@@ -1502,7 +1502,7 @@ export const profileDetails = {
         "AJAX",
       ],
       git: "https://github.com/tanmayKumarSarkar/MNREGA",
-      icon:{name:"FaRoad",lib:"fa"}
+      icon: { name: "FaRoad", lib: "fa" },
     },
     {
       name: "E-Requisition System Web Application",
@@ -1510,7 +1510,7 @@ export const profileDetails = {
         "The E-Requisition System Web App enhances organizational productivity by managing, tracking, and approving requests efficiently online. Smooth workflows, simplified processes.",
       technologies: ["C#", ".NET 4.0", "JQuery", "AJAX"],
       git: "https://github.com/tanmayKumarSarkar/E-Requisition-System",
-      icon:{name:"HiOutlineClipboardDocumentCheck",lib:"hi2"}
+      icon: { name: "HiOutlineClipboardDocumentCheck", lib: "hi2" },
     },
     {
       name: "LAN Chat communication tool",
@@ -1518,7 +1518,7 @@ export const profileDetails = {
         "The LAN Chat tool supports TCP/IP and UDP, enabling seamless, real-time communication across local networks. Efficient, reliable, interactive.",
       technologies: ["C#", ".NET", "TCP/ IP", "UDP"],
       git: "https://github.com/tanmayKumarSarkar/LanChat",
-      icon:{name:"PiChatsDuotone",lib:"pi"}
+      icon: { name: "PiChatsDuotone", lib: "pi" },
     },
     {
       name: "Running Ninja Android Game",
@@ -1531,7 +1531,7 @@ export const profileDetails = {
         "Character Design & Animation",
       ],
       git: "https://github.com/tanmayKumarSarkar/RunningNinja",
-      icon:{name:"GiRunningNinja",lib:"gi"}
+      icon: { name: "GiRunningNinja", lib: "gi" },
     },
     {
       name: "Catch The Balls Android Game",
@@ -1544,7 +1544,7 @@ export const profileDetails = {
         "Asset Design & Animation",
       ],
       git: "https://github.com/tanmayKumarSarkar/CollectTheBalls",
-      icon:{name:"GiThreeBurningBalls",lib:"gi"}
+      icon: { name: "GiThreeBurningBalls", lib: "gi" },
     },
     {
       name: "Tic Tac Toe Android Game",
@@ -1552,7 +1552,7 @@ export const profileDetails = {
         "Tic Tac Toe is a classic Android game, offering simple yet addictive gameplay. Play against AI or friends anytime.",
       technologies: ["JAVA SWING", "JDK 1.7", "Eclipse"],
       git: "https://github.com/tanmayKumarSarkar/Tic-Tac-Toe",
-      icon:{name:"TbTicTac",lib:"tb"}
+      icon: { name: "TbTicTac", lib: "tb" },
     },
     {
       name: "Auction System Desktop Application",
@@ -1560,7 +1560,7 @@ export const profileDetails = {
         "The Auction System Desktop Application enables efficient auction management, bidding, and tracking. User-friendly interface ensures smooth, real-time operations.",
       technologies: ["JAVA SWING", "JDK 1.7", "Eclipse"],
       git: "https://github.com/tanmayKumarSarkar/Auction-System",
-      icon:{name:"RiAuctionFill",lib:"ri"}
+      icon: { name: "RiAuctionFill", lib: "ri" },
     },
     {
       name: "Stock Management System Web Application",
@@ -1568,7 +1568,7 @@ export const profileDetails = {
         "The Stock Management System Web App efficiently handles inventory tracking, stock levels, and order management. User-friendly, accurate, essential.",
       technologies: ["Oracle 10g", "Oracle Forms"],
       git: "https://github.com/tanmayKumarSarkar/Stock-Management-System",
-      icon:{name:"MdWarehouse",lib:"md"}
+      icon: { name: "MdWarehouse", lib: "md" },
     },
     {
       name: "Online Examination System Web Application",
@@ -1576,7 +1576,7 @@ export const profileDetails = {
         "The Online Examination System Web App offers secure, efficient test administration, automated grading, and detailed reporting. User-friendly, reliable.",
       technologies: ["PHP", "MySQL", "JQuery", "AJAX"],
       git: "https://github.com/tanmayKumarSarkar/Online-Test",
-      icon:{name:"PiExamBold",lib:"pi"}
+      icon: { name: "PiExamBold", lib: "pi" },
     },
     {
       name: "Social Networking Site Web Application",
@@ -1584,7 +1584,7 @@ export const profileDetails = {
         "The Social Networking Site Web App connects users, enabling profile creation, messaging, and content sharing. User-friendly, engaging, interactive.",
       technologies: ["PHP", "MySQL", "JQuery", "AJAX"],
       git: "https://github.com/tanmayKumarSarkar/Social-Networking",
-      icon:{name:"LiaNetworkWiredSolid",lib:"lia"}
+      icon: { name: "LiaNetworkWiredSolid", lib: "lia" },
     },
     {
       name: "Game Library Web App",
@@ -1592,7 +1592,7 @@ export const profileDetails = {
         "The Game Library Web App organizes, tracks, and manages video games efficiently. User-friendly, interactive, perfect for gamers.",
       technologies: ["React", "REST API"],
       git: "https://github.com/tanmayKumarSarkar/react-game-library",
-      icon:{name:"IoGameController",lib:""}
+      icon: { name: "IoGameController", lib: "" },
     },
     {
       name: "Renewable Energy Simulation App",
@@ -1600,7 +1600,7 @@ export const profileDetails = {
         "Interactive app simulating wind turbine and solar power generation, the server sends wind speed and light intensity data, simulating turbine rotation and solar power generation.",
       technologies: ["React", "Node.js", "Three.js"],
       git: "https://github.com/tanmayKumarSarkar/ThreeJS",
-      icon:{name:"PiSolarPanelDuotone",lib:"pi"}
+      icon: { name: "PiSolarPanelDuotone", lib: "pi" },
     },
   ],
   technical_skills: {
@@ -1736,4 +1736,13 @@ export const isMobile = () => {
     navigator.userAgent.toLowerCase()
   );
   return isMobile;
+};
+
+export const customNav = (path) => {
+  window.location = path;
+  setTimeout(() => {
+    document
+      .getElementById(path.replace("/", "").replace("#", ""))
+      .scrollIntoView({ behavior: "smooth" });
+  }, 1000);
 };

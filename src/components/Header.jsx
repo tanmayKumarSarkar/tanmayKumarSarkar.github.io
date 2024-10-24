@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { navRoutes, zIndex } from "../utils";
+import { navRoutes, zIndex, customNav } from "../utils";
 import { Link, useNavigate } from "react-router-dom";
 import { HeaderContext, useHeaderMenuCtx } from "../utils/Context.jsx";
 
@@ -101,12 +101,16 @@ const Header = () => {
               {navRoutes.map((nav) => (
                 <li key={nav.id}>
                   <a
-                    href={nav.path}
+                    // href={nav.path}
                     onClick={() => {
-                      navigate(nav.path);
+                      customNav(nav.path);
+                      // navigate(nav.path);
+                      // document
+                      //   .getElementById(nav.path.replace("/#", ""))
+                      //   .scrollIntoView();
                       toggleMobileMenu();
                     }}
-                    className="flex px-3 md:px-2 mx-2 md:mx-0 lg:mx-2 mb-2 md:mb-1 md:px-2 py-1 md:py-1 text-white nav-txt header-nav-item cursor-pointer"
+                    className="flex px-3 md:px-2 mx-2 md:mx-0 lg:mx-2 mb-2 md:mb-1 py-1 md:py-1 text-white nav-txt header-nav-item cursor-pointer"
                     //                   "bg-transparent md:hover:bg-blue-700 rounded md:rounded-full  shadow-sm hover:
                     // hover:shadow-white"
                     //   aria-current="page"

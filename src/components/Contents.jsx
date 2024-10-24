@@ -4,6 +4,7 @@ import React, { lazy, useContext, useEffect, useState } from "react";
 import ProfileSummary from "./Summary/ProfileSummary";
 import { HeaderContext, useHeaderMenuCtx } from "../utils/Context.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
+import { customNav } from "../utils/index.js";
 // import Projects from "./Projects/Projects";
 
 const ContentFragment = lazy(() => import("./ContentFragment.jsx"));
@@ -16,7 +17,6 @@ const MinorProjects = lazy(() => import("./Learnings/MinorProjects.jsx"));
 const Technology = lazy(() => import("./Technology/Technology.jsx"));
 const Contact = lazy(() => import("./Contact/Contact.jsx"));
 
-
 const Contents = () => {
   // const {showHeader, setShowHeader} = useContext(HeaderContext);
   const [headerMenu, setHeaderMenu] = useHeaderMenuCtx();
@@ -27,15 +27,16 @@ const Contents = () => {
     // setShowHeader(true);
     setHeaderMenu(true);
     if (location.hash) {
+      customNav(location.hash);
       // console.log(`1:: ${location.pathname}${location.hash}`, document.querySelector(`a[href="${location.pathname}${location.hash}"]`))
-      let hashPath = document.querySelector(
-        `a[href="${location.pathname}${location.hash}"]`
-      );
-      if (hashPath) {
-        hashPath?.click();
-      } else {
-        navigate("/#");
-      }
+      // let hashPath = document.querySelector(
+      //   `a[href="${location.pathname}${location.hash}"]`
+      // );
+      // if (hashPath) {
+      //   hashPath?.click();
+      // } else {
+      //   navigate("/#");
+      // }
     }
   }, []);
 
@@ -60,7 +61,10 @@ const Contents = () => {
 
   return (
     <div className="w-full z-[1] bg-white contents-container">
-      <ContentFragment id="intro-section" className="w-full min-h-screen md:h-screen">
+      <ContentFragment
+        id="intro-section"
+        className="w-full min-h-screen md:h-screen"
+      >
         <Intro></Intro>
       </ContentFragment>
       <ContentFragment
@@ -87,6 +91,7 @@ const Contents = () => {
       >
         <MinorProjects></MinorProjects>
       </ContentFragment>
+
       {/* <ContentFragment
         id="skills-section"
         className="w-full min-h-screen py-5 skill-container "
@@ -97,13 +102,10 @@ const Contents = () => {
         id="technology-section"
         className="w-full min-h-screen bg-white py-5"
       >
-        <Technology/>
+        <Technology />
       </ContentFragment>
-      <ContentFragment
-        id="contact-section"
-        className="w-full min-h-screen"
-      >
-        <Contact/>
+      <ContentFragment id="contact-section" className="w-full min-h-screen">
+        <Contact />
       </ContentFragment>
       {/* <ContentFragment
         id="footer-content-section"

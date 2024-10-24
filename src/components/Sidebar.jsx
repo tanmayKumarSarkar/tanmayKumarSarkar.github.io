@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { zIndex } from "../utils";
+import { customNav, zIndex } from "../utils";
 import { IoHome } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { navRoutes } from "../utils";
@@ -57,8 +57,14 @@ function Sidebar() {
               key={nav.id}
               aria-label={nav.title}
               // title={nav.title}
-              href={nav.path}
-              onClick={() => navigate(nav.path)}
+              // href={nav.path}
+              // onClick={() => navigate(nav.path)}
+              onClick={
+                () => customNav(nav.path)
+                // document
+                //   .getElementById(nav.path.replace("/#", ""))
+                //   .scrollIntoView()
+              }
               className="p-2 my-3 sidebar header-nav-item cursor-pointer"
             >
               <span className="menu-span-item relative">

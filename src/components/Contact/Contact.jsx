@@ -20,14 +20,14 @@ const Contact = () => {
         Math.max(0, wrapper.height - wrapper.top)
       );
     }
-    console.log(
-      "wrapperScrollPos:::",
-      wrapperScrollPos,
-      wrapper.height,
-      "Pct::",
-      (wrapperScrollPos / wrapper.height) * 100,
-      "% "
-    );
+    // console.log(
+    //   "wrapperScrollPos:::",
+    //   wrapperScrollPos,
+    //   wrapper.height,
+    //   "Pct::",
+    //   (wrapperScrollPos / wrapper.height) * 100,
+    //   "% "
+    // );
     setWrapperOffset(wrapperScrollPos);
     setWrapperOffsetPct((wrapperScrollPos / wrapper.height) * 100);
   };
@@ -51,7 +51,7 @@ const Contact = () => {
     if (wrapperHeight == wrapperOffset)
       rocketTop = wrapperOffset - (rocket.getBoundingClientRect().height + 10);
 
-    // console.log("wrapperOffset::", wrapperOffset, "rocketTop", rocketTop);
+    console.log("wrapperOffset::", wrapperOffset, "rocketTop", rocketTop);
 
     rocketGroup.style.top = rocketTop + "px";
   }, [wrapperOffset]);
@@ -65,6 +65,12 @@ const Contact = () => {
       .querySelector(".parallax-wrapper")
       ?.getBoundingClientRect();
 
+    let rover = document.querySelector(".rover");
+    rover.style.left = (wrapperOffsetPct / 3) * 2 + "%";
+    let satelite = document.querySelector(".satelite");
+    satelite.style.left = (wrapperOffsetPct / 5) * 4 + "%";
+    // satelite.style.scaleX = wrapperOffsetPct / 100;
+
     if (!!rocketSmoke && !!rocketFire) {
       if (wrapperOffsetPct < 90) {
         rocketSmoke.style.opacity = 0;
@@ -74,8 +80,6 @@ const Contact = () => {
         rocketFire.style.opacity = 0;
       }
       if (wrapperOffsetPct > 99) {
-        console.log("---------------------------", wrapperOffsetPct);
-
         rocketSmoke.style.opacity = 0;
         rocketFire.style.opacity = 0;
       }
@@ -91,9 +95,6 @@ const Contact = () => {
         </div>
       </div>
       <div className="parallax-wrapper">
-        <div className="prlx-elm satelite w-[30%] md:w-[25%]  ">
-          <img src="/assets/Contact/satelite.png" alt="" />
-        </div>
         <div className="prlx-elm planet-1 w-[20%] md:w-[8%]  ">
           <img src="/assets/Contact/planet-1.png" alt="" />
         </div>
@@ -108,6 +109,9 @@ const Contact = () => {
         </div>
         <div className="prlx-elm planet-5 w-[20%] md:w-[8%]  ">
           <img src="/assets/Contact/planet-5.png" alt="" />
+        </div>
+        <div className="prlx-elm satelite w-[30%] md:w-[20%]  ">
+          <img src="/assets/Contact/satelite.png" alt="" />
         </div>
         <div className="prlx-elm rocket-group ">
           <div className=" rocket ">

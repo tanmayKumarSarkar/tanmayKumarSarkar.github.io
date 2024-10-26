@@ -6,8 +6,10 @@
 
 .contact-wrapper .back {
     position: absolute;
+    height: 100%;
+    width: 100%;
     /* position: relative; */
-    /* bottom: -4px; */
+    bottom: -4px;
 }
 
 .contact-wrapper .front {
@@ -15,7 +17,56 @@
 }
 
 .contact-wrapper .back .ground {
+    /* object-fit: cover; */
+    /* position: relative; */
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* perspective: 10px;
+    transform-style: preserve-3d; */
+    height: 100%;
+}
+
+.ground-wrap {
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* perspective: 10px;
+    transform-style: inherit; */
+    /* perspective: 1px;
+    transform-style: preserve-3d; */
+    height: 100%;
+}
+
+.contact-wrapper .back .ground .contact-contents {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: .5s ease-out;
+    /* transform-style: preserve-3d; */
+    /* z-index: -1; */
+}
+
+.mars-sky-back,
+.mars-sky-front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    /* z-index: -1; */
+}
+
+.mars-sky-back {
+    /* transform: translateZ(-10px) scale(2); */
+    /* transform: translateZ(-0.25px) scale(1.25); */
+}
+
+.mars-sky-front {
+    /* transform: translateZ(-5px) scale(1.5); */
+    /* transform: translateZ(-0.5px) scale(1.4); */
 }
 
 .contact-wrapper .parallax-wrapper {
@@ -42,7 +93,9 @@
 
 .contact-wrapper .parallax-wrapper .prlx-elm.planet-1 {
     /* width: 20%; */
+    left: 0%;
     top: 0;
+    transition: .8s ease-out;
 }
 
 .contact-wrapper .parallax-wrapper .prlx-elm.planet-1 img {
@@ -53,25 +106,31 @@
 .contact-wrapper .parallax-wrapper .prlx-elm.planet-2 {
     /* width: 10%; */
     top: 0;
-    left: 20%;
+    right: 18%;
+    transition: .5s ease-out;
 }
 
 .contact-wrapper .parallax-wrapper .prlx-elm.planet-3 {
     /* width: 15%; */
     top: 0;
-    left: 40%;
+    right: 3%;
+    transition: .8s ease-out;
 }
 
 .contact-wrapper .parallax-wrapper .prlx-elm.planet-4 {
     /* width: 10%; */
     top: 0;
-    left: 10%;
+    /* left: 20%; */
+    left: 45%;
+    transition: .5s ease-out;
 }
 
 .contact-wrapper .parallax-wrapper .prlx-elm.planet-5 {
     /* width: 10%; */
     top: 0;
-    left: 60%;
+    /* left: 45%; */
+    left: 20%;
+    transition: .2s ease-out;
 }
 
 .contact-wrapper .parallax-wrapper .prlx-elm.rocket-group {
@@ -130,15 +189,15 @@
     /* transform: translate(-50%,-50%) ; */
     /* mask-image: linear-gradient(to right, transparent 0%, rgb(255 255 255) 20%, rgb(255 255 255) 80%, transparent 100%); */
     /* -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(255 255 255) 20%, rgb(255 255 255) 80%, transparent 100%); */
-    mask-image: radial-gradient(rgb(255 255 255) 55%, transparent 90%);
-    -webkit-mask-image: radial-gradient(rgb(255 255 255) 55%, transparent 90%);
-    animation: blinker-rocket-smoke 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+    mask-image: radial-gradient(rgb(255 255 255) 55%, transparent 85%);
+    -webkit-mask-image: radial-gradient(rgb(255 255 255) 55%, transparent 85%);
+    animation: blinker-rocket-smoke 0.3s cubic-bezier(.5, 0, 1, 1) infinite alternate;
 }
 
 @keyframes blinker-rocket-smoke {
     to {
         opacity: 0.8;
-        transform: scaleY(0.95) scaleX(1.01)
+        transform: scaleY(0.9) scaleX(1.01) translateY(1.1);
     }
 }
 
@@ -159,3 +218,12 @@
 /* .contact-wrapper .parallax-wrapper .prlx-elm.satelite {
     transform: translate(-50%,-50%) scale(.1);
 } */
+
+.contact-form-container {
+    background: rgba(31, 41, 45, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+}

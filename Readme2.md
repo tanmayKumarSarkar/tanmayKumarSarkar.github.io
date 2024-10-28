@@ -113,6 +113,10 @@ Nav colors: bg, font, link-button, shadow
 
 #2 bouncing bubble, changing radient border, card hover effect, double curve, w<1024 && w>h
 
+## Email Image
+![image-2](https://github.com/user-attachments/assets/fdff5756-8dea-47e2-978e-90a56e33e11d)
+
+
 ## Resources
 
 [Build and Deploy a Fully Responsive Website with Modern UI/UX in React JS with Tailwind](https://www.youtube.com/watch?v=B91wc5dCEBA) || [GitHub](https://github.com/adrianhajdin/brainwave)

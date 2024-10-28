@@ -1746,3 +1746,7 @@ export const customNav = (path) => {
       .scrollIntoView({ behavior: "smooth" });
   }, 1000);
 };
+
+export const titleCase = (str) => {
+  return str.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase());
+};

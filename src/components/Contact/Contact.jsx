@@ -1,15 +1,27 @@
 import React, { useEffect, useState } from "react";
 import "./Contact.css";
+import { titleCase } from "../../utils";
 
 const Contact = () => {
   const [wrapperOffset, setWrapperOffset] = useState(0); //0 to height of div
   const [wrapperOffsetPct, setWrapperOffsetPct] = useState(0); //0 to height of div
+  const [error, setError] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
   const [formObj, setFormObj] = useState({
     name: "",
     email: "",
-    phno: "",
+    phone: "",
     message: "",
   });
+  const [successMsg, setSuccessMsg] = useState("");
+
+  const itmp = "template_n5p9rdj";
+  const isr = "service_h4j7ide";
+  const kpuk = "YR5CtCu68nxmG1hP4";
 
   const wrapperPosition = () => {
     const wrapper = document
@@ -26,13 +38,13 @@ const Contact = () => {
         Math.max(0, wrapper.height - wrapper.top)
       );
     }
-    console.log(
-      "wrapperScrollPos:::",
-      wrapperScrollPos,
-      "Pct::",
-      (wrapperScrollPos / wrapper.height) * 100,
-      "% "
-    );
+    // console.log(
+    //   "wrapperScrollPos:::",
+    //   wrapperScrollPos,
+    //   "Pct::",
+    //   (wrapperScrollPos / wrapper.height) * 100,
+    //   "% "
+    // );
     setWrapperOffset(wrapperScrollPos);
     setWrapperOffsetPct((wrapperScrollPos / wrapper.height) * 100);
 
@@ -72,7 +84,7 @@ const Contact = () => {
     if (wrapperHeight == wrapperOffset)
       rocketTop = wrapperOffset - (rocket.getBoundingClientRect().height + 10);
 
-    console.log("wrapperOffset::", wrapperOffset, "rocketTop", rocketTop);
+    // console.log("wrapperOffset::", wrapperOffset, "rocketTop", rocketTop);
 
     rocketGroup.style.top = rocketTop + "px";
 
@@ -128,6 +140,7 @@ const Contact = () => {
     setTimeout(() => {
       wrapperPosition();
     }, 500);
+    addFieldValidation();
   }, []);
 
   const handleInputChange = (e) => {
@@ -142,11 +155,104 @@ const Contact = () => {
     }
   };
 
+  const addFieldValidation = (e) => {
+    let name = document.querySelector("#name.name");
+    name?.addEventListener("invalid", function (event) {
+      if (event.target.validity.valueMissing) {
+        event.target.setCustomValidity(
+          "Please tell us how we should address you."
+        );
+      }
+    });
+
+    let email = document.querySelector("#email.email");
+    email?.addEventListener("invalid", function (event) {
+      if (event.target.validity.valueMissing) {
+        event.target.setCustomValidity(
+          "Please tell us how we should address you."
+        );
+      }
+    });
+
+    let phone = document.querySelector("#phone.phone");
+    phone?.addEventListener("invalid", function (event) {
+      if (event.target.validity.valueMissing) {
+        event.target.setCustomValidity(
+          "Please tell us how we should address you."
+        );
+      }
+    });
+
+    let message = document.querySelector("#message.message");
+    message?.addEventListener("invalid", function (event) {
+      if (event.target.validity.valueMissing) {
+        event.target.setCustomValidity(
+          "Please tell us how we should address you."
+        );
+      }
+    });
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (!error) {
+    e.target.name;
+    let formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      message: e.target.message.value,
+    };
+    // validateFields(e);
+    setFormObj(formData);
+    console.log(e.target.elements, " form submit ", formData);
+    // if()
+    if (!error.name && !error.email && !error.message) {
       // Submit form
+
+      // setSuccessMsg("Message sent successfully!!");
+      sendEmail(formData);
+      togglePopUp(e, "open");
+      e.target.reset();
     }
+  };
+
+  const isEmailValid = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+  };
+
+  const sendEmail = (formData) => {
+    var data = {
+      service_id: isr,
+      template_id: itmp,
+      user_id: kpuk,
+      template_params: {
+        to_name: titleCase(formData.name),
+        to_email: formData.email,
+      },
+    };
+
+    fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      // .then((response) => response.json())
+      .then((res) => {
+        console.log("email res:: ", res);
+
+        return res;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const togglePopUp = (e, type) => {
+    var target = document.querySelector("#myPopup");
+    target.classList.toggle("overlay-hide");
+    var popup = document.querySelector("#myPopup .popup");
+    popup.classList.toggle("hide");
   };
 
   /*
@@ -225,7 +331,7 @@ const Contact = () => {
               {/* // */}
               <div className="flex items-center">
                 <div className="mx-auto">
-                  <div className="max-w-md mx-auto contact-form-container p-5 rounded-md shadow-sm">
+                  <div className="max-w-md md:max-w-3xl mx-auto contact-form-container p-5 rounded-md shadow-sm">
                     <div className="text-center">
                       <h1 className="my-3 text-3xl font-semibold text-gray-100">
                         Contact Me
@@ -269,7 +375,7 @@ const Contact = () => {
                             name="name"
                             id="name"
                             placeholder="John Doe"
-                            required=""
+                            required={true}
                             className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
@@ -285,7 +391,8 @@ const Contact = () => {
                             name="email"
                             id="email"
                             placeholder="john@company.com"
-                            required=""
+                            required={true}
+                            // pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
                             className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
@@ -301,7 +408,7 @@ const Contact = () => {
                             name="phone"
                             id="phone"
                             placeholder="+1 (555) 1234-567"
-                            required=""
+                            required={false}
                             className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
@@ -318,17 +425,24 @@ const Contact = () => {
                             id="message"
                             placeholder="Your Message"
                             className="w-full px-3 py-2 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
-                            required=""
+                            required={true}
                             defaultValue={""}
                           />
                         </div>
                         <div className="mb-6">
                           <button
                             type="submit"
-                            className="w-full bg-indigo-600 hover:bg-indigo-500 inline-block text-white no-underline hover:text-black py-4 px-4 rounded-sm focus:outline-none"
+                            className={`w-full bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-500 inline-block text-white no-underline hover:text-black disabled:text-black py-4 px-4 rounded-sm focus:outline-none`}
+                            disabled={successMsg}
                           >
                             Send Message
                           </button>
+                          {/*<a className="button">Let me Pop up</a>
+                           {successMsg && (
+                            <p className="mt-2 -mb-8 text-white">
+                              {successMsg}
+                            </p>
+                          )} */}
                         </div>
                         <p
                           className="text-base text-center text-gray-400"
@@ -380,6 +494,40 @@ const Contact = () => {
         </div>
       </div>
       <div className="front"></div>
+      <div>
+        <div className="container">
+          <button className="toggle button" data-target="myPopup">
+            Toggle popup
+          </button>
+          <div id="myPopup" className="overlay overlay-hide">
+            <div className="popup hide">
+              <div className="popup-header">
+                Alert !!
+                <span
+                  className="close toggle"
+                  onClick={(e) => togglePopUp(e, "close")}
+                  data-target="myPopup"
+                >
+                  close
+                </span>
+              </div>
+              <div className="popup-body">
+                <div className="popup-circle">✓</div>
+                Your message has been sent successfully !!
+              </div>
+              <div className="popup-footer">
+                <button
+                  className="toggle button"
+                  onClick={(e) => togglePopUp(e, "close")}
+                  data-target="myPopup"
+                >
+                  Got it
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

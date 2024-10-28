@@ -1,0 +1,21 @@
+Hello {{to_name}},
+
+ 
+
+Thank you for taking the time to review my portfolio and reach out. I appreciate your interest in my work.
+
+To ensure I fully understand your needs, could you share a few more details about specific goals or project scope.
+
+Please let me know if you have any questions or if there's anything specific you'd like to discuss further. I'd be happy to provide more details or set up a call to chat.
+
+Looking forward to hearing from you soon.
+
+ 
+
+Thanks again,
+Tanmay Kumar Sarkar
+Full-Stack Developer
++91 9749760920
+tanmay.kr.sarkars@gmail.com
+https://github.com/tanmayKumarSarkar
+www.linkedin.com/in/tanmay-kumar-sarkar

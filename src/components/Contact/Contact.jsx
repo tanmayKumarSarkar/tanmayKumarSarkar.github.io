@@ -37,6 +37,10 @@ const Contact = () => {
         wrapper.height,
         Math.max(0, wrapper.height - wrapper.top)
       );
+      setWrapperOffset(wrapperScrollPos);
+      setWrapperOffsetPct((wrapperScrollPos / wrapper.height) * 100);
+  
+      updateObjectPosition((wrapperScrollPos / wrapper.height) * 100);
     }
     // console.log(
     //   "wrapperScrollPos:::",
@@ -45,10 +49,6 @@ const Contact = () => {
     //   (wrapperScrollPos / wrapper.height) * 100,
     //   "% "
     // );
-    setWrapperOffset(wrapperScrollPos);
-    setWrapperOffsetPct((wrapperScrollPos / wrapper.height) * 100);
-
-    updateObjectPosition((wrapperScrollPos / wrapper.height) * 100);
   };
 
   const updateObjectPosition = (wrapperOffsetPct) => {
@@ -140,72 +140,72 @@ const Contact = () => {
     setTimeout(() => {
       wrapperPosition();
     }, 500);
-    addFieldValidation();
+
+    return () => document.removeEventListener("scroll", wrapperPosition, true);
   }, []);
 
   const handleInputChange = (e) => {
-    const value = e.target.value;
-    setInputValue(value);
+    let fieldName = e.target.name;
+    let fieldVal= e.target.value;
+    let isRequired= e.target.required;
+    let err = '';
+    // console.log(isRequired, " ", !fieldVal);
 
-    // Validate if the input is not empty
-    if (!value.trim()) {
-      setError("This field is required.");
-    } else {
-      setError("");
+    if(isRequired && !fieldVal){
+      e.target.setCustomValidity("Please fill out this field.");
+      err = 'required';
+    }else if(!!fieldVal && !checkFieldValid(e)){
+      console.log(fieldVal, "invalid");
+      e.target.setCustomValidity("Please enter a valid input.");
+      err = 'invalid';
+    }else{
+      e.target.setCustomValidity("");
+      err = '';
     }
+    if(!e.target.checkValidity()) {
+      e.target.reportValidity();
+    };
+    setError(er=> ({...er, [fieldName]: err}));
+
   };
 
-  const addFieldValidation = (e) => {
-    let name = document.querySelector("#name.name");
-    name?.addEventListener("invalid", function (event) {
-      if (event.target.validity.valueMissing) {
-        event.target.setCustomValidity(
-          "Please tell us how we should address you."
-        );
-      }
-    });
-
-    let email = document.querySelector("#email.email");
-    email?.addEventListener("invalid", function (event) {
-      if (event.target.validity.valueMissing) {
-        event.target.setCustomValidity(
-          "Please tell us how we should address you."
-        );
-      }
-    });
-
-    let phone = document.querySelector("#phone.phone");
-    phone?.addEventListener("invalid", function (event) {
-      if (event.target.validity.valueMissing) {
-        event.target.setCustomValidity(
-          "Please tell us how we should address you."
-        );
-      }
-    });
-
-    let message = document.querySelector("#message.message");
-    message?.addEventListener("invalid", function (event) {
-      if (event.target.validity.valueMissing) {
-        event.target.setCustomValidity(
-          "Please tell us how we should address you."
-        );
-      }
-    });
-  };
+  const checkFieldValid = (e)=>{
+    let fieldName = e.target.name;
+    let fieldVal= e.target.value;
+    if(fieldName == 'name'){
+      const pattern = /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/;
+      console.log(fieldName, ' field Valid? ' + pattern.test(fieldVal))
+      return pattern.test(fieldVal);
+    }
+    if(fieldName == 'email'){
+      const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      console.log(fieldName, ' field Valid? ' + pattern.test(fieldVal))
+      return pattern.test(fieldVal);
+    }
+    if(fieldName == 'phone'){
+      const pattern = /(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?/;
+      console.log(fieldName, ' field Valid? ' + pattern.test(fieldVal))
+      return pattern.test(fieldVal);
+    }
+    if(fieldName == 'message'){
+      return fieldVal.length>2
+      console.log(fieldName, ' field Valid? ' + pattern.test(fieldVal))
+    }
+  }
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    e.target.name;
+    
     let formData = {
       name: e.target.name.value,
       email: e.target.email.value,
       phone: e.target.phone.value,
       message: e.target.message.value,
     };
-    // validateFields(e);
+    
     setFormObj(formData);
     console.log(e.target.elements, " form submit ", formData);
-    // if()
+    
     if (!error.name && !error.email && !error.message) {
       // Submit form
 
@@ -214,11 +214,6 @@ const Contact = () => {
       togglePopUp(e, "open");
       e.target.reset();
     }
-  };
-
-  const isEmailValid = (email) => {
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    return emailPattern.test(email);
   };
 
   const sendEmail = (formData) => {
@@ -376,6 +371,7 @@ const Contact = () => {
                             id="name"
                             placeholder="John Doe"
                             required={true}
+                            onChange={handleInputChange}
                             className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
@@ -392,7 +388,8 @@ const Contact = () => {
                             id="email"
                             placeholder="john@company.com"
                             required={true}
-                            // pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+                            onChange={handleInputChange}
+                            // pattern="^[a-zA-Z0-9._\-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
                             className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
@@ -409,6 +406,7 @@ const Contact = () => {
                             id="phone"
                             placeholder="+1 (555) 1234-567"
                             required={false}
+                            onChange={handleInputChange}
                             className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
@@ -426,6 +424,7 @@ const Contact = () => {
                             placeholder="Your Message"
                             className="w-full px-3 py-2 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                             required={true}
+                            onChange={handleInputChange}
                             defaultValue={""}
                           />
                         </div>

@@ -1738,13 +1738,54 @@ export const isMobile = () => {
   return isMobile;
 };
 
-export const customNav = (path) => {
-  window.location = path;
-  setTimeout(() => {
-    document
+export const navigateToPath = (path)=>{
+  document
       .getElementById(path.replace("/", "").replace("#", ""))
-      .scrollIntoView({ behavior: "smooth" });
-  }, 1000);
+      ?.scrollIntoView({ behavior: "smooth" });
+}
+
+export const customNav = (path, reload) => {
+  let pathParts = window.location.pathname.split('/').length;
+  if(pathParts<3 && !reload){
+    window.history.replaceState(null, 'My Portfolio', path);
+    navigateToPath(path);
+    return;
+  }else{
+    window.location = path;
+  }
+  let learningSectionHeight1 = document.querySelector('#learnings-section')?.clientHeight;
+  let bodyHeight1 = document.querySelector('body').clientHeight;
+  navigateToPath(path);
+
+  // document.querySelector('body').addEventListener('resize', ()=>{
+  //   console.log('body resize ', document.querySelector('body').clientHeight);
+    
+  // })
+  const resizeObserver = new ResizeObserver(entries =>{
+    console.log('Body height changed:', entries[0].target.clientHeight);
+    navigateToPath(path);
+  })
+  resizeObserver.observe(document.body);
+  
+  // 
+  
+  // const intervalId  = setInterval(() => {
+  //   let learningSectionHeight2 = document.querySelector('#learnings-section')?.clientHeight;
+  //   let bodyHeight2 = document.querySelector('body').clientHeight;
+  //   if(bodyHeight1!=bodyHeight2){
+  //     navigateToPath(path);
+  //     // clearInterval(intervalId);
+  //   }
+  //   intervalTotalDuration-=intervalstep;
+  //   console.log("intervalTotalDuration:: ", intervalTotalDuration, " learningSectionHeight2: ", learningSectionHeight2);
+    
+  //   if(intervalTotalDuration<=0) clearInterval(intervalId);
+  // }, intervalstep);
+  // setTimeout(() => {
+  //   document
+  //     .getElementById(path.replace("/", "").replace("#", ""))
+  //     ?.scrollIntoView({ behavior: "smooth" });
+  // }, 1000);
 };
 
 export const titleCase = (str) => {

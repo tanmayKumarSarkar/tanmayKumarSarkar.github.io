@@ -15,6 +15,7 @@ const ScrollIndicator = () => {
 const PageScrollBar = () => {
   useEffect(() => {
     window.addEventListener("scroll", ScrollIndicator);
+    return () => document.removeEventListener("scroll", ScrollIndicator, true);
   }, []);
 
   return (

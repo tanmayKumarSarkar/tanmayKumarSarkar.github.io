@@ -27,7 +27,7 @@ const Contents = () => {
     // setShowHeader(true);
     setHeaderMenu(true);
     if (location.hash) {
-      customNav(location.hash);
+      customNav(location.hash,'true');
       // console.log(`1:: ${location.pathname}${location.hash}`, document.querySelector(`a[href="${location.pathname}${location.hash}"]`))
       // let hashPath = document.querySelector(
       //   `a[href="${location.pathname}${location.hash}"]`

@@ -5,27 +5,32 @@ import { FaGithub } from "react-icons/fa";
 import IconComp from "../Common/IconComp";
 
 const MinorProjects = () => {
+
+  const mouseMoveEvent = (e)=> {
+    let light = document.querySelector(".mp-light");
+    let grid = document.querySelector(".minor-project-wrapper");
+    if (light) {
+      // console.log(
+      //   e.clientX,
+      //   e.clientY,
+      //   grid.getBoundingClientRect().x,
+      //   grid.getBoundingClientRect().y
+      // );
+
+      e.clientX ? (light.style.left = `${e.clientX}px`) : null;
+      e.clientY
+        ? (light.style.top = `${
+            e.clientY - grid.getBoundingClientRect().y
+          }px`)
+        : null;
+    }
+  }
   useEffect(() => {
     const light = document.querySelector(".mp-light");
     const grid = document.querySelector(".minor-project-wrapper");
 
-    grid?.addEventListener("mousemove", function (e) {
-      if (light) {
-        // console.log(
-        //   e.clientX,
-        //   e.clientY,
-        //   grid.getBoundingClientRect().x,
-        //   grid.getBoundingClientRect().y
-        // );
-
-        e.clientX ? (light.style.left = `${e.clientX}px`) : null;
-        e.clientY
-          ? (light.style.top = `${
-              e.clientY - grid.getBoundingClientRect().y
-            }px`)
-          : null;
-      }
-    });
+    grid?.addEventListener("mousemove", mouseMoveEvent);
+    return () => document.removeEventListener("mousemove", mouseMoveEvent, true);
   }, []);
   return (
     <div className="minor-project-wrapper w-full">

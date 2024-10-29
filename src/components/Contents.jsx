@@ -100,7 +100,7 @@ const Contents = () => {
       </ContentFragment> */}
       <ContentFragment
         id="technology-section"
-        className="w-full min-h-screen bg-white py-5"
+        className="w-full min-h-screen technology-wrapper"
       >
         <Technology />
       </ContentFragment>

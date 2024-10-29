@@ -68,9 +68,9 @@ const MinorProjects = () => {
                 ))}
               </div>
               <div className="text-3xl mt-2 git">
-                <a href={p.git}>
+                {p.git && <a href={p.git}>
                   <FaGithub></FaGithub>
-                </a>
+                </a>}
               </div>
             </div>
           ))}

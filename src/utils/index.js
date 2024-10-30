@@ -1746,8 +1746,8 @@ export const profileDetails = {
       },
       {
         name:"Node JS",
-        icon:'',
-        lib:''
+        icon:'FaNodeJs',
+        lib:'fa'
       },
       {
         name:"Express",
@@ -1756,43 +1756,43 @@ export const profileDetails = {
       },
       {
         name:"GraphQL",
-        icon:'',
-        lib:''
+        icon:'SiGraphql',
+        lib:'si'
       },
       {
         name:"Hibernate",
-        icon:'',
-        lib:''
+        icon:'SiHibernate',
+        lib:'si'
       },
       {
         name:"Spring",
-        icon:'',
-        lib:''
+        icon:'SiSpring',
+        lib:'si'
       },
       {
         name:"Struts",
-        icon:'',
-        lib:''
+        icon:'GiArtificialHive',
+        lib:'gi'
       },
       {
         name:"Django",
-        icon:'',
-        lib:''
+        icon:'TbBrandDjango',
+        lib:'tb'
       },
       {
         name:"Web Socket",
-        icon:'',
-        lib:''
+        icon:'TbBrandSocketIo',
+        lib:'tb'
       },
       {
         name:"Bootstrap",
-        icon:'',
-        lib:''
+        icon:'FaBootstrap',
+        lib:'fa'
       },
       {
         name:"ASP.Net",
-        icon:'',
-        lib:''
+        icon:'SiDotnet',
+        lib:'si'
       },
       {
         name:"Selenium & Sikuli Automation tools",
@@ -1843,361 +1843,361 @@ export const profileDetails = {
       },
       {
         name:"React Native",
-        icon:'',
-        lib:''
+        icon:'TbBrandReactNative',
+        lib:'tb'
       },
       {
         name:"Next JS",
-        icon:'',
-        lib:''
+        icon:'TbBrandNextjs',
+        lib:'tb'
       },
       {
         name:"Angular",
-        icon:'',
-        lib:''
+        icon:'FaAngular',
+        lib:'fa'
       },
       {
         name:"Svelte",
-        icon:'',
-        lib:''
+        icon:'SiSvelte',
+        lib:'si'
       },
       {
         name:"Handlebars",
-        icon:'',
-        lib:''
+        icon:'SiHandlebarsdotjs',
+        lib:'si'
       },
       {
         name:"Bootstrap",
-        icon:'',
-        lib:''
+        icon:'FaBootstrap',
+        lib:'fa'
       },
       {
         name:"Tailwind CSS",
-        icon:'',
-        lib:''
+        icon:'SiTailwindcss',
+        lib:'si'
       },
       {
         name:"Power BI",
-        icon:'',
-        lib:''
+        icon:'SiPowerbi',
+        lib:'si'
       },
       {
         name:"OAC",
-        icon:'',
-        lib:''
+        icon:'FaChartPie',
+        lib:'fa'
       },
       {
-        name:"LogStash",
-        icon:'',
-        lib:''
+        name:"Three Js",
+        icon:'SiThreedotjs',
+        lib:'si'
       },
       {
         name:"Kibana",
-        icon:'',
-        lib:''
+        icon:'SiKibana',
+        lib:'si'
       },  
 
     ],
     backend: [
       {
         name:"Node JS",
-        icon:'',
-        lib:''
+        icon:'FaNodeJs',
+        lib:'fa'
       },
       {
         name:"Express",
-        icon:'',
-        lib:''
+        icon:'TbServerBolt',
+        lib:'tb'
       },
       {
         name:"REST API",
-        icon:'',
-        lib:''
+        icon:'AiTwotoneApi',
+        lib:'ai'
       },
       {
         name:"J2EE",
-        icon:'',
-        lib:''
+        icon:'FaJava',
+        lib:'fa'
       },
       {
         name:"GraphQL",
-        icon:'',
-        lib:''
+        icon:'SiGraphql',
+        lib:'si'
       },
       {
         name:"Hibernate",
-        icon:'',
-        lib:''
+        icon:'SiHibernate',
+        lib:'si'
       },
       {
         name:"Spring",
-        icon:'',
-        lib:''
+        icon:'SiSpring',
+        lib:'si'
       },
       {
         name:"Struts",
-        icon:'',
-        lib:''
+        icon:'GiArtificialHive',
+        lib:'gi'
       },
       {
         name:"Django",
-        icon:'',
-        lib:''
+        icon:'TbBrandDjango',
+        lib:'tb'
       },
       {
         name:"Web Socket",
-        icon:'',
-        lib:''
+        icon:'TbBrandSocketIo',
+        lib:'tb'
       },
       {
         name:"ASP.Net",
-        icon:'',
-        lib:''
+        icon:'SiDotnet',
+        lib:'si'
       },
       {
         name:"Kafka",
-        icon:'',
-        lib:''
+        icon:'SiApachekafka',
+        lib:'si'
       },
       {
         name:"MQTT",
-        icon:'',
-        lib:''
+        icon:'SiMqtt',
+        lib:'si'
       },
       {
         name:"Logstash",
-        icon:'',
-        lib:''
+        icon:'SiLogstash',
+        lib:'si'
       },
       {
         name:"Azure",
-        icon:'',
-        lib:''
+        icon:'SiMicrosoftazure',
+        lib:'si'
       },
       {
         name:"D365 App Components",
-        icon:'',
-        lib:''
+        icon:'SiDynamics365',
+        lib:'si'
       },
     ],
     databases: [
       {
         name:"PostgreSQL",
-        icon:'',
-        lib:''
+        icon:'SiPostgresql',
+        lib:'si'
       },
       {
         name:"MySQL",
-        icon:'',
-        lib:''
+        icon:'DiMysql',
+        lib:'di'
       },
       {
         name:"Oracle",
-        icon:'',
-        lib:''
+        icon:'SiOracle',
+        lib:'si'
       },
       {
         name:"Mongo DB",
-        icon:'',
-        lib:''
+        icon:'SiMongodb',
+        lib:'si'
       },
       {
         name:"Elastic Search",
-        icon:'',
-        lib:''
+        icon:'SiElasticsearch',
+        lib:'si'
       },
       {
         name:"Harper DB",
-        icon:'',
-        lib:''
+        icon:'FaDatabase',
+        lib:'fa'
       },
     ],
     Testing: [
       {
         name:"Selenium",
-        icon:'',
-        lib:''
+        icon:'SiSelenium',
+        lib:'si'
       },
       {
         name:"Sikuli",
-        icon:'',
-        lib:''
+        icon:'SiTestcafe',
+        lib:'si'
       },
       {
         name:"Katalon Studio",
-        icon:'',
-        lib:''
+        icon:'FaKaggle',
+        lib:'fa'
       },
       {
         name:"JUnit",
-        icon:'',
-        lib:''
+        icon:'SiJunit5',
+        lib:'si'
       },
       {
         name:"Jest",
-        icon:'',
-        lib:''
+        icon:'SiJest',
+        lib:'si'
       },
     ],
     devops: [
       {
-        name:"GIT",
-        icon:'',
-        lib:''
+        name:"Git",
+        icon:'FaGit',
+        lib:'fa'
       },
       {
         name:"AWS",
-        icon:'',
-        lib:''
+        icon:'FaAws',
+        lib:'fa'
       },
       {
         name:"Azure",
-        icon:'',
-        lib:''
+        icon:'SiMicrosoftazure',
+        lib:'si'
       },
       {
         name:"Jenkins",
-        icon:'',
-        lib:''
+        icon:'FaJenkins',
+        lib:'fa'
       },
       {
         name:"GitHub Actions",
-        icon:'',
-        lib:''
+        icon:'SiGithubactions',
+        lib:'si'
       },
       {
         name:"Tomcat",
-        icon:'',
-        lib:''
+        icon:'SiApachetomcat',
+        lib:'si'
       },
       {
         name:"Kubernetes",
-        icon:'',
-        lib:''
+        icon:'SiKubernetes',
+        lib:'si'
       },
       {
         name:"Docker",
-        icon:'',
-        lib:''
+        icon:'FaDocker',
+        lib:'fa'
       },
     ],
     miscellaneous: [
       {
         name:"Figma",
-        icon:'',
-        lib:''
+        icon:'FaFigma',
+        lib:'fa'
       },
       {
         name:"Adobe After Effects",
-        icon:'',
-        lib:''
+        icon:'SiAdobeaftereffects',
+        lib:'si'
       },
       {
         name:"Premiere Pro",
-        icon:'',
-        lib:''
+        icon:'SiAdobepremierepro',
+        lib:'si'
       },
       {
         name:"Flash/ Animate CC",
-        icon:'',
-        lib:''
+        icon:'RiFlashlightFill',
+        lib:'ri'
       },
       {
         name:"Illustrator",
-        icon:'',
-        lib:''
+        icon:'SiAdobeillustrator',
+        lib:'si'
       },
       {
         name:"Photoshop",
-        icon:'',
-        lib:''
+        icon:'SiAdobephotoshop',
+        lib:'si'
       },
       {
         name:"Dreamweaver",
-        icon:'',
-        lib:''
+        icon:'SiAdobedreamweaver',
+        lib:'si'
       },
       {
         name:"Blender",
-        icon:'',
-        lib:''
+        icon:'SiBlender',
+        lib:'si'
       },
       {
         name:"Autodesk Maya",
-        icon:'',
-        lib:''
+        icon:'SiAutodeskmaya',
+        lib:'si'
       },
       {
         name:"Sketch-Up",
-        icon:'',
-        lib:''
+        icon:'SiSketchup',
+        lib:'si'
       },
       {
         name:"InkScape",
-        icon:'',
-        lib:''
+        icon:'SiInkscape',
+        lib:'si'
       },
       {
         name:"UNITY Game Engine",
-        icon:'',
-        lib:''
+        icon:'FaUnity',
+        lib:'fa'
       },
       {
         name:"Visual Studio",
-        icon:'',
-        lib:''
+        icon:'SiVisualstudioappcenter',
+        lib:'si'
       },
       {
         name:"SharePoint Designer",
-        icon:'',
-        lib:''
+        icon:'SiMicrosoftsharepoint',
+        lib:'si'
       },
       {
         name:"Eclipse",
-        icon:'',
-        lib:''
+        icon:'SiEclipseide',
+        lib:'si'
       },
       {
         name:"MS Word",
-        icon:'',
-        lib:''
+        icon:'SiMicrosoftword',
+        lib:'si'
       },
       {
         name:"MS Excel",
-        icon:'',
-        lib:''
+        icon:'SiMicrosoftexcel',
+        lib:'si'
       },
       {
         name:"MS PowerPoint",
-        icon:'',
-        lib:''
+        icon:'SiMicrosoftpowerpoint',
+        lib:'si'
       },
       {
         name:"Web Scraping",
-        icon:'',
-        lib:''
+        icon:'SiScrapy',
+        lib:'si'
       },
     ],
     hardware: [
       {
         name:"Raspberry Pi",
-        icon:'',
-        lib:''
+        icon:'FaRaspberryPi',
+        lib:'fa'
       }, 
       {
         name:"Arduino",
-        icon:'',
-        lib:''
+        icon:'SiArduino',
+        lib:'si'
       }, 
       {
         name:"ESP8266 Node MCU",
-        icon:'',
-        lib:''
+        icon:'FaMicrochip',
+        lib:'fa'
       }, 
       {
         name:"GSM SIM900A",
-        icon:'',
-        lib:''
+        icon:'RiWifiLine',
+        lib:'ri'
       },
     ],
   },

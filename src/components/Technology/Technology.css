@@ -19,6 +19,10 @@
     position: relative;
 }
 
+.technology-front .page-header{
+  /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.905); */
+}
+
 .technology-back{
     display: flex;
     width: 100%;
@@ -112,11 +116,12 @@
 }
 .technology-front h2 {
     color: #999;
-    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    /* font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif; */
     font-size: 2.6rem;
     font-weight: 500;
-    font-style: normal;
+    /* font-style: normal; */
     text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.68);
 }
 
 .technical-skills-section{
@@ -137,11 +142,40 @@
     color: #fff;
 }
 .skill-item{
-    background: black;
-    padding: 6px 12px;
-    border-radius: 4px;
+  background: black;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 4px solid #000;
+  box-shadow: inset 5px 5px 8px #383737,
+            inset -5px -5px 8px #323232;
 }
 
 .items-header{
-    
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media only screen and (max-width : 767px) {
+  .items-header{
+    justify-content: center;
+  }
+}
+
+.items-header>svg{
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  border: 2px solid #fff;
+  outline: 1px solid black;
+  border-radius: 50%;
+  background-color: black;
+  color: #fff;
+  margin-right: 5px;
+  box-shadow: inset 3px 3px 8px #383737,
+            inset -3px -3px 8px #323232;
 }

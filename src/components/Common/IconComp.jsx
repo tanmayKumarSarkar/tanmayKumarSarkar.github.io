@@ -62,13 +62,14 @@ const IconComp = ({ componentName, lib, ...props }) => {
       Component = lazy(() => import(`react-icons/tb`).then((module) => ({ default: module[componentName] })));
     } else if (lib === 'lia') {
       Component = lazy(() => import(`react-icons/lia`).then((module) => ({ default: module[componentName] })));
+    } else if (lib === 'rx') {
+      Component = lazy(() => import(`react-icons/rx`).then((module) => ({ default: module[componentName] })));
     }
 
   
   
     return (
       <Suspense fallback={<span></span>}>
-
         <Component {...props} />
       </Suspense>
     )

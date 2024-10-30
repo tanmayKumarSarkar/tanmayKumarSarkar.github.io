@@ -71,7 +71,7 @@ const ProfileSummary = () => {
             Specialized In: Responsive UI Design.
             <br />
             Proficient In: React JS, React Native, Angular, Svelte, JQuery, Grid
-            & Flex Layout Bootstrap, Tailwind CSS.
+            & Flex Layout Bootstrap, Tailwind CSS, A11Y/ WCAG.
           </div>
         </div>
 

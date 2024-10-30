@@ -1604,128 +1604,602 @@ export const profileDetails = {
     },
   ],
   technical_skills: {
-    Featured: [],
+    Featured: [
+      {
+        name:"React JS",
+        icon:'FaReact',
+        lib:'fa'
+      },
+      {
+        name:"Svelte",
+        icon:'RiSvelteFill',
+        lib:'ri'
+      },
+      {
+        name:"Node JS",
+        icon:'FaNodeJs',
+        lib:'fa'
+      },
+      {
+        name:"Tailwind",
+        icon:'RiTailwindCssFill',
+        lib:'ri'
+      },
+      {
+        name:"Bootstrap",
+        icon:'FaBootstrap',
+        lib:'fa'
+      },
+      {
+        name:"Java",
+        icon:'FaJava',
+        lib:'fa'
+      },
+      {
+        name:"A11Y",
+        icon:'RxAccessibility',
+        lib:'rx'
+      },
+    ],
     languages: [
-      "JAVA",
-      "JavaScript",
-      "PL/ SQL",
-      "HTML",
-      "CSS",
-      "XML",
-      "AJAX",
-      "C",
-      "C#",
-      "MQL",
-      "VB.Net",
-      "JQuery",
-      "PHP",
-      "Python",
-      "TypeScript",
+      {
+        name:"Java",
+        icon:'FaJava',
+        lib:'fa'
+      },
+      {
+        name:"JavaScript",
+        icon:'TbBrandJavascript',
+        lib:'tb'
+      },
+      {
+        name:"PL/ SQL",
+        icon:'DiMsqlServer',
+        lib:'di'
+      },
+      {
+        name:"HTML",
+        icon:'FaHtml5',
+        lib:'fa'
+      },
+      {
+        name:"CSS",
+        icon:'FaCss3Alt',
+        lib:'fa'
+      },
+      {
+        name:"XML",
+        icon:'TbFileTypeXml',
+        lib:'tb'
+      },
+      {
+        name:"AJAX",
+        iicon:'PiCodeLight',
+        lib:'pi'
+      },
+      {
+        name:"C",
+        icon:'PiCodeLight',
+        lib:'pi'
+      },
+      {
+        name:"C#",
+        icon:'SiCsharp',
+        lib:'si'
+      },
+      {
+        name:"MQL",
+        icon:'PiCodeLight',
+        lib:'pi'
+      },
+      {
+        name:"VB.Net",
+        icon:'SiVisualbasic',
+        lib:'si'
+      },
+      {
+        name:"JQuery",
+        icon:'SiJquery',
+        lib:'si'
+      },
+      {
+        name:"PHP",
+        icon:'FaPhp',
+        lib:'fa'
+      },
+      {
+        name:"Python",
+        icon:'FaPython',
+        lib:'fa'
+      },
+      {
+        name:"TypeScript",
+        icon:'SiTypescript',
+        lib:'si'
+      },
     ],
     technologies: [
-      "React JS",
-      "React Native",
-      "Angular",
-      "J2EE",
-      "Web Service",
-      "Node JS",
-      "Express",
-      "GraphQL",
-      "Hibernate",
-      "Spring",
-      "Struts",
-      "Django",
-      "Web Socket",
-      "Bootstrap",
-      "ASP.Net",
-      "Selenium & Sikuli Automation tools",
-      "BI tools",
-      "Kafka",
-      "MQTT",
-      "Logstash",
-      "Kibana (ELK Stack)",
-      "Azure",
-      "D365 App Components",
+      {
+        name:"React JS",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"React Native",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Angular",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"J2EE",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Web Service",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Node JS",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Express",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"GraphQL",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Hibernate",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Spring",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Struts",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Django",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Web Socket",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Bootstrap",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"ASP.Net",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Selenium & Sikuli Automation tools",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"BI tools",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Kafka",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"MQTT",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Logstash",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Kibana (ELK Stack)",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Azure",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"D365 App Components",
+        icon:'',
+        lib:''
+      },
     ],
     frontend: [
-      "React JS",
-      "React Native",
-      "Next JS",
-      "Angular",
-      "Svelte",
-      "Handlebars",
-      "Bootstrap",
-      "Tailwind CSS",
-      "Power BI",
-      "OAC",
-      "LogStash",
-      "Kibana",  
+      {
+        name:"React JS",
+        icon:'FaReact',
+        lib:'fa'
+      },
+      {
+        name:"React Native",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Next JS",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Angular",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Svelte",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Handlebars",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Bootstrap",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Tailwind CSS",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Power BI",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"OAC",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"LogStash",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Kibana",
+        icon:'',
+        lib:''
+      },  
 
     ],
     backend: [
-      "Node JS",
-      "Express",
-      "REST API",
-      "J2EE",
-      "GraphQL",
-      "Hibernate",
-      "Spring",
-      "Struts",
-      "Django",
-      "Web Socket",
-      "ASP.Net",
-      "Kafka",
-      "MQTT",
-      "Logstash",
-      "Azure",
-      "D365 App Components",
+      {
+        name:"Node JS",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Express",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"REST API",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"J2EE",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"GraphQL",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Hibernate",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Spring",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Struts",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Django",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Web Socket",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"ASP.Net",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Kafka",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"MQTT",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Logstash",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Azure",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"D365 App Components",
+        icon:'',
+        lib:''
+      },
     ],
     databases: [
-      "PostgreSQL",
-      "MySQL",
-      "Oracle",
-      "Mongo DB",
-      "Elastic Search",
-      "Harper DB",
+      {
+        name:"PostgreSQL",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"MySQL",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Oracle",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Mongo DB",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Elastic Search",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Harper DB",
+        icon:'',
+        lib:''
+      },
     ],
     Testing: [
-      "Selenium",
-      "Sikuli",
-      "Katalon Studio",
-      "JUnit",
-      "Jest"
+      {
+        name:"Selenium",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Sikuli",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Katalon Studio",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"JUnit",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Jest",
+        icon:'',
+        lib:''
+      },
     ],
     devops: [
-      "GIT",
-      "AWS",
-      "Azure",
-      "Jenkins",
-      "GitHub Actions",
-      "Tomcat",
-      "Kubernetes",
-      "Docker",
+      {
+        name:"GIT",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"AWS",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Azure",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Jenkins",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"GitHub Actions",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Tomcat",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Kubernetes",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Docker",
+        icon:'',
+        lib:''
+      },
     ],
     miscellaneous: [
-      "Adobe After Effects",
-      "Premiere Pro",
-      "Flash/ Animate CC",
-      "Illustrator",
-      "Photoshop",
-      "Dreamweaver",
-      "Blender",
-      "Autodesk Maya",
-      "Sketch-Up",
-      "InkScape",
-      "UNITY Game Engine",
-      "Visual Studio",
-      "SharePoint Designer",
-      "Eclipse",
-      "MS Word",
-      "MS Excel",
-      "MS PowerPoint",
-      "Web Scraping",
+      {
+        name:"Figma",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Adobe After Effects",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Premiere Pro",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Flash/ Animate CC",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Illustrator",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Photoshop",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Dreamweaver",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Blender",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Autodesk Maya",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Sketch-Up",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"InkScape",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"UNITY Game Engine",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Visual Studio",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"SharePoint Designer",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Eclipse",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"MS Word",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"MS Excel",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"MS PowerPoint",
+        icon:'',
+        lib:''
+      },
+      {
+        name:"Web Scraping",
+        icon:'',
+        lib:''
+      },
     ],
-    hardware: ["Raspberry Pi", "Arduino", "ESP8266 Node MCU", "GSM SIM900A"],
+    hardware: [
+      {
+        name:"Raspberry Pi",
+        icon:'',
+        lib:''
+      }, 
+      {
+        name:"Arduino",
+        icon:'',
+        lib:''
+      }, 
+      {
+        name:"ESP8266 Node MCU",
+        icon:'',
+        lib:''
+      }, 
+      {
+        name:"GSM SIM900A",
+        icon:'',
+        lib:''
+      },
+    ],
   },
   education: [
     {

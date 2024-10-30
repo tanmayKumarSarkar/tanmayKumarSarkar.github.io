@@ -1,1 +1,0 @@
-import{j as s}from"./index-Cj__8BMg.js";function r(){return s.jsxs("div",{children:[s.jsx("div",{className:"stars",id:"stars1"}),s.jsx("div",{className:"stars",id:"stars2"}),s.jsx("div",{className:"stars",id:"stars3"})]})}export{r as default};

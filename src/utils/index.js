@@ -1694,8 +1694,8 @@ export const profileDetails = {
       },
       {
         name:"VB.Net",
-        icon:'SiVisualbasic',
-        lib:'si'
+        icon: 'TbLayoutNavbarCollapse',
+        lib:'tb'
       },
       {
         name:"JQuery",
@@ -1726,23 +1726,23 @@ export const profileDetails = {
       },
       {
         name:"React Native",
-        icon:'',
-        lib:''
+        icon:'TbBrandReactNative',
+        lib:'tb'
       },
       {
         name:"Angular",
-        icon:'',
-        lib:''
+        icon:'FaAngular',
+        lib:'fa'
       },
       {
         name:"J2EE",
-        icon:'',
-        lib:''
+        icon:'FaJava',
+        lib:'fa'
       },
       {
         name:"Web Service",
-        icon:'',
-        lib:''
+        icon:'TbWorldWww',
+        lib:'tb'
       },
       {
         name:"Node JS",

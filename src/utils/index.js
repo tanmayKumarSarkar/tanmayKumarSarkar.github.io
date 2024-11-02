@@ -1606,598 +1606,597 @@ export const profileDetails = {
   technical_skills: {
     Featured: [
       {
-        name:"React JS",
-        icon:'FaReact',
-        lib:'fa'
+        name: "React JS",
+        icon: "FaReact",
+        lib: "fa",
       },
       {
-        name:"Svelte",
-        icon:'RiSvelteFill',
-        lib:'ri'
+        name: "Svelte",
+        icon: "RiSvelteFill",
+        lib: "ri",
       },
       {
-        name:"Node JS",
-        icon:'FaNodeJs',
-        lib:'fa'
+        name: "Node JS",
+        icon: "FaNodeJs",
+        lib: "fa",
       },
       {
-        name:"Tailwind",
-        icon:'RiTailwindCssFill',
-        lib:'ri'
+        name: "Tailwind",
+        icon: "RiTailwindCssFill",
+        lib: "ri",
       },
       {
-        name:"Bootstrap",
-        icon:'FaBootstrap',
-        lib:'fa'
+        name: "Bootstrap",
+        icon: "FaBootstrap",
+        lib: "fa",
       },
       {
-        name:"Java",
-        icon:'FaJava',
-        lib:'fa'
+        name: "Java",
+        icon: "FaJava",
+        lib: "fa",
       },
       {
-        name:"A11Y",
-        icon:'RxAccessibility',
-        lib:'rx'
+        name: "A11Y",
+        icon: "RxAccessibility",
+        lib: "rx",
       },
     ],
     languages: [
       {
-        name:"Java",
-        icon:'FaJava',
-        lib:'fa'
+        name: "Java",
+        icon: "FaJava",
+        lib: "fa",
       },
       {
-        name:"JavaScript",
-        icon:'TbBrandJavascript',
-        lib:'tb'
+        name: "JavaScript",
+        icon: "TbBrandJavascript",
+        lib: "tb",
       },
       {
-        name:"PL/ SQL",
-        icon:'DiMsqlServer',
-        lib:'di'
+        name: "PL/ SQL",
+        icon: "DiMsqlServer",
+        lib: "di",
       },
       {
-        name:"HTML",
-        icon:'FaHtml5',
-        lib:'fa'
+        name: "HTML",
+        icon: "FaHtml5",
+        lib: "fa",
       },
       {
-        name:"CSS",
-        icon:'FaCss3Alt',
-        lib:'fa'
+        name: "CSS",
+        icon: "FaCss3Alt",
+        lib: "fa",
       },
       {
-        name:"XML",
-        icon:'TbFileTypeXml',
-        lib:'tb'
+        name: "XML",
+        icon: "TbFileTypeXml",
+        lib: "tb",
       },
       {
-        name:"AJAX",
-        iicon:'PiCodeLight',
-        lib:'pi'
+        name: "AJAX",
+        icon: "TbCode",
+        lib: "tb",
       },
       {
-        name:"C",
-        icon:'PiCodeLight',
-        lib:'pi'
+        name: "C",
+        icon: "PiCodeLight",
+        lib: "pi",
       },
       {
-        name:"C#",
-        icon:'SiCsharp',
-        lib:'si'
+        name: "C#",
+        icon: "SiCsharp",
+        lib: "si",
       },
       {
-        name:"MQL",
-        icon:'PiCodeLight',
-        lib:'pi'
+        name: "MQL",
+        icon: "PiCodeLight",
+        lib: "pi",
       },
       {
-        name:"VB.Net",
-        icon: 'TbLayoutNavbarCollapse',
-        lib:'tb'
+        name: "VB.Net",
+        icon: "TbLayoutNavbarCollapse",
+        lib: "tb",
       },
       {
-        name:"JQuery",
-        icon:'SiJquery',
-        lib:'si'
+        name: "JQuery",
+        icon: "SiJquery",
+        lib: "si",
       },
       {
-        name:"PHP",
-        icon:'FaPhp',
-        lib:'fa'
+        name: "PHP",
+        icon: "FaPhp",
+        lib: "fa",
       },
       {
-        name:"Python",
-        icon:'FaPython',
-        lib:'fa'
+        name: "Python",
+        icon: "FaPython",
+        lib: "fa",
       },
       {
-        name:"TypeScript",
-        icon:'SiTypescript',
-        lib:'si'
+        name: "TypeScript",
+        icon: "SiTypescript",
+        lib: "si",
       },
     ],
     technologies: [
       {
-        name:"React JS",
-        icon:'',
-        lib:''
+        name: "React JS",
+        icon: "",
+        lib: "",
       },
       {
-        name:"React Native",
-        icon:'TbBrandReactNative',
-        lib:'tb'
+        name: "React Native",
+        icon: "TbBrandReactNative",
+        lib: "tb",
       },
       {
-        name:"Angular",
-        icon:'FaAngular',
-        lib:'fa'
+        name: "Angular",
+        icon: "FaAngular",
+        lib: "fa",
       },
       {
-        name:"J2EE",
-        icon:'FaJava',
-        lib:'fa'
+        name: "J2EE",
+        icon: "FaJava",
+        lib: "fa",
       },
       {
-        name:"Web Service",
-        icon:'TbWorldWww',
-        lib:'tb'
+        name: "Web Service",
+        icon: "TbWorldWww",
+        lib: "tb",
       },
       {
-        name:"Node JS",
-        icon:'FaNodeJs',
-        lib:'fa'
+        name: "Node JS",
+        icon: "FaNodeJs",
+        lib: "fa",
       },
       {
-        name:"Express",
-        icon:'',
-        lib:''
+        name: "Express",
+        icon: "",
+        lib: "",
       },
       {
-        name:"GraphQL",
-        icon:'SiGraphql',
-        lib:'si'
+        name: "GraphQL",
+        icon: "SiGraphql",
+        lib: "si",
       },
       {
-        name:"Hibernate",
-        icon:'SiHibernate',
-        lib:'si'
+        name: "Hibernate",
+        icon: "SiHibernate",
+        lib: "si",
       },
       {
-        name:"Spring",
-        icon:'SiSpring',
-        lib:'si'
+        name: "Spring",
+        icon: "SiSpring",
+        lib: "si",
       },
       {
-        name:"Struts",
-        icon:'GiArtificialHive',
-        lib:'gi'
+        name: "Struts",
+        icon: "GiArtificialHive",
+        lib: "gi",
       },
       {
-        name:"Django",
-        icon:'TbBrandDjango',
-        lib:'tb'
+        name: "Django",
+        icon: "TbBrandDjango",
+        lib: "tb",
       },
       {
-        name:"Web Socket",
-        icon:'TbBrandSocketIo',
-        lib:'tb'
+        name: "Web Socket",
+        icon: "TbBrandSocketIo",
+        lib: "tb",
       },
       {
-        name:"Bootstrap",
-        icon:'FaBootstrap',
-        lib:'fa'
+        name: "Bootstrap",
+        icon: "FaBootstrap",
+        lib: "fa",
       },
       {
-        name:"ASP.Net",
-        icon:'SiDotnet',
-        lib:'si'
+        name: "ASP.Net",
+        icon: "SiDotnet",
+        lib: "si",
       },
       {
-        name:"Selenium & Sikuli Automation tools",
-        icon:'',
-        lib:''
+        name: "Selenium & Sikuli Automation tools",
+        icon: "",
+        lib: "",
       },
       {
-        name:"BI tools",
-        icon:'',
-        lib:''
+        name: "BI tools",
+        icon: "",
+        lib: "",
       },
       {
-        name:"Kafka",
-        icon:'',
-        lib:''
+        name: "Kafka",
+        icon: "",
+        lib: "",
       },
       {
-        name:"MQTT",
-        icon:'',
-        lib:''
+        name: "MQTT",
+        icon: "",
+        lib: "",
       },
       {
-        name:"Logstash",
-        icon:'',
-        lib:''
+        name: "Logstash",
+        icon: "",
+        lib: "",
       },
       {
-        name:"Kibana (ELK Stack)",
-        icon:'',
-        lib:''
+        name: "Kibana (ELK Stack)",
+        icon: "",
+        lib: "",
       },
       {
-        name:"Azure",
-        icon:'',
-        lib:''
+        name: "Azure",
+        icon: "",
+        lib: "",
       },
       {
-        name:"D365 App Components",
-        icon:'',
-        lib:''
+        name: "D365 App Components",
+        icon: "",
+        lib: "",
       },
     ],
     frontend: [
       {
-        name:"React JS",
-        icon:'FaReact',
-        lib:'fa'
+        name: "React JS",
+        icon: "FaReact",
+        lib: "fa",
       },
       {
-        name:"React Native",
-        icon:'TbBrandReactNative',
-        lib:'tb'
+        name: "React Native",
+        icon: "TbBrandReactNative",
+        lib: "tb",
       },
       {
-        name:"Next JS",
-        icon:'TbBrandNextjs',
-        lib:'tb'
+        name: "Next JS",
+        icon: "TbBrandNextjs",
+        lib: "tb",
       },
       {
-        name:"Angular",
-        icon:'FaAngular',
-        lib:'fa'
+        name: "Angular",
+        icon: "FaAngular",
+        lib: "fa",
       },
       {
-        name:"Svelte",
-        icon:'SiSvelte',
-        lib:'si'
+        name: "Svelte",
+        icon: "SiSvelte",
+        lib: "si",
       },
       {
-        name:"Handlebars",
-        icon:'SiHandlebarsdotjs',
-        lib:'si'
+        name: "Handlebars",
+        icon: "SiHandlebarsdotjs",
+        lib: "si",
       },
       {
-        name:"Bootstrap",
-        icon:'FaBootstrap',
-        lib:'fa'
+        name: "Bootstrap",
+        icon: "FaBootstrap",
+        lib: "fa",
       },
       {
-        name:"Tailwind CSS",
-        icon:'SiTailwindcss',
-        lib:'si'
+        name: "Tailwind CSS",
+        icon: "SiTailwindcss",
+        lib: "si",
       },
       {
-        name:"Power BI",
-        icon:'SiPowerbi',
-        lib:'si'
+        name: "Power BI",
+        icon: "SiPowerbi",
+        lib: "si",
       },
       {
-        name:"OAC",
-        icon:'FaChartPie',
-        lib:'fa'
+        name: "OAC",
+        icon: "FaChartPie",
+        lib: "fa",
       },
       {
-        name:"Three Js",
-        icon:'SiThreedotjs',
-        lib:'si'
+        name: "Three Js",
+        icon: "SiThreedotjs",
+        lib: "si",
       },
       {
-        name:"Kibana",
-        icon:'SiKibana',
-        lib:'si'
-      },  
-
+        name: "Kibana",
+        icon: "SiKibana",
+        lib: "si",
+      },
     ],
     backend: [
       {
-        name:"Node JS",
-        icon:'FaNodeJs',
-        lib:'fa'
+        name: "Node JS",
+        icon: "FaNodeJs",
+        lib: "fa",
       },
       {
-        name:"Express",
-        icon:'TbServerBolt',
-        lib:'tb'
+        name: "Express",
+        icon: "TbServerBolt",
+        lib: "tb",
       },
       {
-        name:"REST API",
-        icon:'AiTwotoneApi',
-        lib:'ai'
+        name: "REST API",
+        icon: "AiTwotoneApi",
+        lib: "ai",
       },
       {
-        name:"J2EE",
-        icon:'FaJava',
-        lib:'fa'
+        name: "J2EE",
+        icon: "FaJava",
+        lib: "fa",
       },
       {
-        name:"GraphQL",
-        icon:'SiGraphql',
-        lib:'si'
+        name: "GraphQL",
+        icon: "SiGraphql",
+        lib: "si",
       },
       {
-        name:"Hibernate",
-        icon:'SiHibernate',
-        lib:'si'
+        name: "Hibernate",
+        icon: "SiHibernate",
+        lib: "si",
       },
       {
-        name:"Spring",
-        icon:'SiSpring',
-        lib:'si'
+        name: "Spring",
+        icon: "SiSpring",
+        lib: "si",
       },
       {
-        name:"Struts",
-        icon:'GiArtificialHive',
-        lib:'gi'
+        name: "Struts",
+        icon: "GiArtificialHive",
+        lib: "gi",
       },
       {
-        name:"Django",
-        icon:'TbBrandDjango',
-        lib:'tb'
+        name: "Django",
+        icon: "TbBrandDjango",
+        lib: "tb",
       },
       {
-        name:"Web Socket",
-        icon:'TbBrandSocketIo',
-        lib:'tb'
+        name: "Web Socket",
+        icon: "TbBrandSocketIo",
+        lib: "tb",
       },
       {
-        name:"ASP.Net",
-        icon:'SiDotnet',
-        lib:'si'
+        name: "ASP.Net",
+        icon: "SiDotnet",
+        lib: "si",
       },
       {
-        name:"Kafka",
-        icon:'SiApachekafka',
-        lib:'si'
+        name: "Kafka",
+        icon: "SiApachekafka",
+        lib: "si",
       },
       {
-        name:"MQTT",
-        icon:'SiMqtt',
-        lib:'si'
+        name: "MQTT",
+        icon: "SiMqtt",
+        lib: "si",
       },
       {
-        name:"Logstash",
-        icon:'SiLogstash',
-        lib:'si'
+        name: "Logstash",
+        icon: "SiLogstash",
+        lib: "si",
       },
       {
-        name:"Azure",
-        icon:'SiMicrosoftazure',
-        lib:'si'
+        name: "Azure",
+        icon: "SiMicrosoftazure",
+        lib: "si",
       },
       {
-        name:"D365 App Components",
-        icon:'SiDynamics365',
-        lib:'si'
+        name: "D365 App Components",
+        icon: "SiDynamics365",
+        lib: "si",
       },
     ],
     databases: [
       {
-        name:"PostgreSQL",
-        icon:'SiPostgresql',
-        lib:'si'
+        name: "PostgreSQL",
+        icon: "SiPostgresql",
+        lib: "si",
       },
       {
-        name:"MySQL",
-        icon:'DiMysql',
-        lib:'di'
+        name: "MySQL",
+        icon: "DiMysql",
+        lib: "di",
       },
       {
-        name:"Oracle",
-        icon:'SiOracle',
-        lib:'si'
+        name: "Oracle",
+        icon: "SiOracle",
+        lib: "si",
       },
       {
-        name:"Mongo DB",
-        icon:'SiMongodb',
-        lib:'si'
+        name: "Mongo DB",
+        icon: "SiMongodb",
+        lib: "si",
       },
       {
-        name:"Elastic Search",
-        icon:'SiElasticsearch',
-        lib:'si'
+        name: "Elastic Search",
+        icon: "SiElasticsearch",
+        lib: "si",
       },
       {
-        name:"Harper DB",
-        icon:'FaDatabase',
-        lib:'fa'
+        name: "Harper DB",
+        icon: "FaDatabase",
+        lib: "fa",
       },
     ],
     Testing: [
       {
-        name:"Selenium",
-        icon:'SiSelenium',
-        lib:'si'
+        name: "Selenium",
+        icon: "SiSelenium",
+        lib: "si",
       },
       {
-        name:"Sikuli",
-        icon:'SiTestcafe',
-        lib:'si'
+        name: "Sikuli",
+        icon: "SiTestcafe",
+        lib: "si",
       },
       {
-        name:"Katalon Studio",
-        icon:'FaKaggle',
-        lib:'fa'
+        name: "Katalon Studio",
+        icon: "FaKaggle",
+        lib: "fa",
       },
       {
-        name:"JUnit",
-        icon:'SiJunit5',
-        lib:'si'
+        name: "JUnit",
+        icon: "SiJunit5",
+        lib: "si",
       },
       {
-        name:"Jest",
-        icon:'SiJest',
-        lib:'si'
+        name: "Jest",
+        icon: "SiJest",
+        lib: "si",
       },
     ],
     devops: [
       {
-        name:"Git",
-        icon:'FaGit',
-        lib:'fa'
+        name: "Git",
+        icon: "FaGithub",
+        lib: "fa",
       },
       {
-        name:"AWS",
-        icon:'FaAws',
-        lib:'fa'
+        name: "AWS",
+        icon: "FaAws",
+        lib: "fa",
       },
       {
-        name:"Azure",
-        icon:'SiMicrosoftazure',
-        lib:'si'
+        name: "Azure",
+        icon: "SiMicrosoftazure",
+        lib: "si",
       },
       {
-        name:"Jenkins",
-        icon:'FaJenkins',
-        lib:'fa'
+        name: "Jenkins",
+        icon: "FaJenkins",
+        lib: "fa",
       },
       {
-        name:"GitHub Actions",
-        icon:'SiGithubactions',
-        lib:'si'
+        name: "GitHub Actions",
+        icon: "SiGithubactions",
+        lib: "si",
       },
       {
-        name:"Tomcat",
-        icon:'SiApachetomcat',
-        lib:'si'
+        name: "Tomcat",
+        icon: "SiApachetomcat",
+        lib: "si",
       },
       {
-        name:"Kubernetes",
-        icon:'SiKubernetes',
-        lib:'si'
+        name: "Kubernetes",
+        icon: "SiKubernetes",
+        lib: "si",
       },
       {
-        name:"Docker",
-        icon:'FaDocker',
-        lib:'fa'
+        name: "Docker",
+        icon: "FaDocker",
+        lib: "fa",
       },
     ],
     miscellaneous: [
       {
-        name:"Figma",
-        icon:'FaFigma',
-        lib:'fa'
+        name: "Figma",
+        icon: "FaFigma",
+        lib: "fa",
       },
       {
-        name:"Adobe After Effects",
-        icon:'SiAdobeaftereffects',
-        lib:'si'
+        name: "Adobe After Effects",
+        icon: "SiAdobeaftereffects",
+        lib: "si",
       },
       {
-        name:"Premiere Pro",
-        icon:'SiAdobepremierepro',
-        lib:'si'
+        name: "Premiere Pro",
+        icon: "SiAdobepremierepro",
+        lib: "si",
       },
       {
-        name:"Flash/ Animate CC",
-        icon:'RiFlashlightFill',
-        lib:'ri'
+        name: "Flash/ Animate CC",
+        icon: "RiFlashlightFill",
+        lib: "ri",
       },
       {
-        name:"Illustrator",
-        icon:'SiAdobeillustrator',
-        lib:'si'
+        name: "Illustrator",
+        icon: "SiAdobeillustrator",
+        lib: "si",
       },
       {
-        name:"Photoshop",
-        icon:'SiAdobephotoshop',
-        lib:'si'
+        name: "Photoshop",
+        icon: "SiAdobephotoshop",
+        lib: "si",
       },
       {
-        name:"Dreamweaver",
-        icon:'SiAdobedreamweaver',
-        lib:'si'
+        name: "Dreamweaver",
+        icon: "SiAdobedreamweaver",
+        lib: "si",
       },
       {
-        name:"Blender",
-        icon:'SiBlender',
-        lib:'si'
+        name: "Blender",
+        icon: "SiBlender",
+        lib: "si",
       },
       {
-        name:"Autodesk Maya",
-        icon:'SiAutodeskmaya',
-        lib:'si'
+        name: "Autodesk Maya",
+        icon: "SiAutodeskmaya",
+        lib: "si",
       },
       {
-        name:"Sketch-Up",
-        icon:'SiSketchup',
-        lib:'si'
+        name: "Sketch-Up",
+        icon: "SiSketchup",
+        lib: "si",
       },
       {
-        name:"InkScape",
-        icon:'SiInkscape',
-        lib:'si'
+        name: "InkScape",
+        icon: "SiInkscape",
+        lib: "si",
       },
       {
-        name:"UNITY Game Engine",
-        icon:'FaUnity',
-        lib:'fa'
+        name: "UNITY Game Engine",
+        icon: "FaUnity",
+        lib: "fa",
       },
       {
-        name:"Visual Studio",
-        icon:'SiVisualstudioappcenter',
-        lib:'si'
+        name: "Visual Studio",
+        icon: "SiVisualstudioappcenter",
+        lib: "si",
       },
       {
-        name:"SharePoint Designer",
-        icon:'SiMicrosoftsharepoint',
-        lib:'si'
+        name: "SharePoint Designer",
+        icon: "SiMicrosoftsharepoint",
+        lib: "si",
       },
       {
-        name:"Eclipse",
-        icon:'SiEclipseide',
-        lib:'si'
+        name: "Eclipse",
+        icon: "SiEclipseide",
+        lib: "si",
       },
       {
-        name:"MS Word",
-        icon:'SiMicrosoftword',
-        lib:'si'
+        name: "MS Word",
+        icon: "SiMicrosoftword",
+        lib: "si",
       },
       {
-        name:"MS Excel",
-        icon:'SiMicrosoftexcel',
-        lib:'si'
+        name: "MS Excel",
+        icon: "SiMicrosoftexcel",
+        lib: "si",
       },
       {
-        name:"MS PowerPoint",
-        icon:'SiMicrosoftpowerpoint',
-        lib:'si'
+        name: "MS PowerPoint",
+        icon: "SiMicrosoftpowerpoint",
+        lib: "si",
       },
       {
-        name:"Web Scraping",
-        icon:'SiScrapy',
-        lib:'si'
+        name: "Web Scraping",
+        icon: "SiScrapy",
+        lib: "si",
       },
     ],
     hardware: [
       {
-        name:"Raspberry Pi",
-        icon:'FaRaspberryPi',
-        lib:'fa'
-      }, 
+        name: "Raspberry Pi",
+        icon: "FaRaspberryPi",
+        lib: "fa",
+      },
       {
-        name:"Arduino",
-        icon:'SiArduino',
-        lib:'si'
-      }, 
+        name: "Arduino",
+        icon: "SiArduino",
+        lib: "si",
+      },
       {
-        name:"ESP8266 Node MCU",
-        icon:'FaMicrochip',
-        lib:'fa'
-      }, 
+        name: "ESP8266 Node MCU",
+        icon: "FaMicrochip",
+        lib: "fa",
+      },
       {
-        name:"GSM SIM900A",
-        icon:'RiWifiLine',
-        lib:'ri'
+        name: "GSM SIM900A",
+        icon: "GiNetworkBars",
+        lib: "gi",
       },
     ],
   },
@@ -2249,37 +2248,38 @@ export const isMobile = () => {
   return isMobile;
 };
 
-export const navigateToPath = (path)=>{
+export const navigateToPath = (path) => {
   document
-      .getElementById(path.replace("/", "").replace("#", ""))
-      ?.scrollIntoView({ behavior: "smooth" });
-}
+    .getElementById(path.replace("/", "").replace("#", ""))
+    ?.scrollIntoView({ behavior: "smooth" });
+};
 
 export const customNav = (path, reload) => {
-  let pathParts = window.location.pathname.split('/').length;
-  if(pathParts<3 && !reload){
-    window.history.replaceState(null, 'My Portfolio', path);
+  let pathParts = window.location.pathname.split("/").length;
+  if (pathParts < 3 && !reload) {
+    window.history.replaceState(null, "My Portfolio", path);
     navigateToPath(path);
     return;
-  }else{
+  } else {
     window.location = path;
   }
-  let learningSectionHeight1 = document.querySelector('#learnings-section')?.clientHeight;
-  let bodyHeight1 = document.querySelector('body').clientHeight;
+  let learningSectionHeight1 =
+    document.querySelector("#learnings-section")?.clientHeight;
+  let bodyHeight1 = document.querySelector("body").clientHeight;
   navigateToPath(path);
 
   // document.querySelector('body').addEventListener('resize', ()=>{
   //   console.log('body resize ', document.querySelector('body').clientHeight);
-    
+
   // })
-  const resizeObserver = new ResizeObserver(entries =>{
-    console.log('Body height changed:', entries[0].target.clientHeight);
+  const resizeObserver = new ResizeObserver((entries) => {
+    console.log("Body height changed:", entries[0].target.clientHeight);
     navigateToPath(path);
-  })
+  });
   resizeObserver.observe(document.body);
-  
-  // 
-  
+
+  //
+
   // const intervalId  = setInterval(() => {
   //   let learningSectionHeight2 = document.querySelector('#learnings-section')?.clientHeight;
   //   let bodyHeight2 = document.querySelector('body').clientHeight;
@@ -2289,7 +2289,7 @@ export const customNav = (path, reload) => {
   //   }
   //   intervalTotalDuration-=intervalstep;
   //   console.log("intervalTotalDuration:: ", intervalTotalDuration, " learningSectionHeight2: ", learningSectionHeight2);
-    
+
   //   if(intervalTotalDuration<=0) clearInterval(intervalId);
   // }, intervalstep);
   // setTimeout(() => {

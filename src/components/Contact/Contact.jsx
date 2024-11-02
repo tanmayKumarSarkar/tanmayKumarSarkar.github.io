@@ -39,7 +39,7 @@ const Contact = () => {
       );
       setWrapperOffset(wrapperScrollPos);
       setWrapperOffsetPct((wrapperScrollPos / wrapper.height) * 100);
-  
+
       updateObjectPosition((wrapperScrollPos / wrapper.height) * 100);
     }
     // console.log(
@@ -119,12 +119,34 @@ const Contact = () => {
     }
     marsSkyBack.style.top = (wrapperHeight - wrapperOffset) * 0.8 + "px";
     marsSkyFront.style.top = (wrapperHeight - wrapperOffset) * 0.4 + "px";
-    contactContents.style.top =
-      siteFooterCR.top > window.innerHeight
-        ? (wrapperHeight - wrapperOffset) * 0.1 + "px"
-        : siteFooterCR.height / 2 -
-          (wrapperHeight - wrapperOffset) * 0.8 +
-          "px";
+    // contactContents.style.top =
+    //   siteFooterCR.top > window.innerHeight
+    //     ? (wrapperHeight - wrapperOffset) * 0.1 + "px"
+    //     : siteFooterCR.height / 2 -
+    //       (wrapperHeight - wrapperOffset) * 0.8 +
+    //       "px";
+    let rawOffset = Math.max(0, wrapper.height - wrapper.top);
+    console.log(
+      "wrapperOffset ; ",
+      wrapperOffset,
+      "(wrapperHeight - wrapperOffset):: ",
+      wrapperHeight - wrapperOffset,
+      "offset 2: ",
+      wrapper.height,
+      " - ",
+      wrapper.top
+    );
+    contactContents.style.top = -wrapper.top * 0.5 + "px";
+    // contactContents.style.top =
+    //   (rawOffset / 2) * 0.9 +
+    //   (window.innerHeight - contactContents.getBoundingClientRect().height) /
+    //     2 +
+    //   "px";
+    // contactContents.style.top =
+    //   -(wrapperHeight - wrapperOffset) * 0.9 +
+    //   (window.innerHeight - contactContents.getBoundingClientRect().height) /
+    //     2 +
+    //   "px";
     // siteFooterCR.height / 2 - (wrapperHeight - wrapperOffset) * 0.1 + "px";
     planet1.style.top = wrapperOffsetPct * 0.2 + "%";
     planet2.style.top = wrapperOffsetPct * 0.2 + "%";
@@ -146,66 +168,66 @@ const Contact = () => {
 
   const handleInputChange = (e) => {
     let fieldName = e.target.name;
-    let fieldVal= e.target.value;
-    let isRequired= e.target.required;
-    let err = '';
+    let fieldVal = e.target.value;
+    let isRequired = e.target.required;
+    let err = "";
     // console.log(isRequired, " ", !fieldVal);
 
-    if(isRequired && !fieldVal){
+    if (isRequired && !fieldVal) {
       e.target.setCustomValidity("Please fill out this field.");
-      err = 'required';
-    }else if(!!fieldVal && !checkFieldValid(e)){
+      err = "required";
+    } else if (!!fieldVal && !checkFieldValid(e)) {
       console.log(fieldVal, "invalid");
       e.target.setCustomValidity("Please enter a valid input.");
-      err = 'invalid';
-    }else{
+      err = "invalid";
+    } else {
       e.target.setCustomValidity("");
-      err = '';
+      err = "";
     }
-    if(!e.target.checkValidity()) {
+    if (!e.target.checkValidity()) {
       e.target.reportValidity();
-    };
-    setError(er=> ({...er, [fieldName]: err}));
-
+    }
+    setError((er) => ({ ...er, [fieldName]: err }));
   };
 
-  const checkFieldValid = (e)=>{
+  const checkFieldValid = (e) => {
     let fieldName = e.target.name;
-    let fieldVal= e.target.value;
-    if(fieldName == 'name'){
+    let fieldVal = e.target.value;
+    if (fieldName == "name") {
       const pattern = /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/;
-      console.log(fieldName, ' field Valid? ' + pattern.test(fieldVal))
+      console.log(fieldName, " field Valid? " + pattern.test(fieldVal));
       return pattern.test(fieldVal);
     }
-    if(fieldName == 'email'){
+    if (fieldName == "email") {
       const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      console.log(fieldName, ' field Valid? ' + pattern.test(fieldVal))
+      console.log(fieldName, " field Valid? " + pattern.test(fieldVal));
       return pattern.test(fieldVal);
     }
-    if(fieldName == 'phone'){
-      const pattern = /(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?/;
-      console.log(fieldName, ' field Valid? ' + pattern.test(fieldVal))
+    if (fieldName == "phone") {
+      const pattern =
+        /(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?/;
+      console.log(fieldName, " field Valid? " + pattern.test(fieldVal));
       return pattern.test(fieldVal);
     }
-    if(fieldName == 'message'){
-      return fieldVal.length>2
-      console.log(fieldName, ' field Valid? ' + pattern.test(fieldVal))
+    if (fieldName == "message") {
+      return fieldVal.length > 2;
+      console.log(fieldName, " field Valid? " + pattern.test(fieldVal));
     }
-  }
+  };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    
+
     let formData = {
       name: e.target.name.value,
       email: e.target.email.value,
       phone: e.target.phone.value,
       message: e.target.message.value,
     };
-    
+
     setFormObj(formData);
     console.log(e.target.elements, " form submit ", formData);
-    
+
     if (!error.name && !error.email && !error.message) {
       // Submit form
 
@@ -358,7 +380,7 @@ const Contact = () => {
                           id=""
                           style={{ display: "none" }}
                         />
-                        <div className="mb-6">
+                        <div className="mb-4">
                           <label
                             htmlFor="name"
                             className="block mb-2 text-sm text-white"
@@ -372,10 +394,10 @@ const Contact = () => {
                             placeholder="John Doe"
                             required={true}
                             onChange={handleInputChange}
-                            className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
+                            className="w-full px-3 py-2 h-10 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
-                        <div className="mb-6">
+                        <div className="mb-4">
                           <label
                             htmlFor="email"
                             className="block mb-2 text-sm text-white"
@@ -390,10 +412,10 @@ const Contact = () => {
                             required={true}
                             onChange={handleInputChange}
                             // pattern="^[a-zA-Z0-9._\-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
-                            className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
+                            className="w-full px-3 py-2 h-10 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
-                        <div className="mb-6">
+                        <div className="mb-4">
                           <label
                             htmlFor="phone"
                             className="block mb-2 text-sm text-white"
@@ -407,10 +429,10 @@ const Contact = () => {
                             placeholder="+1 (555) 1234-567"
                             required={false}
                             onChange={handleInputChange}
-                            className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
+                            className="w-full px-3 py-2 h-10 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
-                        <div className="mb-6">
+                        <div className="mb-4">
                           <label
                             htmlFor="message"
                             className="block mb-2 text-sm text-white"
@@ -431,7 +453,7 @@ const Contact = () => {
                         <div className="mb-6">
                           <button
                             type="submit"
-                            className={`w-full bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-500 inline-block text-white no-underline hover:text-black disabled:text-black py-4 px-4 rounded-sm focus:outline-none`}
+                            className={`w-full bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-500 inline-block text-white no-underline hover:text-black disabled:text-black py-3 px-4 rounded-sm focus:outline-none`}
                             disabled={successMsg}
                           >
                             Send Message

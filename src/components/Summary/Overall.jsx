@@ -9,10 +9,10 @@ import { RiRadioButtonLine } from "react-icons/ri";
 const Overall = () => {
   return (
     <div className="w-full h-full px-2 gap-3 grid grid-cols-12 grid-rows-12 ">
-      <div className="rounded-xl col-span-3 row-span-7 portrait:lg:max-xl:row-span-9 bento-card md:mr-6">
+      <div className="rounded-xl col-span-3 row-span-7 portrait:lg:max-xl:row-span-9 portrait:lg:row-span-9 bento-card md:mr-6 profile-pic-container">
         Photo
       </div>
-      <div className="rounded-xl col-span-6 row-span-7 portrait:lg:max-xl:row-span-9 flex flex-col justify-between items-start text-sm py-1">
+      <div className="rounded-xl col-span-6 row-span-7 portrait:lg:max-xl:row-span-9 portrait:lg:row-span-9 flex flex-col justify-between items-start text-sm py-1">
         <span className="flex justify-center items-center dark-back-shade py-0 px-2">
           <div className="bg-[#62ff00] h-2 w-2 md:h-[6px] md:w-[6px] rounded-lg"></div>
           &nbsp; Available to work
@@ -28,11 +28,13 @@ const Overall = () => {
       </div>
       <div className="rounded-xl col-span-3 row-span-4 inline-flex justify-center items-center">
         Resume
-        <span className="rounded-md ml-1 p-1 bg-[#b1b1b183]">
-          <FaDownload color="#a02dff" />
+        <span className="rounded-md cursor-pointer ml-1 p-1 bg-[#b1b1b183]">
+          <a href="/assets/TANMAY KUMAAR SARKAR.pdf" target="_blank">
+            <FaDownload color="#a02dff" />
+          </a>
         </span>
       </div>
-      <div className="rounded-xl col-span-12 row-span-6 bento-card p-2 text-xs md:text-sm text-left liner-gradient-border">
+      <div className="rounded-xl col-span-12 row-span-6 portrait:lg:row-span-3 bento-card p-2 text-xs md:text-sm text-left liner-gradient-border">
         Experienced in Full-Stack Software Development, Architecture Design,
         IOT, DevOps & Web Development in Enterprise Applications.
       </div>

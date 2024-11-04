@@ -17,12 +17,12 @@ const ProfileSummary = () => {
   return (
     <div className="w-full h-full profile-summary-bg relative black-scroll-cursor">
       <ProfileSummaryBG />
-      <div className="w-full h-full px-5 gap-3 md:gap-6 grid grid-cols-12 grid-rows-12 md:grid-rows-11 lg:grid-rows-12 ">
-        <div className="rounded-xl col-span-12 lg:col-span-6 portrait:lg:max-xl:col-span-12 row-span-3 md:row-span-4 lg:row-span-5 portrait:lg:max-xl:row-span-3 bento-card">
+      <div className="w-full h-full px-5 gap-3 md:gap-6 grid grid-cols-12 grid-rows-12 md:grid-rows-11 lg:grid-rows-12">
+        <div className="rounded-xl col-span-12 lg:col-span-6 portrait:lg:max-xl:col-span-12 portrait:lg:col-span-12 row-span-3 md:row-span-4 lg:row-span-5 portrait:lg:row-span-3 portrait:lg:max-xl:row-span-3 bento-card ">
           <Overall />
         </div>
         {/* <!-- 1 Large box spanning 2x2 --> */}
-        <div className="flex rounded-xl col-span-6 lg:col-span-2 portrait:lg:max-xl:col-span-6 row-span-2 lg:row-span-4 portrait:lg:max-xl:row-span-2 bento-card">
+        <div className="flex rounded-xl col-span-6 lg:col-span-2 portrait:lg:col-span-4 portrait:lg:max-xl:col-span-6 row-span-2 lg:row-span-4 portrait:lg:row-span-3 portrait:lg:max-xl:row-span-2 bento-card">
           <span>
             <span className="text-4xl purple-grad-font font-medium">15</span>
             <span className="text-4xl purple-grad-icons font-semibold">+</span>
@@ -32,7 +32,7 @@ const ProfileSummary = () => {
           </span>
         </div>
         {/* <!-- 2 Tall box spanning 2 rows --> */}
-        <div className="flex rounded-xl col-span-6 lg:col-span-2 portrait:lg:max-xl:col-span-6 row-span-2 lg:row-span-4 portrait:lg:max-xl:row-span-2 bento-card">
+        <div className="flex rounded-xl col-span-6 lg:col-span-2 portrait:lg:col-span-4 portrait:lg:max-xl:col-span-6 row-span-2 lg:row-span-4 portrait:lg:row-span-3 portrait:lg:max-xl:row-span-2 bento-card">
           <span>
             <span className="text-4xl purple-grad-font font-medium">10</span>
             <span className="text-4xl purple-grad-icons font-semibold">+</span>
@@ -42,7 +42,7 @@ const ProfileSummary = () => {
           </span>
         </div>
         {/* <!-- 3 Regular box --> */}
-        <div className="flex rounded-xl col-span-6 lg:col-span-2 portrait:lg:max-xl:col-span-6 row-span-2 lg:row-span-4 portrait:lg:max-xl:row-span-2 bento-card">
+        <div className="flex rounded-xl col-span-6 lg:col-span-2 portrait:lg:col-span-4 portrait:lg:max-xl:col-span-6 row-span-2 lg:row-span-4 portrait:lg:row-span-3 portrait:lg:max-xl:row-span-2 bento-card">
           <span>
             <span className="text-4xl purple-grad-font font-medium">8</span>
             <span className="text-4xl purple-grad-icons font-semibold">+</span>
@@ -61,9 +61,9 @@ const ProfileSummary = () => {
           </span>
         </div>
 
-        <div className="rounded-xl md:col-span-6 md:row-span-1 hidden lg:block portrait:lg:max-xl:hidden"></div>
+        <div className="rounded-xl md:col-span-6 md:row-span-1 hidden lg:block portrait:lg:hidden portrait:lg:max-xl:hidden"></div>
 
-        <div className="rounded-xl col-span-6 row-span-3 md:row-span-3 lg:row-span-3 bento-card flex flex-col justify-start items-start p-2">
+        <div className="rounded-xl col-span-6 row-span-3 md:row-span-3 lg:row-span-3 portrait:lg:row-span-3 bento-card flex flex-col justify-start items-start p-2">
           <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold flex justify-center items-center">
             <IoDesktopSharp color="#6e18f0" /> &nbsp; Front-end Technologies
           </div>
@@ -75,7 +75,7 @@ const ProfileSummary = () => {
           </div>
         </div>
 
-        <div className="rounded-xl col-span-6 row-span-3 md:row-span-3 lg:row-span-3 bento-card flex flex-col justify-start items-start p-2">
+        <div className="rounded-xl col-span-6 row-span-3 md:row-span-3 lg:row-span-3 portrait:lg:row-span-3 bento-card flex flex-col justify-start items-start p-2">
           <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold flex justify-center items-center">
             <GiServerRack color="#6e18f0" /> &nbsp; Back-end Technologies
           </div>
@@ -87,7 +87,7 @@ const ProfileSummary = () => {
           </div>
         </div>
 
-        <div className="rounded-xl col-span-6 row-span-2 md:row-span-3 bento-card flex flex-col justify-start items-start p-2">
+        <div className="rounded-xl col-span-6 row-span-2 md:row-span-3 portrait:lg:row-span-3 bento-card flex flex-col justify-start items-start p-2">
           <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold flex justify-center items-center">
             <ImDatabase color="#6e18f0" /> &nbsp; Databases
           </div>
@@ -97,7 +97,7 @@ const ProfileSummary = () => {
             Non-Relational: MongoDB, Elasticsearch, Oracle NoSQL, HarperDB.
           </div>
         </div>
-        <div className="rounded-xl col-span-6 row-span-2 md:row-span-3 bento-card flex flex-col justify-start items-start p-2">
+        <div className="rounded-xl col-span-6 row-span-2 md:row-span-3 portrait:lg:row-span-3 bento-card flex flex-col justify-start items-start p-2">
           <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold flex justify-center items-center">
             <PiChatsDuotone color="#6e18f0" /> &nbsp; Communication
           </div>

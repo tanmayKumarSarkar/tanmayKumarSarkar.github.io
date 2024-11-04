@@ -70,7 +70,7 @@ const Contents = () => {
       </ContentFragment>
       <ContentFragment
         id="profile-summary-section"
-        className="w-full min-h-screen md:h-screen lg-h-screen bg-[#ffffff10] pt-5 pb-3 mb-16"
+        className="w-full h-auto lg:h-screen bg-[#ffffff10] pt-5 pb-3 mb-16"
       >
         <ProfileSummary></ProfileSummary>
       </ContentFragment>

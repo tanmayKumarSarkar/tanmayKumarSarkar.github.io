@@ -2,7 +2,7 @@ import { useState, lazy, Suspense, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Contents from "./components/Contents";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Common/SidebarV2";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 import { Route, Routes, useNavigate } from "react-router-dom";

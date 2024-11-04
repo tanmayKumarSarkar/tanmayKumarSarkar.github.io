@@ -114,8 +114,8 @@ Nav colors: bg, font, link-button, shadow
 #2 bouncing bubble, changing radient border, card hover effect, double curve, w<1024 && w>h
 
 ## Email Image
-![image-2](https://github.com/user-attachments/assets/fdff5756-8dea-47e2-978e-90a56e33e11d)
 
+![image-2](https://github.com/user-attachments/assets/fdff5756-8dea-47e2-978e-90a56e33e11d)
 
 ## Resources
 
@@ -126,3 +126,7 @@ Nav colors: bg, font, link-button, shadow
 [Build and Deploy Responsive React portfolio website: React | Framer Motion| Tailwind CSS](https://www.youtube.com/watch?v=_63mEm3AMSY) || [GitHub](https://github.com/kushald/react-portfolio-assets-kevin/tree/main)
 
 [Animated Portfolio Website with React & Framer Motion | React Project for Beginners](https://www.youtube.com/watch?v=CHGHuF24Cjw)
+
+https://codepen.io/jh3y/pen/WNRjxjP
+
+https://codepen.io/ricardoolivaalonso/pen/yLOpNdZ

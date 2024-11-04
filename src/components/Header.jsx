@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { navRoutes, zIndex, customNav } from "../utils";
+import { navRoutes, zIndex, customNav, sideNavActivate } from "../utils";
 import { Link, useNavigate } from "react-router-dom";
 import { HeaderContext, useHeaderMenuCtx } from "../utils/Context.jsx";
 
@@ -104,6 +104,7 @@ const Header = () => {
                     // href={nav.path}
                     onClick={() => {
                       customNav(nav.path);
+                      sideNavActivate(nav.path);
                       // navigate(nav.path);
                       // document
                       //   .getElementById(nav.path.replace("/#", ""))

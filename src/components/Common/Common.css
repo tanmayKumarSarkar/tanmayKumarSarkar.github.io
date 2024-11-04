@@ -21,3 +21,99 @@ body h2 {
     margin: 0;
     opacity: 0.4;
 } */
+
+
+.sidebar-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    /* height: 60vh; */
+    /* width: 40px; */
+    min-width: 30px;
+    width: auto;
+    padding: 8px 4px;
+    background: linear-gradient(to bottom, #31344300 0%, #313443cc 20%, #313443cc 80%, #31344300 100%);
+    /* background: #313443; */
+    border-radius: 60px;
+}
+
+.sidebar-navigation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+    .sidebar-navigation ul {
+        gap: 5px;
+    }
+}
+
+.sidebar-navigation ul li {
+    /* padding: 10px 10px; */
+    padding: 5px;
+    cursor: pointer;
+    transition: all ease-out 120ms;
+    border-radius: 50%;
+}
+
+.sidebar-navigation ul li i {
+    display: block;
+    font-size: 24px;
+    transition: all ease 450ms;
+}
+
+.sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: #313443;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    right: 45px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+    ;
+}
+
+.sidebar-navigation ul li .tooltip:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -4px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+}
+
+.sidebar-navigation ul li:hover {
+    background-color: #22252e;
+}
+
+.sidebar-navigation ul li:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-navigation ul li.active {
+    background-color: #22252e;
+    box-shadow: 0 0 3px #fff;
+}
+
+.sidebar-navigation ul li.active i {
+    color: #98d7ec;
+}
+
+.sidebar-navigation .side-menu-icon {
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
+}

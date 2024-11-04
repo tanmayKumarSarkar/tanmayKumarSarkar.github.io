@@ -2302,3 +2302,12 @@ export const customNav = (path, reload) => {
 export const titleCase = (str) => {
   return str.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase());
 };
+
+export const sideNavActivate = (path) => {
+  document
+    .querySelectorAll(".sidebar-navigation li")
+    .forEach((ele) => ele.classList.remove("active"));
+  document
+    .querySelector(`.sidebar-navigation li[path='${path}']`)
+    .classList.add("active");
+};

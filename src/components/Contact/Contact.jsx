@@ -126,16 +126,16 @@ const Contact = () => {
     //       (wrapperHeight - wrapperOffset) * 0.8 +
     //       "px";
     let rawOffset = Math.max(0, wrapper.height - wrapper.top);
-    console.log(
-      "wrapperOffset ; ",
-      wrapperOffset,
-      "(wrapperHeight - wrapperOffset):: ",
-      wrapperHeight - wrapperOffset,
-      "offset 2: ",
-      wrapper.height,
-      " - ",
-      wrapper.top
-    );
+    // console.log(
+    //   "wrapperOffset ; ",
+    //   wrapperOffset,
+    //   "(wrapperHeight - wrapperOffset):: ",
+    //   wrapperHeight - wrapperOffset,
+    //   "offset 2: ",
+    //   wrapper.height,
+    //   " - ",
+    //   wrapper.top
+    // );
     contactContents.style.top = -wrapper.top * 0.5 + "px";
     // contactContents.style.top =
     //   (rawOffset / 2) * 0.9 +

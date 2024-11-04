@@ -4,7 +4,7 @@ import React, { lazy, useContext, useEffect, useState } from "react";
 import ProfileSummary from "./Summary/ProfileSummary";
 import { HeaderContext, useHeaderMenuCtx } from "../utils/Context.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
-import { customNav } from "../utils/index.js";
+import { customNav, sideNavActivate } from "../utils/index.js";
 // import Projects from "./Projects/Projects";
 
 const ContentFragment = lazy(() => import("./ContentFragment.jsx"));
@@ -27,7 +27,8 @@ const Contents = () => {
     // setShowHeader(true);
     setHeaderMenu(true);
     if (location.hash) {
-      customNav(location.hash,'true');
+      customNav(location.hash, "true");
+      sideNavActivate(`/${location.hash}`);
       // console.log(`1:: ${location.pathname}${location.hash}`, document.querySelector(`a[href="${location.pathname}${location.hash}"]`))
       // let hashPath = document.querySelector(
       //   `a[href="${location.pathname}${location.hash}"]`

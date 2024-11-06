@@ -64,31 +64,31 @@ const Contents = () => {
     <div className="w-full z-[1] bg-white contents-container">
       <ContentFragment
         id="intro-section"
-        className="w-full min-h-screen md:h-screen"
+        className="fragment-content w-full min-h-screen md:h-screen"
       >
         <Intro></Intro>
       </ContentFragment>
       <ContentFragment
         id="profile-summary-section"
-        className="w-full h-auto lg:h-screen bg-[#ffffff10] pt-5 pb-3 mb-16"
+        className="fragment-content w-full h-auto lg:h-screen bg-[#ffffff10] pt-5 pb-3 mb-16"
       >
         <ProfileSummary></ProfileSummary>
       </ContentFragment>
       <ContentFragment
         id="projects-section"
-        className="w-full min-h-screen bg-black pb-5"
+        className="fragment-content w-full min-h-screen bg-black pb-5"
       >
         <Projects />
       </ContentFragment>
       <ContentFragment
         id="work-experience-section"
-        className="w-full min-h-screen bg-[#e0e0e0] py-5"
+        className="fragment-content w-full min-h-screen bg-[#e0e0e0] py-5"
       >
         <WorkExp />
       </ContentFragment>
       <ContentFragment
         id="learnings-section"
-        className="w-full min-h-screen minor-project-container "
+        className="fragment-content w-full min-h-screen lg:min-h-[250vh] lg:min-h-[250vh] minor-project-container "
       >
         <MinorProjects></MinorProjects>
       </ContentFragment>
@@ -101,11 +101,11 @@ const Contents = () => {
       </ContentFragment> */}
       <ContentFragment
         id="technology-section"
-        className="w-full min-h-screen technology-wrapper"
+        className="fragment-content w-full min-h-screen technology-wrapper"
       >
         <Technology />
       </ContentFragment>
-      <ContentFragment id="contact-section" className="w-full min-h-screen">
+      <ContentFragment id="contact-section" className="fragment-content w-full min-h-screen">
         <Contact />
       </ContentFragment>
       {/* <ContentFragment

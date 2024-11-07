@@ -26,12 +26,14 @@ const MinorProjects = () => {
     }
   }
   useEffect(() => {
+    // console.log("MinorProjects useeffect")
     const light = document.querySelector(".mp-light");
     const grid = document.querySelector(".minor-project-wrapper");
 
     grid?.addEventListener("mousemove", mouseMoveEvent);
     return () => document.removeEventListener("mousemove", mouseMoveEvent, true);
   }, []);
+
   return (
     <div className="minor-project-wrapper w-full">
       <div className="minor-project-bg">

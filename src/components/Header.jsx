@@ -103,7 +103,7 @@ const Header = () => {
                   <a
                     // href={nav.path}
                     onClick={() => {
-                      customNav(nav.path);
+                      customNav(nav.path, false, navigate);
                       sideNavActivate(nav.path);
                       // navigate(nav.path);
                       // document

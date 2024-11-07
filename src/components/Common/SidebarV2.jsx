@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { customNav, sideNavActivate, zIndex } from "../../utils";
+import { customNav, sideNavActivate, zIndex, isNavScroll } from "../../utils";
 import { IoHome } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { navRoutes } from "../../utils";
@@ -11,6 +11,7 @@ import "./Common.css";
 function SidebarV2() {
   const navigate = useNavigate();
   const [scope, animate] = useAnimate();
+  let timeoutId = 0;
   const onScroll = () => {
     // 60px
     let navRect = document.querySelector("nav")?.getBoundingClientRect();
@@ -35,15 +36,64 @@ function SidebarV2() {
     } else {
       animate(scope.current, slideInProp.hidden);
     }
+
+    if(!!timeoutId) clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      intersectionViewportContainers();
+    }, 200);
+
   };
 
   useEffect(() => {
     document.addEventListener("scroll", onScroll, true);
-    return () => document.removeEventListener("scroll", onScroll, true);
+    return () =>{
+      document.removeEventListener("scroll", onScroll, true);
+      if(!!timeoutId) clearTimeout(timeoutId);
+    }
   });
 
+  const intersectionViewportContainers = ()=>{
+    console.log("isNavScroll ", isNavScroll);
+    
+    if(isNavScroll) return;
+    let containerList = [];
+    document.querySelectorAll('.fragment-content').forEach(elm=>{
+      let elmRect = elm.getBoundingClientRect();
+      let visibleHeight = 0;
+      if(elmRect.top>0 && elmRect.top>=window.innerHeight){
+        visibleHeight = 0;
+      }
+      if(elmRect.top>0 && elmRect.top<window.innerHeight){
+        if(elmRect.bottom<window.innerHeight){
+          visibleHeight = elmRect.bottom;
+        }else{
+          visibleHeight = window.innerHeight-elmRect.top;
+        }
+      }
+      if(elmRect.top<0){
+        if(elmRect.bottom<=0){
+          visibleHeight = 0;
+        }else{
+          visibleHeight = Math.min(elmRect.bottom, window.innerHeight);
+        }
+      }
+      let visiblePct = (Math.round(visibleHeight/window.innerHeight*10000)/100);
+      let path = `/#${elm.getAttribute('id')}`;
+      containerList.push({path, visiblePct});
+    })
+    if(containerList.length>0){
+      let maxVisible = containerList.reduce((a,b)=>a.visiblePct>b.visiblePct?a:b)
+      console.log("max Visible ", maxVisible);
+      let pathParts = window.location.pathname.split("/").length;
+      if (pathParts < 3 && maxVisible.visiblePct>1) {
+        window.history.replaceState(null, "My Portfolio", maxVisible.path);
+        sideNavActivate(maxVisible.path);
+      }
+    } 
+  }
+
   const navClick = (path, i) => {
-    customNav(path);
+    customNav(path, false, navigate);
     sideNavActivate(path);
     // document
     //   .querySelectorAll(".sidebar-navigation li")

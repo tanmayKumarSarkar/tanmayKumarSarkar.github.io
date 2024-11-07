@@ -2249,17 +2249,23 @@ export const isMobile = () => {
 };
 
 export const navigateToPath = (path) => {
+  isNavScroll = true;
   document
     .getElementById(path.replace("/", "").replace("#", ""))
     ?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      isNavScroll = false;
+    }, 1400);
 };
 
-export const customNav = (path, reload) => {
+export const customNav = (path, reload, navigate) => {
   let pathParts = window.location.pathname.split("/").length;
   if (pathParts < 3 && !reload) {
     window.history.replaceState(null, "My Portfolio", path);
     navigateToPath(path);
     return;
+  } else if(!reload && !!navigate){
+    navigate(path);
   } else {
     window.location = path;
   }
@@ -2272,11 +2278,7 @@ export const customNav = (path, reload) => {
   //   console.log('body resize ', document.querySelector('body').clientHeight);
 
   // })
-  const resizeObserver = new ResizeObserver((entries) => {
-    console.log("Body height changed:", entries[0].target.clientHeight);
-    navigateToPath(path);
-  });
-  resizeObserver.observe(document.body);
+  // resizeObserver.observe(document.body);
 
   //
 
@@ -2299,6 +2301,30 @@ export const customNav = (path, reload) => {
   // }, 1000);
 };
 
+let prevHeight = 0;
+
+export const resizeObserver = new ResizeObserver((entries) => {
+  // console.log("Prev Height : ", prevHeight);
+  let currHeight = entries[0].target.clientHeight;
+  // console.log(entries, "Body height changed:", entries[0].target.clientHeight);
+  let hash = window.location.hash;
+  if(!!hash){
+    navigateToPath("/" + hash);
+    // console.log("window.Location.path + hash : ", window.Location.path + hash)
+  }
+  prevHeight = currHeight;
+});
+
+export const intersectionObserver = (callback)=>{
+  const options = {
+    // root: document.querySelector(".contents-container"),
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  };
+  return new IntersectionObserver(callback, options);
+}
+
 export const titleCase = (str) => {
   return str.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase());
 };
@@ -2311,3 +2337,35 @@ export const sideNavActivate = (path) => {
     .querySelector(`.sidebar-navigation li[path='${path}']`)
     .classList.add("active");
 };
+
+export const removeSidebarActivate = () =>{
+  document
+    .querySelectorAll(".sidebar-navigation li")
+    .forEach((ele) => ele.classList.remove("active"));
+}
+
+export const intersectionViewport = (selector)=>{
+  let elmRect = document.querySelector(selector).getBoundingClientRect();
+  // console.log(window.top);
+  let visibleHeight = 0;
+  if(elmRect.top>0 && elmRect.top>=window.innerHeight){
+    visibleHeight = 0;
+  }
+  if(elmRect.top>0 && elmRect.top<window.innerHeight){
+    if(elmRect.bottom<window.innerHeight){
+      visibleHeight = elmRect.bottom;
+    }else{
+      visibleHeight = window.innerHeight-elmRect.top;
+    }
+  }
+  if(elmRect.top<0){
+    if(elmRect.bottom<=0){
+      visibleHeight = 0;
+    }else{
+      visibleHeight = Math.min(elmRect.bottom, window.innerHeight);
+    }
+  }
+  return (Math.round(visibleHeight/window.innerHeight*10000)/100);
+}
+
+export let isNavScroll = false;

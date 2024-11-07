@@ -4,7 +4,7 @@ import React, { lazy, useContext, useEffect, useState } from "react";
 import ProfileSummary from "./Summary/ProfileSummary";
 import { HeaderContext, useHeaderMenuCtx } from "../utils/Context.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
-import { customNav, sideNavActivate } from "../utils/index.js";
+import { customNav, sideNavActivate, resizeObserver } from "../utils/index.js";
 // import Projects from "./Projects/Projects";
 
 const ContentFragment = lazy(() => import("./ContentFragment.jsx"));
@@ -22,12 +22,84 @@ const Contents = () => {
   const [headerMenu, setHeaderMenu] = useHeaderMenuCtx();
   const navigate = useNavigate();
   const location = useLocation();
+  let observers = [];
+  let observeh1 = null;
+
+  const intersectionObserver = () =>{
+    console.log(entries);
+    /**/
+    let targetSelector = '.fragment-content';
+    observers = [];
+    const options = {
+      root: null,
+      rootMargin: "100px 0px 100px 0px",
+      threshold: [0,.25,.5,.75,1],
+    };
+
+    if(observeh1) observeh1.disconnect();
+      //observeh1.unobserve(document.querySelector('#technology-section'));
+    observeh1 = new IntersectionObserver(function(entries) {
+      console.log(entries[0].intersectionRatio, entries[0]?.target, entries[0].isIntersecting, entries[0].isVisible);
+      // isIntersecting is true when element and viewport are overlapping
+      // isIntersecting is false when element and viewport don't overlap
+      if(entries[0].isIntersecting === true)
+        console.log('Element has just become visible in screen');
+    }, { threshold: [0, .2,1] });
+    
+    observeh1.observe(document.querySelector("#contact-section"));
+
+    // if(observeh1) observeh1.unobserve(document.querySelector('#technology-section'));
+    // observeh1 = new IntersectionObserver(
+    //   (entries) => {
+    //     entries.forEach((entry) => {
+    //       console.log("entry: ", entry, "Intersection Ratio: ", entry.intersectionRatio)
+    //       if (entry.isIntersecting) {
+    //         console.log('h1 is in the viewport!');
+    //         // entry.target.style.backgroundColor = '#3498db';
+    //         // entry.target.style.fontSize = '4rem';
+    //       } else {
+    //         console.log('h1 is out of the viewport!');
+    //         // entry.target.style.backgroundColor = '#2ecc71';
+    //         // entry.target.style.fontSize = 'unset';
+    //       }
+    //     });
+    //   },
+    //   {
+    //     root: null,
+    //     rootMargin: '200px',
+    //     threshold:[ 0.5],
+    //   }
+    // );
+    
+    // observeh1.observe(document.querySelector('#technology-section'));
+    // let intersectionObserverObj = new IntersectionObserver(intersectionHandler, options);
+    // intersectionObserverObj.observe(document.querySelector('#technology-section'));
+    
+    // document.querySelectorAll(targetSelector).forEach((i) => {
+    //   console.log(i)
+    //   if (i) {
+    //     let intersectionObserverObj = new IntersectionObserver(intersectionHandler, options);
+    //     //intersectionObserver(intersectionHandler);
+    //     setTimeout(() => {
+    //       intersectionObserverObj.observe(i);
+    //     }, 5000);
+    //     observers.push({observer: intersectionObserverObj, element: i});
+    //   }
+    // });
+    console.log("Intersection Observers: ", observers)
+    /**/
+    
+  }
 
   useEffect(() => {
     // setShowHeader(true);
     setHeaderMenu(true);
+    resizeObserver.observe(document.body);
+    /**/
+    
+    // console.log("subscribing to resizeObserver")
     if (location.hash) {
-      customNav(location.hash, "true");
+      customNav(location.hash, true);
       sideNavActivate(`/${location.hash}`);
       // console.log(`1:: ${location.pathname}${location.hash}`, document.querySelector(`a[href="${location.pathname}${location.hash}"]`))
       // let hashPath = document.querySelector(
@@ -39,6 +111,12 @@ const Contents = () => {
       //   navigate("/#");
       // }
     }
+    return () => {
+      resizeObserver.unobserve(document.body);
+      // observers.forEach((intersectionObserverObj) => {
+      //     intersectionObserverObj.observer.unobserve(intersectionObserverObj.element);
+      // });
+    };
   }, []);
 
   const [hasError, setHasError] = useState(false);
@@ -88,7 +166,7 @@ const Contents = () => {
       </ContentFragment>
       <ContentFragment
         id="learnings-section"
-        className="fragment-content w-full min-h-screen lg:min-h-[250vh] lg:min-h-[250vh] minor-project-container "
+        className="fragment-content w-full min-h-screen portrait:md:min-h-[125vh] landscape:lg:min-h-[150vh] portrait:lg:min-h-[125vh] minor-project-container "
       >
         <MinorProjects></MinorProjects>
       </ContentFragment>

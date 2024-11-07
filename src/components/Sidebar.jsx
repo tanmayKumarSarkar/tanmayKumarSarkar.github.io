@@ -60,7 +60,7 @@ function Sidebar() {
               // href={nav.path}
               // onClick={() => navigate(nav.path)}
               onClick={
-                () => customNav(nav.path)
+                () => customNav(nav.path, false)
                 // document
                 //   .getElementById(nav.path.replace("/#", ""))
                 //   .scrollIntoView()

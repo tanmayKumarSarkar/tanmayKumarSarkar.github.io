@@ -8,15 +8,17 @@ import {
   slideInFromRight,
   slideInFromBottom,
 } from "../../utils/motion";
-import { profileDetails } from "../../utils";
+import { customNav, profileDetails, sideNavActivate } from "../../utils";
 import { SparklesIcon } from "@heroicons/react/16/solid";
 import { IoIosArrowDown } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 // import TechIcons from "./TechIcons";
 const TechIcons = lazy(() => import("./TechIcons.jsx"));
 const StarsField = lazy(() => import("./StarsField.jsx"));
 
 const Intro = () => {
   const componentRef = useRef(null);
+  const navigate = useNavigate();
   const gradientTextClass = `text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 whitespace-nowrap`;
   useEffect(() => {
     let about_me_1 = componentRef.current.querySelector(".about_me_1");
@@ -30,6 +32,12 @@ const Intro = () => {
       `<span class="${gradientTextClass}">the best</span>`
     );
   }, []);
+
+  const navClick = (path, i) => {
+    customNav(path, false, navigate);
+    sideNavActivate(path);
+  };
+
   return (
     <div
       className="flex flex-col w-full min-h-screen md:h-full justify-around md:justify-start intro3-cointainer pt-0 pb-8 md:pb-0 px-0 mx-0 relative overflow-hidden"
@@ -107,6 +115,7 @@ const Intro = () => {
                 <motion.span
                   variants={slideInFromBottom(0.5)}
                   className="Welcome-box py-[5px] md:py-[3px] px-[10px] border border-[#efe9ff] opacity-[0.9] text-center cursor-pointer"
+                  onClick={() => navClick('/#profile-summary-section', 1)}
                 >
                   <h1 className="Welcome-text text-[17px] text-white mr-[4px]">
                     About Me

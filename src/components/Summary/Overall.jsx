@@ -37,21 +37,36 @@ const Overall = () => {
       </div>
       <div className="rounded-xl col-span-6 md:col-span-4 lg:col-span-5 row-span-4 flex flex-col justify-center items-start text-sm">
         <div className="inline-flex justify-center items-center">
-          <GiRotaryPhone color="#6e18f0" />&nbsp;&nbsp;+91 9749760920&nbsp;
-          <FaRegClipboard className="cursor-pointer" style={{color:'#000'}}
-            onClick={(e) => {navigator.clipboard.writeText('+919749760920'); e.target.style.color='#69db04';}}
+          <GiRotaryPhone color="#6e18f0" />
+          &nbsp;&nbsp;+91 9749760920&nbsp;
+          <FaRegClipboard
+            className="cursor-pointer"
+            style={{ color: "#000" }}
+            onClick={(e) => {
+              navigator.clipboard.writeText("+919749760920");
+              e.target.style.color = "#69db04";
+            }}
           />
         </div>
-        <div className="inline-flex justify-center items-center cursor-pointer" >
-          <span className="inline-flex justify-center items-center" onClick={(e)=>window.open('mailto:tanmay.kr.sarkars@gmail.com')}>
-            <MdEmail color="#6e18f0" />&nbsp;&nbsp;tanmay.kr.sarkars@gmail.com
-          </span>&nbsp;
-          <FaRegClipboard style={{color:'#000'}}
-            onClick={(e) => {navigator.clipboard.writeText('tanmay.kr.sarkars@gmail.com'); e.target.style.color='#69db04';}} 
+        <div className="inline-flex justify-center items-center cursor-pointer">
+          <span
+            className="inline-flex justify-center items-center"
+            onClick={(e) => window.open("mailto:tanmay.kr.sarkars@gmail.com")}
+          >
+            <MdEmail color="#6e18f0" />
+            &nbsp;&nbsp;tanmay.kr.sarkars@gmail.com
+          </span>
+          &nbsp;
+          <FaRegClipboard
+            style={{ color: "#000" }}
+            onClick={(e) => {
+              navigator.clipboard.writeText("tanmay.kr.sarkars@gmail.com");
+              e.target.style.color = "#69db04";
+            }}
           />
         </div>
       </div>
-      <div className="rounded-xl col-span-12 row-span-6 portrait:lg:row-span-3 bento-card p-2 text-xs md:text-sm text-left liner-gradient-border">
+      <div className="flex rounded-xl col-span-12 row-span-6 portrait:lg:row-span-3 bento-card p-2 text-xs md:text-sm text-left liner-gradient-border">
         Experienced in Full-Stack Software Development, Architecture Design,
         IOT, DevOps & Web Development in Enterprise Applications.
       </div>

@@ -182,3 +182,30 @@
     border-radius: 3px;
     /* background: radial-gradient(circle at 6px 6px, #3994f7, #024c74); */
 }
+
+.liner-grad-border {
+    border-radius: 10px;
+    transition: transform .2s;
+    /* display: flow-root; */
+    position: relative;
+}
+
+.liner-grad-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background: linear-gradient(45deg, rgb(248, 0, 248), rgb(0, 255, 242)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    transition: transform 2s;
+}
+
+.prv-nxt-btn {
+    border: 1px solid #b1b1b12a;
+}

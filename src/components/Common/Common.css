@@ -118,3 +118,22 @@ body h2 {
 .sidebar-navigation .side-menu-icon {
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
 }
+
+.sidebar-scroll-up {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    color: #fff;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
+    cursor: pointer;
+}
+
+.sidebar-scroll-up::before {
+    content: '';
+    position: absolute;
+    background: #0e0e0e69;
+    inset: 0px;
+    border-radius: 50%;
+    border: 2px solid #2c2c2caf;
+    z-index: -1;
+}

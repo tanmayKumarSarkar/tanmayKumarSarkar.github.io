@@ -347,17 +347,17 @@ const Contact = () => {
             <div className="contact-contents">
               {/* // */}
               <div className="flex items-center">
-                <div className="mx-auto">
-                  <div className="max-w-md md:max-w-3xl mx-auto contact-form-container p-5 rounded-md shadow-sm">
+                <div className="mx-auto flex flex-col justify-center items-center h-auto lg:max-h-[95vh]">
+                  <div className="max-w-md md:max-w-3xl mx-auto contact-form-container px-5 py-10 md:py-5 rounded-md shadow-sm">
                     <div className="text-center">
-                      <h1 className="my-3 text-3xl font-semibold text-gray-100">
+                      <h1 className=" text-3xl font-semibold text-gray-100">
                         Contact Me
                       </h1>
                       <p className="text-gray-400 dark:text-gray-400">
                         Fill up the form below to send me a message.
                       </p>
                     </div>
-                    <div className="m-7">
+                    <div className="mx-2">
                       <form
                         onSubmit={handleFormSubmit}
                         // action="https://api.web3forms.com/submit"
@@ -380,10 +380,10 @@ const Contact = () => {
                           id=""
                           style={{ display: "none" }}
                         />
-                        <div className="mb-4">
+                        <div className="">
                           <label
                             htmlFor="name"
-                            className="block mb-2 text-sm text-white"
+                            className="block mt-1 text-sm text-white"
                           >
                             Full Name
                           </label>
@@ -397,10 +397,10 @@ const Contact = () => {
                             className="w-full px-3 py-2 h-10 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
-                        <div className="mb-4">
+                        <div className="">
                           <label
                             htmlFor="email"
-                            className="block mb-2 text-sm text-white"
+                            className="block mt-1 text-sm text-white"
                           >
                             Email Address
                           </label>
@@ -415,10 +415,10 @@ const Contact = () => {
                             className="w-full px-3 py-2 h-10 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
-                        <div className="mb-4">
+                        <div className="">
                           <label
                             htmlFor="phone"
-                            className="block mb-2 text-sm text-white"
+                            className="block mt-1 text-sm text-white"
                           >
                             Phone Number
                           </label>
@@ -432,10 +432,10 @@ const Contact = () => {
                             className="w-full px-3 py-2 h-10 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                           />
                         </div>
-                        <div className="mb-4">
+                        <div className="">
                           <label
                             htmlFor="message"
-                            className="block mb-2 text-sm text-white"
+                            className="block mt-1 text-sm text-white"
                           >
                             Your Message
                           </label>
@@ -450,10 +450,10 @@ const Contact = () => {
                             defaultValue={""}
                           />
                         </div>
-                        <div className="mb-6">
+                        <div className="">
                           <button
                             type="submit"
-                            className={`w-full bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-500 inline-block text-white no-underline hover:text-black disabled:text-black py-3 px-4 rounded-sm focus:outline-none`}
+                            className={`w-full bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-500 inline-block text-white no-underline hover:text-black disabled:text-black py-3 px-4 mt-3 rounded-sm focus:outline-none`}
                             disabled={successMsg}
                           >
                             Send Message

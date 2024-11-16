@@ -18,9 +18,10 @@ const ProfileSummary = () => {
     <div className="w-full h-full profile-summary-bg relative black-scroll-cursor">
       <ProfileSummaryBG />
       <div className="w-full h-full px-5 gap-3 md:gap-6 grid grid-cols-12 grid-rows-12 md:grid-rows-11 lg:grid-rows-12">
-        <div className="rounded-xl col-span-12 lg:col-span-6 portrait:lg:max-xl:col-span-12 portrait:lg:col-span-12 row-span-3 md:row-span-4 lg:row-span-5 portrait:lg:row-span-3 portrait:lg:max-xl:row-span-3 bento-card ">
+        <div className="rounded-xl col-span-12 lg:col-span-6 portrait:lg:max-xl:col-span-12 portrait:lg:col-span-12 row-span-3 md:row-span-4 lg:row-span-6 portrait:lg:row-span-3 portrait:lg:max-xl:row-span-3 bento-card ">
           <Overall />
         </div>
+        {/* <div className="rounded-xl md:col-span-6 md:row-span-1 hidden lg:block portrait:lg:hidden portrait:lg:max-xl:hidden"></div> */}
         {/* <!-- 1 Large box spanning 2x2 --> */}
         <div className="flex rounded-xl col-span-6 lg:col-span-2 portrait:lg:col-span-4 portrait:lg:max-xl:col-span-6 row-span-2 lg:row-span-4 portrait:lg:row-span-3 portrait:lg:max-xl:row-span-2 bento-card">
           <span>
@@ -61,7 +62,7 @@ const ProfileSummary = () => {
           </span>
         </div>
 
-        <div className="rounded-xl md:col-span-6 md:row-span-1 hidden lg:block portrait:lg:hidden portrait:lg:max-xl:hidden"></div>
+        <div className="rounded-xl md:col-span-6 md:row-span-2 hidden lg:block portrait:lg:hidden portrait:lg:max-xl:hidden"></div>
 
         <div className="rounded-xl col-span-6 row-span-3 md:row-span-3 lg:row-span-3 portrait:lg:row-span-3 bento-card flex flex-col justify-start items-start p-2">
           <div className="rounded-xl col-span-12 row-span-6 px-2 py-1 md:py-2 text-xs md:text-sm text-left purple-grad-font font-semibold flex justify-center items-center">

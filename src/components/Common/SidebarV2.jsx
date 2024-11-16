@@ -7,6 +7,7 @@ import IconComp from "./IconComp";
 import { motion, useAnimate } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "../../utils/motion";
 import "./Common.css";
+import { CgChevronDoubleUpO } from "react-icons/cg";
 
 function SidebarV2() {
   const navigate = useNavigate();
@@ -37,60 +38,62 @@ function SidebarV2() {
       animate(scope.current, slideInProp.hidden);
     }
 
-    if(!!timeoutId) clearTimeout(timeoutId);
+    if (!!timeoutId) clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
       intersectionViewportContainers();
     }, 200);
-
   };
 
   useEffect(() => {
     document.addEventListener("scroll", onScroll, true);
-    return () =>{
+    return () => {
       document.removeEventListener("scroll", onScroll, true);
-      if(!!timeoutId) clearTimeout(timeoutId);
-    }
+      if (!!timeoutId) clearTimeout(timeoutId);
+    };
   });
 
-  const intersectionViewportContainers = ()=>{
+  const intersectionViewportContainers = () => {
     console.log("isNavScroll ", isNavScroll);
-    
-    if(isNavScroll) return;
+
+    if (isNavScroll) return;
     let containerList = [];
-    document.querySelectorAll('.fragment-content').forEach(elm=>{
+    document.querySelectorAll(".fragment-content").forEach((elm) => {
       let elmRect = elm.getBoundingClientRect();
       let visibleHeight = 0;
-      if(elmRect.top>0 && elmRect.top>=window.innerHeight){
+      if (elmRect.top > 0 && elmRect.top >= window.innerHeight) {
         visibleHeight = 0;
       }
-      if(elmRect.top>0 && elmRect.top<window.innerHeight){
-        if(elmRect.bottom<window.innerHeight){
+      if (elmRect.top > 0 && elmRect.top < window.innerHeight) {
+        if (elmRect.bottom < window.innerHeight) {
           visibleHeight = elmRect.bottom;
-        }else{
-          visibleHeight = window.innerHeight-elmRect.top;
+        } else {
+          visibleHeight = window.innerHeight - elmRect.top;
         }
       }
-      if(elmRect.top<0){
-        if(elmRect.bottom<=0){
+      if (elmRect.top < 0) {
+        if (elmRect.bottom <= 0) {
           visibleHeight = 0;
-        }else{
+        } else {
           visibleHeight = Math.min(elmRect.bottom, window.innerHeight);
         }
       }
-      let visiblePct = (Math.round(visibleHeight/window.innerHeight*10000)/100);
-      let path = `/#${elm.getAttribute('id')}`;
-      containerList.push({path, visiblePct});
-    })
-    if(containerList.length>0){
-      let maxVisible = containerList.reduce((a,b)=>a.visiblePct>b.visiblePct?a:b)
+      let visiblePct =
+        Math.round((visibleHeight / window.innerHeight) * 10000) / 100;
+      let path = `/#${elm.getAttribute("id")}`;
+      containerList.push({ path, visiblePct });
+    });
+    if (containerList.length > 0) {
+      let maxVisible = containerList.reduce((a, b) =>
+        a.visiblePct > b.visiblePct ? a : b
+      );
       console.log("max Visible ", maxVisible);
       let pathParts = window.location.pathname.split("/").length;
-      if (pathParts < 3 && maxVisible.visiblePct>1) {
+      if (pathParts < 3 && maxVisible.visiblePct > 1) {
         window.history.replaceState(null, "My Portfolio", maxVisible.path);
         sideNavActivate(maxVisible.path);
       }
-    } 
-  }
+    }
+  };
 
   const navClick = (path, i) => {
     customNav(path, false, navigate);
@@ -109,7 +112,7 @@ function SidebarV2() {
       // animate="visible"
       variants={slideInFromRight(0.5)}
       ref={scope}
-      className={`h-screen fixed top-0 right-0 w-[10vw] min-w-[35px] max-w-[60px] mr-2 md:-mr-0 flex text-center justify-end items-center sidebar-container2 z-2 z-${zIndex.sideBar}`}
+      className={`h-screen fixed top-0 right-0 w-[10vw] min-w-[35px] max-w-[60px] mr-2 md:-mr-0 flex flex-col text-center justify-center items-end sidebar-container2 z-6 z-${zIndex.sideBar}`}
     >
       <div className="sidebar-navigation">
         <ul>
@@ -173,6 +176,12 @@ function SidebarV2() {
       </div> */}
       {/* <div className="w-full h-full absolute bg-white"></div> */}
       <div className="flex flex-col menu-wrapper"></div>
+      <div
+        className="flex sidebar-scroll-up text-lg"
+        onClick={() => navClick("/#intro-section", 1)}
+      >
+        <CgChevronDoubleUpO />
+      </div>
     </motion.div>
   );
 }

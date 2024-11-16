@@ -49,21 +49,21 @@ const ProjectDetails = (props) => {
                   onClick={() => navigate(-1)}
                   className="flex mr-1 md:mr-24"
                 >
-                  <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2">
+                  <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2 prv-nxt-btn">
                     <TiArrowBack /> &nbsp;Back
                   </span>
                 </a>
 
                 {prevId != -2 && (
                   <Link to={`/project/${prevId}`} className="flex ">
-                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2">
+                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2 prv-nxt-btn">
                       <MdKeyboardDoubleArrowLeft /> Prev
                     </span>
                   </Link>
                 )}
                 {nextId != -1 && (
                   <Link to={`/project/${nextId}`} className="flex ml-1">
-                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2">
+                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2 prv-nxt-btn">
                       Next <MdKeyboardDoubleArrowRight />
                     </span>
                   </Link>
@@ -76,7 +76,7 @@ const ProjectDetails = (props) => {
           </div>
 
           <div className="mt-5">
-            <div className="mt-8 text-base font-semibold text-left">
+            <div className="mt-8 mb-2 text-base font-semibold text-left">
               Screen Captures
             </div>
             {exp.AllScreens && (
@@ -172,6 +172,25 @@ const ProjectDetails = (props) => {
 
           <div className="mt-10 external-details">
             <LoadComp name={exp.Project} project={exp}></LoadComp>
+          </div>
+
+          <div className="flex justify-end text-xs font-medium pt-5">
+            <span className="flex">
+              {prevId != -2 && (
+                <Link to={`/project/${prevId}`} className="flex ">
+                  <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2 prv-nxt-btn">
+                    <MdKeyboardDoubleArrowLeft /> Prev
+                  </span>
+                </Link>
+              )}
+              {nextId != -1 && (
+                <Link to={`/project/${nextId}`} className="flex ml-1">
+                  <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2 prv-nxt-btn">
+                    Next <MdKeyboardDoubleArrowRight />
+                  </span>
+                </Link>
+              )}
+            </span>
           </div>
         </div>
       </div>

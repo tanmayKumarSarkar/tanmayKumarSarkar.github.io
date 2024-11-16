@@ -114,8 +114,8 @@ const Intro = () => {
               <div className="w-full flex justify-center">
                 <motion.span
                   variants={slideInFromBottom(0.5)}
-                  className="Welcome-box py-[5px] md:py-[3px] px-[10px] border border-[#efe9ff] opacity-[0.9] text-center cursor-pointer"
-                  onClick={() => navClick('/#profile-summary-section', 1)}
+                  className="Welcome-box py-[5px] md:py-[3px] px-[10px] z-1 border border-[#efe9ff] opacity-[0.9] text-center cursor-pointer liner-gradient-border-wlcm"
+                  onClick={() => navClick("/#profile-summary-section", 1)}
                 >
                   <h1 className="Welcome-text text-[17px] text-white mr-[4px]">
                     About Me
@@ -133,9 +133,15 @@ const Intro = () => {
         </div>
       </motion.div>
       <div className="scroll-arrow bottom-[6%] md:bottom-[12%] text-sm md:text-4xl">
-        <div className="arrow-1 h-[7px] md:h-[15px]"><IoIosArrowDown /></div>
-        <div className="arrow-2 h-[7px] md:h-[15px]"><IoIosArrowDown /></div>
-        <div className="arrow-3 h-[7px] md:h-[15px]"><IoIosArrowDown /></div>
+        <div className="arrow-1 h-[7px] md:h-[15px]">
+          <IoIosArrowDown />
+        </div>
+        <div className="arrow-2 h-[7px] md:h-[15px]">
+          <IoIosArrowDown />
+        </div>
+        <div className="arrow-3 h-[7px] md:h-[15px]">
+          <IoIosArrowDown />
+        </div>
       </div>
       <div className="custom-shape-divider-bottom-1724344525">
         <svg

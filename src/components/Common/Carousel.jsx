@@ -32,7 +32,7 @@ const Carousel = ({ imageSet }) => {
                 <img
                   src={`${imageSet.path}/${slide}`}
                   alt={slide}
-                  className="image"
+                  className="image portrait:max-h-[80vh] landscape:max-h-[60vh]"
                   title={slide}
                 />
               )}
@@ -40,7 +40,7 @@ const Carousel = ({ imageSet }) => {
           );
         })}
       </section>
-      <div>{imageSet.images[current].split(".")[0]}</div>
+      <div className="mt-4">{imageSet?.images[current]?.split(".")[0]}</div>
     </div>
   );
 };

@@ -1096,6 +1096,18 @@ export const profileDetails = {
       Problem: "Companies faced high costs due to frequent accidents.",
       Solution:
         "Provided real-time feedback on driver behavior, reducing accidents and enhancing safety.",
+      Screens: ["e-trans.gif"],
+      AllScreens: [
+        "Driver Score Card Detailed.jpg",
+        "Driver Score Card Overall.png",
+        "Driver ScoreCard Segmentation.png",
+        "Summary.png",
+        "Event Segmentation.png",
+        "Event Segmentation Breakdown.png",
+        "Driver Score Card Parameters.png",
+        "Architecture.png",
+        "Data Lake.png",
+      ],
     },
     {
       id: 6,
@@ -1176,6 +1188,18 @@ export const profileDetails = {
         "Fleet managers lacked real-time insights into vehicle performance, leading to inefficiencies and increased costs.",
       Solution:
         "Created a system that provides real-time monitoring and data-driven insights into vehicle performance, improving operational efficiency.",
+      Screens: ["e-trans-NRT.gif"],
+      AllScreens: [
+        "Admin.png",
+        "Config Data Flow.png",
+        "Driver.png",
+        "Events.png",
+        "GPS Data Flow.png",
+        "Report Position.png",
+        "Report Tracking.png",
+        "User Process Flow.png",
+        "Architecture.png",
+      ],
     },
     {
       id: 8,

@@ -38,7 +38,8 @@
 
 .slide {
     opacity: 0;
-    transition-duration: 1s ease;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
 .slide.active {

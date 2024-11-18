@@ -76,7 +76,7 @@ const ProjectDetails = (props) => {
           </div>
 
           <div className="mt-5">
-            <div className="mt-8 mb-2 text-base font-semibold text-left">
+            <div className="mt-8 mb-5 text-base font-semibold text-left">
               Screen Captures
             </div>
             {exp.AllScreens && (

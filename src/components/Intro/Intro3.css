@@ -29,7 +29,7 @@
     position: relative;
     width: -moz-max-content;
     width: max-content;
-    transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+    transition: .5s cubic-bezier(0.6, 0.6, 0, 1) ease-out;
 }
 
 .liner-gradient-border-wlcm {
@@ -60,6 +60,7 @@
 .Welcome-box:active,
 .Welcome-box:focus {
     box-shadow: inset 0 -7px 11px #bcacff6e;
+    transform: scale(1.02) !important;
 }
 
 .my-img {

@@ -1083,8 +1083,8 @@ export const profileDetails = {
       Description_2:
         "Created a real-time system to predict accidents and score driver behavior using vehicle data.",
       Revenue:
-        "Helped transportation companies save 10-15% on accident-related costs.",
-      Sales: "Attracted new clients from the transportation industry.",
+        "Helped transportation companies to save on accident-related costs and also by increasing saftey by many folds.",
+      Sales: "Attracted lot of new clients from the transportation industry.",
       The_what:
         "A predictive analytics system for driver performance and accident prediction.",
       The_why:

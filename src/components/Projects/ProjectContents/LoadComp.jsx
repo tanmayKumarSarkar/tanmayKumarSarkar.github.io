@@ -7,14 +7,15 @@ import TeamsApp from "./TeamsApp";
 import EtransScoreCard from "./EtransScoreCard";
 import { removeSidebarActivate } from "../../../utils";
 import { useEffect } from "react";
+import EtransRTracking from "./EtransRTracking";
 
 const LoadComp = ({ name, project }) => {
   name = name.toLowerCase();
-  useEffect(()=>{
+  useEffect(() => {
     console.log(project);
     removeSidebarActivate();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  },[]);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   if (name.includes("united") && name.includes("health"))
     return <Uhg project={project} />;
@@ -26,6 +27,8 @@ const LoadComp = ({ name, project }) => {
     return <SmartWeld project={project} />;
   if (name.includes("scorecard") && name.includes("prediction"))
     return <EtransScoreCard project={project} />;
+  if (name.includes("real-time") && name.includes("vehicle tracking"))
+    return <EtransRTracking project={project} />;
 
   return "<></>";
 };

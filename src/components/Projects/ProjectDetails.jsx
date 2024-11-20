@@ -41,7 +41,7 @@ const ProjectDetails = (props) => {
       <div className=" flex justify-center items-center mt-6">
         <div className="project-details-wrapper max-w-5xl px-10 ">
           <div className="text-left">
-            <div className="text-xs font-medium  flex justify-between">
+            <div className="text-xs font-medium flex justify-between items-center">
               <span className="text-xs font-medium ">{exp.Category}</span>
               <span className="flex">
                 <a

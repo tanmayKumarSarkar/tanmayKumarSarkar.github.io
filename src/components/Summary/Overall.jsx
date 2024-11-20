@@ -10,8 +10,10 @@ import { RiRadioButtonLine } from "react-icons/ri";
 const Overall = () => {
   return (
     <div className="w-full h-full px-2 gap-3 grid grid-cols-12 grid-rows-12 ">
-      <div className="rounded-xl col-span-3 row-span-7 portrait:lg:max-xl:row-span-9 portrait:lg:row-span-9 bento-card md:mr-6 profile-pic-container">
-        Photo
+      <div className="rounded-xl col-span-3 row-span-7 portrait:lg:max-xl:row-span-9 portrait:lg:row-span-9 bento-cards md:mr-6 profile-pic-container-1">
+        <div className="profile-pic-container-2">
+          <img src="/assets/Tanmay-right.png" alt="" />
+        </div>
       </div>
       <div className="rounded-xl col-span-6 md:col-span-5 row-span-7 portrait:lg:max-xl:row-span-9 portrait:lg:row-span-9 flex flex-col justify-between items-start text-sm py-1">
         <span className="flex justify-center items-center dark-back-shade py-0 px-2">
@@ -27,7 +29,7 @@ const Overall = () => {
           </span>
         </div>
       </div>
-      <div className="rounded-xl col-span-3 row-span-4 inline-flex justify-center items-center">
+      <div className="rounded-xl col-span-3 row-span-4 flex flex-col-reverse md:inline-flex md:flex-row justify-center items-center">
         Resume
         <span className="rounded-md cursor-pointer ml-1 p-1 bg-[#b1b1b183]">
           <a href="/assets/TANMAY KUMAAR SARKAR.pdf" target="_blank">

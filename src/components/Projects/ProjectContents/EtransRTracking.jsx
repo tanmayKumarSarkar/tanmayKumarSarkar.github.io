@@ -1,62 +1,57 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-const EtransScoreCard = ({ project }) => {
+const EtransRTracking = ({ project }) => {
   return (
     <div>
-      <div className="EtransScoreCard-wrapper project-wrapper">
-        <div className="mt-4 mb-6 demo-link">
-          <a
-            href="https://app.powerbi.com/view?r=eyJrIjoiMGY0NDA0YWEtNjQwZS00MjY0LTg5ZjAtYTdjYmMzZDA4NjA4IiwidCI6IjBjZGIxYWIwLWNmZjItNDcxNy1hZjU4LTgwYzdkZDE1NjI3ZCJ9"
-            target="_blank"
-          >
-            <h2>Driver Score Card Demo</h2> &nbsp; <FaExternalLinkAlt />
-          </a>
-        </div>
+      <div className="EtransRTracking-wrapper project-wrapper">
         <div>
-          <h2>TECHNO-FUNCTIONAL REQUIREMENTS</h2>
-          <h3 className="mt-4">Driver Score-Card Identification</h3>
+          <h2>REQUIREMENTS</h2>
+          <h3 className="mt-4">FUNCTIONAL REQUIREMENTS</h3>
           <ul className="text-left text-sm">
             <li>
-              A Driver Scorecard is a type of driver performance evaluation
-              based on specific driving metrics, such as speeding or idling,
-              measured via a GPS fleet tracking or telematics system. Fleet and
-              safety managers can use scorecards to track risky behavior and
-              determine which drivers need additional training.
+              Real-Time Data Collection from On-board Diagnostic Device (OBD)
+              installed on Vehicle.
             </li>
-            <div className="flex items-center justify-center py-4">
-              <img
-                className="w-[80%] md:w-[60%]"
-                src={`/assets/Projects/${project.Project}/Summary.png`}
-                alt="Summary"
-              />
-            </div>
             <li>
-              A score/prediction that caters to these needs is of interest to a
-              number of stakeholders, including consignors, consignees,
-              transport companies, and insurance companies.
+              Calculating Driver Score based on Various parameter (i.e. Speed,
+              Acceleration, Braking etc.){" "}
+            </li>
+            <li>
+              Calculation Accident Probability based on collect data and some
+              External Data (i.e. Weather etc.)
+            </li>
+            <li>
+              Visualization Dashboard & Analytics on Real-Time & Historical Data
             </li>
           </ul>
-          <h3 className="mt-4">Predictive Accidents Alert Generation</h3>
+          <h3 className="mt-4">TECHNICAL REQUIREMENTS</h3>
           <ul className="text-left text-sm">
             <li>
-              Accident models are used to explain and predict accident
-              occurrences in different traffic environments. The accident models
-              are normally segmented into separate models for rural and urban
-              areas.
+              Based on GPS data, if the truck is greater than 100 meters from
+              the route, send an alert to the driver and the control center.
+              (The 100 meters needs to be parameterized, as in certain cases it
+              will be 30 meters.)
             </li>
             <li>
-              The models are good at predicting the expected number of accidents
-              for a traffic facility but should not be used to calculate changes
-              in the number of accidents due to street reconstructions or other
-              measures causing changes in the variable of the model.
+              If the truck is moving and the driver is not in frame of the
+              video, send an alert to the driver and control.
             </li>
             <li>
-              Accident models for calculating estimates of environmental impact,
-              time delays, vehicle costs, and other effects of traffic are used
-              to assess the impact of changes in the transport system in
-              socio-economic calculations. Estimates are based on a set of
-              variables depending on the investment under analysis.
+              If the driver is not looking at the road for greater than 3
+              seconds, send an alert to the driver and control.
+            </li>
+            <li>
+              If the driver is yawning 3 times in 5 minutes, send an alert to
+              the driver and control.
+            </li>
+            <li>
+              Every 1 hour, if the truck is moving, send a 10-second clip to the
+              server.
+            </li>
+            <li>
+              Meta data of the clip will be stored in HarperDB. Video will be
+              stored in S3.
             </li>
           </ul>
         </div>
@@ -294,4 +289,4 @@ const EtransScoreCard = ({ project }) => {
   );
 };
 
-export default EtransScoreCard;
+export default EtransRTracking;

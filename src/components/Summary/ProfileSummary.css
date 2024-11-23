@@ -164,6 +164,9 @@
 
 .profile-pic-container-1 {
     position: relative;
+    /* border-bottom: 10px solid #00000046; */
+    /* outline: 1px solid red;
+    outline-offset: 2px; */
 }
 
 .profile-pic-container-2 {
@@ -171,5 +174,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    filter: drop-shadow(0 -5px 5px #000000c9) drop-shadow(0px 4px 2px #08031c);
+    filter: drop-shadow(0 -2px 8px #000000c9) drop-shadow(0px 4px 2px #08031c);
+}
+
+@media only screen and (max-width : 767px) {
+    .profile-pic-container-2 {
+        filter: drop-shadow(0 -1px 1px #00000096) drop-shadow(-2px 3px 2px #08031cbb);
+    }
 }

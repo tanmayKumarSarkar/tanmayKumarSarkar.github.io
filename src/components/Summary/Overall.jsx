@@ -10,7 +10,7 @@ import { RiRadioButtonLine } from "react-icons/ri";
 const Overall = () => {
   return (
     <div className="w-full h-full px-2 gap-3 grid grid-cols-12 grid-rows-12 ">
-      <div className="rounded-xl col-span-3 row-span-7 portrait:lg:max-xl:row-span-9 portrait:lg:row-span-9 bento-cards md:mr-6 profile-pic-container-1">
+      <div className="col-span-3 row-span-7 portrait:lg:max-xl:row-span-9 portrait:lg:row-span-9 bento-cards md:mr-6 profile-pic-container-1">
         <div className="profile-pic-container-2">
           <img src="/assets/Tanmay-right.png" alt="" />
         </div>

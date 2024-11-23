@@ -7,7 +7,7 @@ const EtransRTracking = ({ project }) => {
       <div className="EtransRTracking-wrapper project-wrapper">
         <div>
           <h2>REQUIREMENTS</h2>
-          <h3 className="mt-4">FUNCTIONAL REQUIREMENTS</h3>
+          <h3 className="mt-4">Functional Requirements</h3>
           <ul className="text-left text-sm">
             <li>
               Real-Time Data Collection from On-board Diagnostic Device (OBD)
@@ -25,7 +25,7 @@ const EtransRTracking = ({ project }) => {
               Visualization Dashboard & Analytics on Real-Time & Historical Data
             </li>
           </ul>
-          <h3 className="mt-4">TECHNICAL REQUIREMENTS</h3>
+          <h3 className="mt-4 capitalize">Technical Requirements</h3>
           <ul className="text-left text-sm">
             <li>
               Based on GPS data, if the truck is greater than 100 meters from
@@ -56,222 +56,307 @@ const EtransRTracking = ({ project }) => {
           </ul>
         </div>
         <div>
-          <h2 className="my-4">Driver Scorecard Report/Visualization</h2>
+          <h2 className="my-4 uppercase">Components</h2>
 
-          <div className="flex items-center justify-center py-4">
+          {/* <div className="flex items-center justify-center py-4">
             <img
               className="w-[80%] md:w-[60%]"
               src={`/assets/Projects/${project.Project}/Driver Score Card Detailed.jpg`}
               alt="Driver Score Card Detailed"
             />
+          </div> */}
+          {/* <h3 className="mt-4">Components</h3> */}
+          <ul className="text-left text-sm">
+            <li>
+              <span className="text-sm font-semibold">Raspberry Pi:</span> The
+              onboard device for processing data.
+            </li>
+            <li>
+              <span className="text-sm font-semibold">GPS Module:</span>{" "}
+              Provides real-time location data.
+            </li>
+            <li>
+              <span className="text-sm font-semibold">Node.js </span>Server:
+              Manages data communication between the onboard device and the
+              client application.
+            </li>
+            <li>
+              <span className="text-sm font-semibold">Map Interface:</span>{" "}
+              Displays real-time vehicle location.
+            </li>
+            <li>
+              <span className="text-sm font-semibold">IP Cameras:</span> Provide
+              video feed for monitoring driver and road conditions.
+            </li>
+          </ul>
+          <h2 className="mt-4 uppercase">Workflow & Process</h2>
+
+          <div className="flex items-center justify-center py-4">
+            <img
+              className="w-[80%] md:w-[60%]"
+              src={`/assets/Projects/${project.Project}/Driver.png`}
+              alt="Driver Tracking"
+            />
           </div>
 
-          <h3 className="mt-4">Key Performance Indicators (KPIs)</h3>
-          <ul className="text-left text-sm">
-            <li>Hard Acceleration</li>
-            <li>Harsh Braking/Declaration</li>
-            <li>Velocity/Speed</li>
-            <li>Idling/Idle Time</li>
-            <li>Night Driving</li>
+          <h3 className="mt-4 capitalize ">Operational Workflow</h3>
+          <ul start="1">
             <li>
-              Alert Parameters
-              <ul className="text-left text-sm ml-6 mt-1">
-                <li>ACCELERATION</li>
-                <li>DECELERATION</li>
-                <li>DISTRACTION</li>
-                <li>FATIGUE DRIVING</li>
-                <li>OVERSPEED</li>
+              <strong>Real-Time Data Collection</strong>:
+              <ul className="ml-4 mb-2">
+                <li>The GPS unit continuously collects location data.</li>
+                <li>
+                  IP cameras capture video footage of the driver and the road.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Data Processing</strong>:
+              <ul className="ml-4 mb-2">
+                <li>The Raspberry Pi processes GPS and video data.</li>
+                <li>
+                  Data is formatted into a structured format (e.g., JSON).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Data Transmission</strong>:
+              <ul className="ml-4 mb-2">
+                <li>
+                  The Raspberry Pi sends GPS and video data to a central{" "}
+                  <button type="button">Node.js&nbsp;</button>server using HTTP
+                  or WebSocket.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Server Handling</strong>:
+              <ul className="ml-4 mb-2">
+                <li>
+                  {" "}
+                  The <button type="button">Node.js&nbsp;</button>server
+                  receives, processes, and stores the data.
+                </li>
+                <li>
+                  APIs are provided for accessing real-time data and video
+                  feeds.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Client Interface</strong>:
+              <ul className="ml-4 mb-2">
+                <li>
+                  <strong>Map Integration</strong>: A map interface displays the
+                  real-time location of each truck, enabling easy tracking of
+                  routes and deviations.
+                </li>
+                <li>
+                  <strong>Video Playback</strong>: The system offers video
+                  playback features, allowing users to review past footage from
+                  the IP cameras. This includes event-triggered recordings for
+                  specific incidents, providing valuable insights into driver
+                  behavior and road conditions.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Route Deviation Detection</strong>:
+              <ul className="ml-4 mb-2">
+                <li>
+                  <strong>GPS Data Analysis</strong>: Compare the vehicle&apos;s
+                  current location with predefined routes.
+                </li>
+                <li>
+                  <strong>Deviation Alerts</strong>: Send alerts to the driver
+                  and control center if the vehicle deviates from the route by a
+                  set distance (parameterized, e.g., 100 meters).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Idle Time Monitoring</strong>:
+              <ul className="ml-4 mb-2">
+                <li>
+                  <strong>Engine Status Tracking</strong>: Monitor periods when
+                  the vehicle is stationary but the engine is running.
+                </li>
+                <li>
+                  <strong>Idle Time Alerts</strong>: Generate alerts if idle
+                  time exceeds a predefined threshold, indicating potential
+                  inefficiencies.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Video Feed Recording</strong>:
+              <ul className="ml-4 mb-2">
+                <li>
+                  <strong>Continuous Recording</strong>: Capture continuous
+                  video feed from the IP cameras.
+                </li>
+                <li>
+                  <strong>Event-Triggered Recording</strong>: Record video clips
+                  when specific events occur (e.g., route deviations, idle
+                  times, driver absence).
+                </li>
+                <li>
+                  <strong>Storage and Retrieval</strong>: Save video clips in
+                  cloud storage and provide access through the client
+                  application.
+                </li>
               </ul>
             </li>
           </ul>
-          <h2 className="mt-4">PRODUCT DELEVERABLES</h2>
 
+          <h3 className="mt-4">Hardware Setup</h3>
+          <ul className="text-left text-sm">
+            <li>
+              <span className="text-sm font-semibold">Raspberry Pi:</span>
+              <p className="ml-4 mb-2">
+                Install the operating system and connect the GPS module and IP
+                cameras.
+              </p>
+              <ul className="ml-4 mb-2">
+                <li>
+                  <span className="text-sm font-semibold">Location:</span>{" "}
+                  Inside the chassis of each truck.
+                </li>
+                <li>
+                  <span className="text-sm font-semibold">Accessibility:</span>{" "}
+                  Accessible via local intranet.
+                </li>
+                <li>
+                  <span className="text-sm font-semibold">
+                    Operating System:
+                  </span>{" "}
+                  Running embedded Linux.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span className="text-sm font-semibold">GPS Unit:</span>
+              <p className="ml-4 mb-2">
+                Ensure proper configuration for accurate location data.
+              </p>
+              <ul className="ml-4 mb-2">
+                <li>
+                  Provides real-time location data with accuracy up to 2.5
+                  meters.
+                </li>
+                <li>
+                  Routes are predefined and available in latitude and longitude
+                  format.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span className="text-sm font-semibold">IP Cameras:</span>
+              <p className="ml-4 mb-2">
+                Each truck is equipped with two 1 MP IP cameras:
+              </p>
+              <ul className="ml-4 mb-2">
+                <li>One mounted in the cabin for monitoring the driver.</li>
+                <li>One mounted externally for monitoring the road.</li>
+              </ul>
+            </li>
+            <li className="mb-2">
+              <span className="text-sm font-semibold">Power Supply:</span>{" "}
+              Ensure a stable power source for continuous operation.
+            </li>
+            <li>
+              <span className="text-sm font-semibold">Application:</span>
+              <ul className="ml-4 mb-2">
+                <li>
+                  The application running on the Raspberry Pi is written in
+                  Python.
+                </li>
+                <li>The back-end application is on Node JS run-time.</li>
+                <li>The front-end is an Angular SPA application.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3 className="mt-4">Software Setup</h3>
+          <ul className="text-left text-sm">
+            <li>
+              <strong>GPS Data Collection</strong>: Use a Python script to read
+              and parse GPS data from the module.
+            </li>
+            <li>
+              <strong>Data Transmission</strong>: Send GPS and video data to the
+              server using HTTP or WebSocket.
+            </li>
+            <li>
+              <strong>Sockect Data Reception</strong>: Write a program (e.g., in
+              Python) to read data from the GPS module. This data typically
+              includes latitude, longitude, speed, and timestamp.
+            </li>
+            <li>
+              <strong>Data Processing</strong>: Parse the GPS data to extract
+              latitude, longitude, speed, and other relevant information.
+            </li>
+            <li>
+              <strong>Data Parsing</strong>: Process the raw GPS data to extract
+              relevant information. This involves parsing the data into a
+              structured format like JSON.
+            </li>
+            <li>
+              <strong>Server</strong>: Node.js server to receive GPS data from
+              the Raspberry Pi and send it to the client application.
+            </li>
+            <li>
+              <strong>Communication with Node.js Server</strong>: Develop a
+              mechanism to send the parsed GPS data to a Node.js server. This
+              can be achieved using HTTP or WebSocket protocols for real-time
+              data transmission.
+            </li>
+            <li>
+              <strong>Video Feed Management</strong>: Capture video feed from
+              the IP cameras using appropriate libraries.
+            </li>
+          </ul>
+          <h3 className="mt-4">Data Flow</h3>
           <div className="flex items-center justify-center py-4">
             <img
               className="w-[80%] md:w-[60%]"
-              src={`/assets/Projects/${project.Project}/Driver Score Card Overall.png`}
-              alt="Driver Score Card Overall"
+              src={`/assets/Projects/${project.Project}/GPS Data Flow.png`}
+              alt="GPS Data Flow"
             />
           </div>
-
-          <h3 className="mt-4">Default Reporting Period</h3>
-          <p>Month → Week → Day</p>
-          <h3 className="mt-4">Details Displayed</h3>
           <ul className="text-left text-sm">
             <li>
-              Master Report: High-level analysis for all drivers displays
-              information about the total number of incidents based on model
-              output segmentation with driver details.
+              <strong>GPS Data Collection</strong>: The GPS module continuously
+              collects location data and sends it to the Raspberry Pi.
             </li>
             <li>
-              Detail Report: Displays a specific driver's scorecard based on the
-              high-level visualization.
-            </li>
-          </ul>
-
-          <div className="flex items-center justify-center py-4">
-            <img
-              className="w-[80%] md:w-[60%]"
-              src={`/assets/Projects/${project.Project}/Driver Score Card Parameters.png`}
-              alt="Driver Score Card Parameters"
-            />
-          </div>
-
-          <h3 className="mt-4">Driver Risks Segmentation</h3>
-          <ul className="text-left text-sm">
-            <li>High Risk</li>
-            <li>Medium High Risk</li>
-            <li>Medium Low Risk</li>
-            <li>Medium Risk</li>
-            <li>Low Risk</li>
-          </ul>
-          <h3 className="mt-4">Output Parameter Attributes</h3>
-          <ul className="text-left text-sm">
-            <li>Hard Acceleration</li>
-            <li>Harsh Braking</li>
-            <li>Velocity</li>
-            <li>Alert</li>
-            <li>Idle Time</li>
-            <li>Night Driving</li>
-          </ul>
-          <h3 className="mt-4">Condition Formatting Formula</h3>
-          <ul className="text-left text-sm">
-            <li>High Risk: ≥ 81%</li>
-            <li>Medium High Risk: 60 - 80%</li>
-            <li>Medium Low Risk: 40 - 60%</li>
-            <li>Medium Risk: 20 - 40%</li>
-            <li>Low Risk: ≤ 19%</li>
-          </ul>
-          <h2 className="mt-4">Driver Scorecard in Trend Analysis View</h2>
-          <div className="flex items-center justify-center py-4">
-            <img
-              className="w-[80%] md:w-[60%]"
-              src={`/assets/Projects/${project.Project}/Driver ScoreCard Segmentation.png`}
-              alt="Driver ScoreCard Segmentation"
-            />
-          </div>
-          <p className="mt-4">
-            Provides information about segmentation-based individual drivers
-            based on high-level visualization.
-          </p>
-
-          <div className="flex items-center justify-center py-4">
-            <img
-              className="w-[80%] md:w-[60%]"
-              src={`/assets/Projects/${project.Project}/Segmentation Based Trend Analysis.png`}
-              alt="Segmentation Based Trend Analysis"
-            />
-          </div>
-
-          <h3 className="mt-4"> Segmentation Trends</h3>
-          <ul className="text-left text-sm">
-            <li>
-              High-Risk Drivers: Identify drivers consistently in the high-risk
-              category and analyze patterns leading to this classification.
-            </li>
-
-            <li>
-              Improvement Trends: Track drivers who have shown significant
-              improvement over time, moving from higher to lower risk segments.
-            </li>
-          </ul>
-          <h3 className="mt-4">Behavioral Patterns</h3>
-          <ul className="text-left text-sm">
-            <li>
-              Time-Based Analysis: Examine how driver behavior changes over
-              different times of the day or week.
-            </li>
-
-            <li>
-              Incident Frequency: Assess the frequency and types of incidents
-              (e.g., hard braking, acceleration) to identify common triggers or
-              times of occurrence.
-            </li>
-          </ul>
-          <h3 className="mt-4">Comparative Analysis</h3>
-          <ul className="text-left text-sm">
-            <li>
-              Peer Comparison: Compare drivers against their peers to identify
-              outliers and set benchmarks for performance.
-            </li>
-
-            <li>
-              Historical Comparison: Track individual driver performance over
-              time to evaluate consistency and long-term trends.
-            </li>
-          </ul>
-          <h3 className="mt-4">Predictive Insights</h3>
-          <ul className="text-left text-sm">
-            <li>
-              Accident Probability: Use historical data to predict the
-              likelihood of accidents based on current driving patterns and past
-              incidents.
-            </li>
-
-            <li>
-              Risk Forecasting: Forecast future risk levels for drivers based on
-              their historical performance and behavioral trends.
-            </li>
-          </ul>
-          <h3 className="mt-4">KPI Evolution</h3>
-          <ul className="text-left text-sm">
-            <li>
-              KPI Trends: Monitor how key performance indicators like hard
-              acceleration, harsh braking, and idling time evolve over periods.
-            </li>
-
-            <li>
-              Correlations: Analyze correlations between different KPIs to
-              understand how one driving behavior might influence another.
-            </li>
-          </ul>
-          <h3 className="mt-4">Alert Analysis</h3>
-          <ul className="text-left text-sm">
-            <li>
-              Alert Frequency: Track the number and types of alerts generated
-              over time to identify trends in driver behavior and response.
-            </li>
-
-            <li>
-              Response Time: Assess the average response time to alerts, both
-              from drivers and the control center.
-            </li>
-          </ul>
-          <h3 className="mt-4">Event Segmentation</h3>
-
-          <div className="flex items-center justify-center py-4">
-            <img
-              className="w-[80%] md:w-[60%]"
-              src={`/assets/Projects/${project.Project}/Event Segmentation.png`}
-              alt="Event Segmentation"
-            />
-          </div>
-          <p className="mt-4">
-            Analyzing specific events and their patterns to understand driver
-            behavior better and predict future incidents.
-          </p>
-
-          <div className="flex items-center justify-center py-4">
-            <img
-              className="w-[80%] md:w-[60%]"
-              src={`/assets/Projects/${project.Project}/Event Segmentation Breakdown.png`}
-              alt="Event Segmentation Breakdown"
-            />
-          </div>
-          <ul className="text-left text-sm mt-2">
-            <li>Acceleration Events: Rapid increases in speed.</li>
-            <li>Braking Events: Sudden or harsh braking incidents.</li>
-            <li>
-              Idle Events: Periods where the vehicle is stationary but the
-              engine is running.
+              <strong>Data Processing</strong>: A Python script on the Raspberry
+              Pi processes the GPS data, parsing it into a structured format
+              (JSON).
             </li>
             <li>
-              Distraction Events: Instances where the driver is not focused on
-              the road.
+              <strong>Data Transmission</strong>: The Raspberry Pi sends the
+              structured GPS data to the Node.js server using HTTP or WebSocket.
             </li>
             <li>
-              Fatigue Events: Signs of driver tiredness, such as frequent
-              yawning.
+              <strong>Server Handling</strong>: The Node.js server receives the
+              GPS data, processes it if necessary and stores it in a database
+              for historical tracking, and provides APIs for client access.
+            </li>
+            <li>
+              <strong>Client Requests</strong>: The client application
+              periodically requests the latest GPS data from the Node.js server.
+            </li>
+            <li>
+              <strong>GPS and Video Data Collection</strong>: GPS module and IP
+              cameras collect location and video data, sending it to the
+              Raspberry Pi.
+            </li>
+            <li>
+              <strong>Map and Video Updates</strong>: The client application
+              updates the map with the vehicle&apos;s location and streams live
+              video feeds, as well as providing video playback for past events.
             </li>
           </ul>
 

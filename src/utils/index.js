@@ -1150,19 +1150,28 @@ export const profileDetails = {
         "Interviews could only occur with an interviewer present, leading to scheduling conflicts and delays.",
       Solution:
         "Created a system that allows interviews to be conducted automatically, providing options for later review, thus eliminating scheduling constraints and improving workflow.",
+      Screens: ["Peek Hire.gif"],
+      AllScreens: [
+        "Landing Page.jpg",
+        "Features.jpg",
+        "Login.jpg",
+        "Sign Up.jpg",
+        "Registration.jpg",
+        "Pricing.jpg",
+        "Contact.jpg",
+      ],
     },
     {
       id: 7,
       Project: "E-Trans - Real-Time Vehicle Tracking System",
-      Duration: "Aug 2023 - Present",
+      Duration: "Aug 2020 - Dec 2020",
       "Tools/Technologies": [
         "Raspberry Pi",
         "HarperDB",
         "Node.js",
         "Angular 4",
       ],
-      Description:
-        "Designed a system to track vehicles in real-time, identifying route deviations, idle times, and providing video feed recording.",
+      Description: `Designed a system to track vehicles in real-time using a Raspberry Pi with GPS capabilities incorporating map interface for live tracking, with additional functionalities for identifying route deviations, idle times, and providing video feed recording.`,
       Role: "Developer, Tech Lead",
       Responsibilities: [
         "SRS/ BRS",
@@ -1242,6 +1251,20 @@ export const profileDetails = {
         "Inefficient water usage led to wastage and higher operational costs.",
       Solution:
         "Implemented a smart system that optimizes water delivery based on real-time data.",
+      Screens: ["Smart Pump.gif"],
+      AllScreens: [
+        "Home.png",
+        "Add Crop.png",
+        "Crop Details.png",
+        "Land Details.png",
+        "Pump Details.png",
+        "Irrigation Schedule.png",
+        "Hardware.png",
+        "Humidity Sensor Data.png",
+        "Moisture Sensor Data.png",
+        "Moisture Vs Humidity Sensor Data.png",
+        "Temperature Sensor Data.png",
+      ],
     },
     {
       id: 9,
@@ -1277,6 +1300,16 @@ export const profileDetails = {
       Problem: "Existing data models were outdated and inefficient.",
       Solution:
         "Upgraded the data model and enhanced analytics capabilities, improving overall data management.",
+      Screens: ["OIDM.gif"],
+      AllScreens: [
+        "Baggage Transfer Delay.png",
+        "Baggage Weight Change.png",
+        "Cloud Rewards.png",
+        "Dashboard.png",
+        "Flight Tickets.png",
+        "Last Week Tickets.png",
+        "Summary Board.png",
+      ],
     },
     {
       id: 10,

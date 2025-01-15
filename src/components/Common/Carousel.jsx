@@ -19,7 +19,7 @@ const Carousel = ({ imageSet }) => {
   }
   return (
     <div className="flex flex-col items-center justify-center">
-      <section className="slider min-h-[25vh] md:min-h-[50vh] lg:min-h-[80vh] w-[100%] md:w-[90%]">
+      <section className="slider min-h-[25vh] md:min-h-[60vh] lg:min-h-[80vh] w-[100%] md:w-[90%]">
         <FaChevronCircleLeft className="left-arrow" onClick={prevSlide} />
         <FaChevronCircleRight className="right-arrow" onClick={nextSlide} />
         {imageSet.images.map((slide, index) => {

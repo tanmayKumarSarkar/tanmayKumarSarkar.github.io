@@ -50,7 +50,6 @@ function App() {
       {/* <HeaderContext.Provider value={{showHeader, setShowHeader}}> */}
       <div className="w-full">
         <Header></Header>
-
         <Suspense
           fallback={
             <div className="bg-[#040016] w-full z-[1] h-screen flex justify-center items-center">

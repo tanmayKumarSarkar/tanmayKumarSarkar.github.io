@@ -14,7 +14,7 @@ const TeamsApp = ({ project }) => {
           <ul>
             <li>
               <a
-                class="tooltip-target"
+                className="tooltip-target"
                 href="https://learn.microsoft.com/en-us/microsoftteams/platform/sbs-gs-nodejs"
                 target="_blank"
               >
@@ -25,7 +25,7 @@ const TeamsApp = ({ project }) => {
             </li>
             <li>
               <a
-                class="tooltip-target"
+                className="tooltip-target"
                 href="https://learn.microsoft.com/en-us/samples/officedev/microsoft-teams-samples/officedev-microsoft-teams-samples-app-complete-sample-nodejs/"
                 target="_blank"
               >
@@ -40,7 +40,7 @@ const TeamsApp = ({ project }) => {
           <ul>
             <li>
               <a
-                class="tooltip-target"
+                className="tooltip-target"
                 href="https://github.com/OfficeDev/Microsoft-Teams-Samples"
                 target="_blank"
               >
@@ -61,7 +61,7 @@ const TeamsApp = ({ project }) => {
               <strong>Custom Tabs</strong>: Embed your web content directly into
               Microsoft Teams.&nbsp;
               <a
-                class="tooltip-target"
+                className="tooltip-target"
                 href="https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-development-all-you-need-to-know/"
                 target="_blank"
               >
@@ -76,7 +76,7 @@ const TeamsApp = ({ project }) => {
               <strong>Conversational Bots</strong>: Create bots that interact
               with users through text, cards, and task modules.&nbsp;
               <a
-                class="tooltip-target"
+                className="tooltip-target"
                 href="https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-development-all-you-need-to-know/"
                 target="_blank"
               >
@@ -93,7 +93,7 @@ const TeamsApp = ({ project }) => {
             </li>
             <li>
               <a
-                class="tooltip-target"
+                className="tooltip-target"
                 href="https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-development-all-you-need-to-know/"
                 target="_blank"
               >
@@ -109,7 +109,7 @@ const TeamsApp = ({ project }) => {
               <strong>Rich Interactive Content</strong>: Use Adaptive Cards to
               present rich, interactive content in conversations.&nbsp;
               <a
-                class="tooltip-target"
+                className="tooltip-target"
                 href="https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-development-all-you-need-to-know/"
                 target="_blank"
               >
@@ -121,7 +121,7 @@ const TeamsApp = ({ project }) => {
           <ul>
             <li>
               <a
-                class="tooltip-target"
+                className="tooltip-target"
                 href="https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-development-all-you-need-to-know/"
                 target="_blank"
               >

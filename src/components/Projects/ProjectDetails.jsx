@@ -33,6 +33,12 @@ const ProjectDetails = (props) => {
     setHeaderMenu(true);
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
+  });
+
   const navigate = useNavigate();
 
   return (

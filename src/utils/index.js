@@ -1309,6 +1309,9 @@ export const profileDetails = {
         "Flight Tickets.png",
         "Last Week Tickets.png",
         "Summary Board.png",
+        "ORDM Customer Income.jpg",
+        "ORDM Dashboard.jpg",
+        "Banking Analytics.jpg",
       ],
     },
     {

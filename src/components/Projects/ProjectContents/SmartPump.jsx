@@ -1,12 +1,90 @@
-import React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import React, { useEffect, useRef, useState } from "react";
 
 const SmartPump = ({ project }) => {
+  const [playing, setPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    let video = document.querySelector(".video__player");
+    let observer = new IntersectionObserver(
+      (entry) => {
+        if (entry[0].intersectionRatio > 0.8) {
+          startVideo();
+          setPlaying(true);
+        } else {
+          pauseVideo();
+          setPlaying(false);
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.8,
+      }
+    );
+
+    debounce(observer.observe(video), 200);
+
+    return () => {
+      observer.unobserve(video);
+    };
+  }, []);
+
+  const startVideo = () => {
+    videoRef.current.play();
+    // document.querySelector(".video__player")?.play();
+    setPlaying(false);
+  };
+
+  const pauseVideo = () => {
+    videoRef.current.pause();
+    // document.querySelector(".video__player")?.pause();
+    setPlaying(true);
+  };
+
+  const handleVideoPress = () => {
+    if (playing) {
+      startVideo();
+    } else {
+      pauseVideo();
+    }
+  };
+
+  const debounce = (callback, wait) => {
+    let timeoutId = null;
+    return (...args) => {
+      window.clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(() => {
+        callback(...args);
+      }, wait);
+    };
+  };
+
   return (
     <div>
       <div className="SmartPump-wrapper project-wrapper">
         <div>
-          <h2 className="uppercase">USE CASE</h2>
+          {/* <h2 className="mt-4">Demo</h2> */}
+          <div className="flex items-center justify-center py-4">
+            <video
+              className="w-[99%] md:w-[80%] video__player"
+              // autoPlay
+              controls
+              muted
+              onClick={handleVideoPress}
+              loop
+              ref={videoRef}
+              src={`/assets/Projects/${project.Project}/Smart Water Pump.mp4`}
+            >
+              {/* <source
+                src={`/assets/Projects/${project.Project}/Smart Water Pump.mp4`}
+                type="video/mp4"
+              /> */}
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <h2 className="uppercase mt-4">USE CASE</h2>
           <h3 className="mt-4 capitalize">
             Solving Major Problems of Agriculture{" "}
           </h3>

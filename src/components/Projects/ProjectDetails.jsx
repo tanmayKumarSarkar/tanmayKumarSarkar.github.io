@@ -1,4 +1,4 @@
-import React, { lazy, useContext, useEffect } from "react";
+import React, { lazy, useContext, useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { profileDetails } from "../../utils";
 import { HeaderContext, useHeaderMenuCtx } from "../../utils/Context.jsx";
@@ -9,7 +9,6 @@ import "./Projects.css";
 import {
   MdKeyboardDoubleArrowLeft,
   MdKeyboardDoubleArrowRight,
-  MdOutlineKeyboardArrowLeft,
 } from "react-icons/md";
 import { TiArrowBack } from "react-icons/ti";
 const Carousel = lazy(() => import("../Common/Carousel.jsx"));
@@ -38,8 +37,11 @@ const ProjectDetails = (props) => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }, 100);
     window.addEventListener("keyup", keyUpHandler);
+    AddSwipeEvent();
+
     return () => {
       window.removeEventListener("keyup", keyUpHandler);
+      removeSwipeEvent();
     };
   });
 
@@ -54,6 +56,68 @@ const ProjectDetails = (props) => {
   };
 
   const navigate = useNavigate();
+
+  /* Touch Swipe Logic*/
+  let startX = 0,
+    startY = 0;
+  let endX = 0,
+    endY = 0;
+  let swipeDistanceThreshold = window.innerWidth / 5 || 50;
+
+  const AddSwipeEvent = () => {
+    const swipeArea = document.querySelector(".project-details-container");
+    // Touch start event
+    swipeArea.addEventListener("touchstart", touchStartHandler);
+    // Touch end event
+    swipeArea.addEventListener("touchend", touchEndHandler);
+  };
+
+  const removeSwipeEvent = () => {
+    const swipeArea = document.querySelector(".project-details-container");
+    swipeArea.removeEventListener("touchstart", touchStartHandler);
+    swipeArea.removeEventListener("touchend", touchEndHandler);
+  };
+
+  const touchStartHandler = (e) => {
+    startX = e.touches[0].clientX; // Starting X position
+    startY = e.touches[0].clientY; // Starting Y position
+  };
+  const touchEndHandler = (e) => {
+    endX = e.changedTouches[0].clientX; // Ending X position
+    endY = e.changedTouches[0].clientY; // Ending Y position
+
+    const diffX = endX - startX; // Horizontal movement
+    const diffY = endY - startY; // Vertical movement
+
+    // Check if the horizontal swipe is significant and larger than vertical movement
+    const angle =
+      Math.atan2(Math.abs(diffY), Math.abs(diffX)) * (180 / Math.PI);
+    // console.log(
+    //   "Angle: ",
+    //   angle,
+    //   ", Y-Dis: ",
+    //   Math.abs(diffY),
+    //   ", X-Dis: ",
+    //   Math.abs(diffX),
+    //   " Dis-Threshold: ",
+    //   swipeDistanceThreshold
+    // );
+    if (
+      Math.abs(diffX) > Math.abs(diffY) &&
+      Math.abs(diffX) > swipeDistanceThreshold &&
+      Math.abs(diffY) < swipeDistanceThreshold &&
+      angle < 30
+    ) {
+      if (diffX > 0) {
+        console.log("Swiped Right!", angle);
+        document.querySelector(".prev-btn")?.click();
+      } else {
+        console.log("Swiped Left!", angle);
+        document.querySelector(".next-btn")?.click();
+      }
+    }
+  };
+  /* */
 
   return (
     <div className="project-details-container min-h-[calc(100vh-49px)] text-white bg-[#040016] pb-4">

@@ -495,7 +495,7 @@ export const profileDetails = {
       works: [
         {
           Project: "Microsoft Sustainability Info Hub",
-          Duration: "Aug 2023 - Present",
+          Duration: "Jan 2022 - Aug 2023",
           "Tools/Technologies": [
             "React JS",
             "Dynamics 365 CRM",
@@ -511,7 +511,7 @@ export const profileDetails = {
         },
         {
           Project: "Microsoft Teams's App Development",
-          Duration: "Aug 2023 - Present",
+          Duration: "Apr 2021 - Jan 2022",
           "Tools/Technologies": [
             "React JS",
             "Node JS",
@@ -535,7 +535,7 @@ export const profileDetails = {
       works: [
         {
           Project: "Smart-Weld IoT Solution",
-          Duration: "Aug 2023 - Present",
+          Duration: "Jul 2019 - Apr 2021",
           "Tools/Technologies": [
             "Angular 8",
             "NodeJS",
@@ -561,7 +561,7 @@ export const profileDetails = {
         },
         {
           Project: "YTY Gloves Manufacturer & AMDTF Data Analytics",
-          Duration: "Aug 2023 - Present",
+          Duration: "Aug 2020 - Mar 2021",
           "Tools/Technologies": [
             "Oracle",
             "Java",
@@ -581,7 +581,7 @@ export const profileDetails = {
         },
         {
           Project: "E-Trans - Driver Scorecard & Accident Prediction",
-          Duration: "Aug 2023 - Present",
+          Duration: "Jan 2019 - Jul 2019",
           "Tools/Technologies": [
             "React",
             "NodeJS",
@@ -606,7 +606,7 @@ export const profileDetails = {
         },
         {
           Project: "PeekHire - Hiring Solutions",
-          Duration: "Aug 2023 - Present",
+          Duration: "Oct 2019 - Apr 2021",
           "Tools/Technologies": [
             "Angular 8",
             "jQuery",
@@ -629,7 +629,7 @@ export const profileDetails = {
         {
           Project:
             "Oracle Industrial Data Model (OIDM) & NetSuite Implementation",
-          Duration: "Aug 2023 - Present",
+          Duration: "Jan 2020 - Feb 2021",
           "Tools/Technologies": [
             "Oracle Analytical Cloud (OAC)",
             "Oracle Industrial Data Model (OIDM)",
@@ -647,7 +647,7 @@ export const profileDetails = {
         },
         {
           Project: "E-Trans - Real-Time Vehicle Tracking System",
-          Duration: "Aug 2023 - Present",
+          Duration: "Aug 2020 - Dec 2020",
           "Tools/Technologies": [
             "Raspberry Pi",
             "HarperDB",
@@ -665,7 +665,7 @@ export const profileDetails = {
         },
         {
           Project: "AEROMEXICO - Real-Time Airlines Baggage Tracking",
-          Duration: "Aug 2023 - Present",
+          Duration: "Jul 2019 - Sep 2019",
           "Tools/Technologies": [
             "Kafka",
             "Oracle NoSQL",
@@ -684,7 +684,7 @@ export const profileDetails = {
         },
         {
           Project: "CWP - Telecommunications Domain Analytics",
-          Duration: "Aug 2023 - Present",
+          Duration: "Aug 2019 - Nov 2019",
           "Tools/Technologies": [
             "ElasticSearch",
             "Logstash",
@@ -701,7 +701,7 @@ export const profileDetails = {
         },
         {
           Project: "Smart Pump IoT Solutions",
-          Duration: "Aug 2023 - Present",
+          Duration: "Apr 2019 - Dec 2019",
           "Tools/Technologies": [
             "React",
             "jQuery",
@@ -726,7 +726,7 @@ export const profileDetails = {
         },
         {
           Project: "Real-Time Robotics Dashboard",
-          Duration: "Aug 2023 - Present",
+          Duration: "Jan 2020 - Apr 2020",
           "Tools/Technologies": ["ElasticSearch", "Logstash", "Kibana"],
           Description:
             "Developed a system to collect real-time data from working robots and display it on customizable dashboards accessible via any device.",
@@ -736,6 +736,21 @@ export const profileDetails = {
             "ETL Data Pipeline",
             "BI Analytics",
             "Real-time dashboard",
+          ],
+        },
+        {
+          Project: "Cryogenic Vial Tracking Solutions",
+          Duration: "Mar 2020 - Nov 2020",
+          "Tools/Technologies": ["Angular 8", "Node JS"],
+          Description:
+            "Cryogenic sample tracking system to efficiently manage stored vial in cryogenic conditions, ensuring quick and accurate retrieval through an online portal and RFID-enabled tracking mechanisms.",
+          Role: "Developer",
+          Responsibilities: [
+            "SRS/ BRS",
+            "Architecture designing",
+            "Front End development",
+            "Backend APIs development",
+            "DevOps",
           ],
         },
       ],
@@ -749,7 +764,7 @@ export const profileDetails = {
       works: [
         {
           Project: "Project Management Portal",
-          Duration: "Aug 2023 - Present",
+          Duration: "May 2018 - Jan 2019",
           "Tools/Technologies": [
             "Microservices",
             "MySQL",
@@ -768,7 +783,7 @@ export const profileDetails = {
         },
         {
           Project: "Banking System Enhancement and Maintenance",
-          Duration: "Aug 2023 - Present",
+          Duration: "Aug 2016 - Dec 2017",
           "Tools/Technologies": ["J2EE", "MySQL", "Java 8"],
           Description:
             "Enhanced and maintained critical banking systems, focusing on fixing broken settlements and improving transactional support for equity, bonds, and stocks.",
@@ -781,7 +796,7 @@ export const profileDetails = {
         },
         {
           Project: "SharePoint Development and Automation Testing",
-          Duration: "Aug 2023 - Present",
+          Duration: "Dec 2017 - May 2018",
           "Tools/Technologies": ["SharePoint Designer", "Selenium", "Sikuli"],
           Description:
             "Developed and designed workflows for content management on SharePoint, and conducted web and desktop application automation testing.",
@@ -853,7 +868,7 @@ export const profileDetails = {
     {
       id: 2,
       Project: "Microsoft Sustainability Info Hub",
-      Duration: "Aug 2023 - Present",
+      Duration: "Jan 2022 - Aug 2023",
       "Tools/Technologies": [
         "React JS",
         "Dynamics 365 CRM",
@@ -902,7 +917,7 @@ export const profileDetails = {
     {
       id: 3,
       Project: "Microsoft Teams's App Development",
-      Duration: "Aug 2023 - Present",
+      Duration: "Apr 2021 - Jan 2022",
       "Tools/Technologies": [
         "React JS",
         "Node JS",
@@ -972,7 +987,7 @@ export const profileDetails = {
     {
       id: 4,
       Project: "Smart-Weld IoT Solution",
-      Duration: "Aug 2023 - Present",
+      Duration: "Jul 2019 - Apr 2021",
       "Tools/Technologies": [
         "Angular 8",
         "NodeJS",
@@ -1057,7 +1072,7 @@ export const profileDetails = {
     {
       id: 5,
       Project: "E-Trans - Driver Scorecard & Accident Prediction",
-      Duration: "Aug 2023 - Present",
+      Duration: "Jan 2019 - Jul 2019",
       "Tools/Technologies": [
         "React",
         "NodeJS",
@@ -1112,7 +1127,7 @@ export const profileDetails = {
     {
       id: 6,
       Project: "PeekHire - Hiring Solutions",
-      Duration: "Aug 2023 - Present",
+      Duration: "Oct 2019 - Apr 2021",
       "Tools/Technologies": [
         "Angular 8",
         "jQuery",
@@ -1213,7 +1228,7 @@ export const profileDetails = {
     {
       id: 8,
       Project: "Smart Pump IoT Solutions",
-      Duration: "Aug 2023 - Present",
+      Duration: "Apr 2019 - Dec 2019",
       "Tools/Technologies": [
         "React",
         "jQuery",
@@ -1269,7 +1284,7 @@ export const profileDetails = {
     {
       id: 9,
       Project: "Oracle Industrial Data Model (OIDM) & NetSuite Implementation",
-      Duration: "Aug 2023 - Present",
+      Duration: "Jan 2020 - Feb 2021",
       "Tools/Technologies": [
         "Oracle Analytical Cloud (OAC)",
         "Oracle Industrial Data Model (OIDM)",
@@ -1312,12 +1327,14 @@ export const profileDetails = {
         "ORDM Customer Income.jpg",
         "ORDM Dashboard.jpg",
         "Banking Analytics.jpg",
+        "Sales by customer demography.png",
+        "Store performance report.png",
       ],
     },
     {
       id: 10,
       Project: "AEROMEXICO - Real-Time Airlines Baggage Tracking",
-      Duration: "Aug 2023 - Present",
+      Duration: "Jul 2019 - Sep 2019",
       "Tools/Technologies": [
         "Kafka",
         "Oracle NoSQL",
@@ -1350,11 +1367,24 @@ export const profileDetails = {
         "Frequent baggage mishandling led to customer dissatisfaction and higher costs.",
       Solution:
         "Implemented real-time tracking to reduce mishandling and improve customer experience.",
+      Screens: ["OADM.gif"],
+      AllScreens: [
+        "RFMP Analytics.jpg",
+        "Customer Loyalty Analytics.jpg",
+        "Baggage Tracking.png",
+        "Baggage Transfer Delay.png",
+        "Baggage Weight Change.png",
+        "Customer Life Time Value Analytics.jpg",
+        "Flight Tickets.png",
+        "Last Week Tickets.png",
+        "Customer Churn Analytics.jpg",
+        "Customer 360 Analytics.jpg",
+      ],
     },
     {
       id: 11,
       Project: "Project Management Portal",
-      Duration: "Aug 2023 - Present",
+      Duration: "May 2018 - Jan 2019",
       "Tools/Technologies": [
         "Microservices",
         "MySQL",
@@ -1391,7 +1421,7 @@ export const profileDetails = {
     {
       id: 12,
       Project: "YTY Gloves Manufacturer & AMDTF Data Analytics",
-      Duration: "Aug 2023 - Present",
+      Duration: "Aug 2020 - Mar 2021",
       "Tools/Technologies": [
         "Oracle",
         "Java",
@@ -1428,11 +1458,22 @@ export const profileDetails = {
         "Lack of structured data and real-time analytics, leading to slower decision-making processes.",
       Solution:
         "Created a seamless data collection system integrated with BI tools for real-time data analysis, enhancing business insights and operational efficiency.",
+      Screens: ["YTY.gif"],
+      AllScreens: [
+        "Current & Torque.jpg",
+        "Dashboard.jpg",
+        "Downtime Type.jpg",
+        "Downtime.png",
+        "Machine Log.jpg",
+        "Production Vs Yield.jpg",
+        "Production.png",
+        "Second Grade Rework Analysis.png",
+      ],
     },
     {
       id: 13,
       Project: "CWP - Telecommunications Domain Analytics",
-      Duration: "Aug 2023 - Present",
+      Duration: "Aug 2019 - Nov 2019",
       "Tools/Technologies": ["ElasticSearch", "Logstash", "Kibana (ELK Stack)"],
       Description:
         "Implemented real-time and historical CDR data analytics & reporting dashboard for telecommunications, focusing on recharge, usage, churn, and profit analysis",
@@ -1457,11 +1498,17 @@ export const profileDetails = {
         "Telecom companies struggled with analyzing real-time data on customer behavior and predicting churn.",
       Solution:
         "Provided real-time analytics that allowed telecom companies to quickly adjust strategies based on customer behavior and trends, improving retention and profitability.",
+      Screens: ["CWP.gif"],
+      AllScreens: [
+        "Dashboard.png",
+        "CDR Call Analytics.jpg",
+        "CDR Record Analytics.jpg",
+      ],
     },
     {
       id: 14,
       Project: "Real-Time Robotics Dashboard",
-      Duration: "Aug 2023 - Present",
+      Duration: "Apr 2020 - Sep 2020",
       "Tools/Technologies": ["ElasticSearch", "Logstash", "Kibana"],
       Description:
         "Developed a system to collect real-time data from working robots and display it on customizable dashboards accessible via any device.",

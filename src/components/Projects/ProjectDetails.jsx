@@ -37,7 +37,21 @@ const ProjectDetails = (props) => {
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }, 100);
+    window.addEventListener("keyup", keyUpHandler);
+    return () => {
+      window.removeEventListener("keyup", keyUpHandler);
+    };
   });
+
+  const keyUpHandler = (e) => {
+    const key = e.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+    if (e.key == "ArrowLeft") {
+      document.querySelector(".prev-btn")?.click();
+    }
+    if (e.key == "ArrowRight") {
+      document.querySelector(".next-btn")?.click();
+    }
+  };
 
   const navigate = useNavigate();
 
@@ -62,14 +76,14 @@ const ProjectDetails = (props) => {
 
                 {prevId != -2 && (
                   <Link to={`/project/${prevId}`} className="flex ">
-                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2 prv-nxt-btn">
+                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2 prv-nxt-btn prev-btn">
                       <MdKeyboardDoubleArrowLeft /> Prev
                     </span>
                   </Link>
                 )}
                 {nextId != -1 && (
                   <Link to={`/project/${nextId}`} className="flex ml-1">
-                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2 prv-nxt-btn">
+                    <span className="flex justify-end items-center bg-[#20202070] hover:bg-[#33333390] rounded-md pl-1 pr-2 prv-nxt-btn next-btn">
                       Next <MdKeyboardDoubleArrowRight />
                     </span>
                   </Link>

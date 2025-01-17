@@ -82,6 +82,10 @@
     color: #c8ff00;
 }
 
+.external-details .project-wrapper ul>li+p {
+    margin-left: 36px;
+}
+
 
 
 /* .external-details .smartweld-wrapper h3:afters {

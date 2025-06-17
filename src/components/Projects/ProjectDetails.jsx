@@ -67,15 +67,15 @@ const ProjectDetails = (props) => {
   const AddSwipeEvent = () => {
     const swipeArea = document.querySelector(".project-details-container");
     // Touch start event
-    swipeArea.addEventListener("touchstart", touchStartHandler);
+    swipeArea?.addEventListener("touchstart", touchStartHandler);
     // Touch end event
-    swipeArea.addEventListener("touchend", touchEndHandler);
+    swipeArea?.addEventListener("touchend", touchEndHandler);
   };
 
   const removeSwipeEvent = () => {
     const swipeArea = document.querySelector(".project-details-container");
-    swipeArea.removeEventListener("touchstart", touchStartHandler);
-    swipeArea.removeEventListener("touchend", touchEndHandler);
+    swipeArea?.removeEventListener("touchstart", touchStartHandler);
+    swipeArea?.removeEventListener("touchend", touchEndHandler);
   };
 
   const touchStartHandler = (e) => {
